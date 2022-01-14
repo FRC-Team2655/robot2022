@@ -1,0 +1,4 @@
+See file:///C:/Users/Team/Documents/robot2022/robot2022/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt for all output for compileFrcUserProgramDebugExecutableFrcUserProgramCpp.
+compiling Robot.cpp successful.
+
+Finished compileFrcUserProgramDebugExecutableFrcUserProgramCpp, see full log file:///C:/Users/Team/Documents/robot2022/robot2022/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt.
