@@ -66,6 +66,7 @@ class Robot : public frc::TimedRobot {
   /** 
    * @brief This function is run periodically in the teleoperated mode.
    * @return void
+   * This handles all of the drive code
    */
   void TeleopPeriodic() override {
     // Drive with arcade style
