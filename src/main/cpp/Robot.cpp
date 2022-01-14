@@ -7,6 +7,9 @@
 
 #include "Robot.h"
 
+/** Declaring the DriveBaseSubsystem instance. */
+DriveBaseSubsystem Robot::driveBase;
+
 /**
  * @brief This function is run when the Robot is Initialized.
  * @return void
@@ -20,7 +23,6 @@ void Robot::RobotInit() {
  * @return void
  */ 
 void Robot::RobotPeriodic() {
-
 }
 
 /**
@@ -44,14 +46,7 @@ void Robot::AutonomousPeriodic() {
   * @return void
   */
  void Robot::TeleopInit() {
-   /** Set the Motor Controllers in Coast Mode */
-   leftLeader.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
-   leftFollower1.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
-   leftFollower2.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
-
-   rightLeader.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
-   rightFollower1.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
-   rightFollower2.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
+   driveBase.setCoastMode();
  }
 
 /** 
@@ -59,8 +54,7 @@ void Robot::AutonomousPeriodic() {
   * @return void
   */
 void Robot::TeleopPeriodic() {
-   // Drive with arcade style
-   robotDrive.ArcadeDrive(joystick.GetY(), joystick.GetZ());
+  driveBase.arcadeDrive();
 }
 
 /**
