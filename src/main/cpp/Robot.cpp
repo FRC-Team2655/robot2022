@@ -1,6 +1,9 @@
-// Copyright (c) FIRST and other WPILib contributors.
-// Open Source Software; you can modify and/or share it under the terms of
-// the WPILib BSD license file in the root directory of this project.
+/**
+ * @file Robot.cpp
+ * @date 1/13/2022
+ * @author Jonah Boan, Aidan Cobb, Alex Nolan
+ * @brief Central source code for the Robot.
+**/
 
 #include <frc/Joystick.h>
 #include <frc/TimedRobot.h>
@@ -10,39 +13,47 @@
 #include "rev/CANSparkMax.h"
 #include "../include/RobotMap.h"
 
-
-/**
- * This is a demo program showing the use of the DifferentialDrive class.
- * Runs the motors with arcade steering.
- */
+/** This is the central robot class. */
 class Robot : public frc::TimedRobot {
 
-  /* Declaring Motor Controllers */
+  /** Definition for the left leader motor controller on the drivetrain. */
   rev::CANSparkMax leftLeader {LEFTLEADERID, rev::CANSparkMax::MotorType::kBrushless};
+  /** Definition for the first left follower motor controller on the drivetrain. */
   rev::CANSparkMax leftFollower1 {LEFTFOLLOWER1ID, rev::CANSparkMax::MotorType::kBrushless};
+  /** Definition for the second left follower motor controller on the drivetrain. */
   rev::CANSparkMax leftFollower2 {LEFTFOLLOWER2ID, rev::CANSparkMax::MotorType::kBrushless};
-  
 
+/** Definition for the right leader motor controller on the drivetrain. */
   rev::CANSparkMax rightLeader {RIGHTLEADERID, rev::CANSparkMax::MotorType::kBrushless};
+  /** Definition for the first right follower motor controller on the drivetrain. */
   rev::CANSparkMax rightFollower1 {RIGHTFOLLOWER1ID, rev::CANSparkMax::MotorType::kBrushless};
+  /** Definition for the second right follower motor controller on the drivetrain. */
   rev::CANSparkMax rightFollower2 {RIGHTFOLLOWER2ID, rev::CANSparkMax::MotorType::kBrushless};
 
-  /* Assigning the motor controllers to the DifferentialDrive */
+  /** Assigning the motor controllers to the DifferentialDrive */
   frc::DifferentialDrive robotDrive{leftLeader, rightLeader};
 
-  /* Defining the Joystick */
+  /** Defining the Joystick */
   frc::Joystick joystick {0};
 
-  /* Create the Ramsete Controller */
+  /** Create the Ramsete Controller */
   frc::RamseteController rController;
 
  public:
+ /** 
+  * @brief This function is run when the Robot is initialized.
+  * @return void
+  */
   void RobotInit() override {
 
   }
 
+  /** 
+   * @brief This function is run when teleoperated mode is initialized.
+   * @return void
+   */
   void TeleopInit() override {
-    /* Set the Motor Controllers in Coast Mode */
+    /** Set the Motor Controllers in Coast Mode */
     leftLeader.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
     leftFollower1.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
     leftFollower2.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
@@ -52,6 +63,10 @@ class Robot : public frc::TimedRobot {
     rightFollower2.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
   }
 
+  /** 
+   * @brief This function is run periodically in the teleoperated mode.
+   * @return void
+   */
   void TeleopPeriodic() override {
     // Drive with arcade style
     robotDrive.ArcadeDrive(joystick.GetY(), joystick.GetZ());
