@@ -10,6 +10,8 @@
 #include <frc/Joystick.h>
 #include <frc2/command/button/JoystickButton.h>
 
+#include "team2655/joystick.hpp"
+
 /** This is the input class. It deals with the joystick input. */
 class Input {
 public:
@@ -30,5 +32,9 @@ public:
     frc2::JoystickButton *shareBtn;
     frc2::JoystickButton *optionsBtn;
     frc2::JoystickButton *rightStickBtn;
+
+    // Configurations for the joystick deadband and cubic function.
+    team2655::jshelper::AxisConfig driveAxisConfig = team2655::jshelper::createAxisConfig(.1, 0, 0.5);
+    team2655::jshelper::AxisConfig rotateAxisConfig = team2655::jshelper::createAxisConfig(0.1);
 private:
 };

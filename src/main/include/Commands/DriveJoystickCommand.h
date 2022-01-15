@@ -9,6 +9,7 @@
 
 #include <frc2/command/CommandBase.h>
 #include <frc2/command/CommandHelper.h>
+#include "team2655/joystick.hpp"
 
 /** The DriveJoystickCommand class drives the robot by joystick control */
 class DriveJoystickCommand
