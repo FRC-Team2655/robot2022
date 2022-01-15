@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Team2655 Robot2022: DriveBaseSubsystem Class Reference</title>
+<title>Team2655 Robot2022: DriveJoystickCommand Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,35 +65,38 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="class_drive_base_subsystem-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DriveBaseSubsystem Class Reference</div></div>
+<a href="class_drive_joystick_command-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">DriveJoystickCommand Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_drive_base_subsystem_8h_source.html">DriveBaseSubsystem.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_drive_joystick_command_8h_source.html">DriveJoystickCommand.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for DriveBaseSubsystem:</div>
+Inheritance diagram for DriveJoystickCommand:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="class_drive_base_subsystem.png" alt=""/>
+  <img src="class_drive_joystick_command.png" alt=""/>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa41f877e890e904b72dd187852af55b0"><td class="memItemLeft" align="right" valign="top"><a id="aa41f877e890e904b72dd187852af55b0" name="aa41f877e890e904b72dd187852af55b0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>arcadeDrive</b> (double xSpeed, double zRotation)</td></tr>
-<tr class="separator:aa41f877e890e904b72dd187852af55b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a542438b7e756823af7462c195360014f"><td class="memItemLeft" align="right" valign="top"><a id="a542438b7e756823af7462c195360014f" name="a542438b7e756823af7462c195360014f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>driveTankPercentage</b> (double leftPercentage, double rightPercentage)</td></tr>
-<tr class="separator:a542438b7e756823af7462c195360014f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfa7bf3a30c9a13b2ff9619bf1ff7e04"><td class="memItemLeft" align="right" valign="top"><a id="acfa7bf3a30c9a13b2ff9619bf1ff7e04" name="acfa7bf3a30c9a13b2ff9619bf1ff7e04"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setCoastMode</b> ()</td></tr>
-<tr class="separator:acfa7bf3a30c9a13b2ff9619bf1ff7e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fac7dae919b608a06ea5e94d6f6f9b9"><td class="memItemLeft" align="right" valign="top"><a id="a8fac7dae919b608a06ea5e94d6f6f9b9" name="a8fac7dae919b608a06ea5e94d6f6f9b9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> () override</td></tr>
+<tr class="separator:a8fac7dae919b608a06ea5e94d6f6f9b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af645cb2c4f9c4736c3e7b4ecca58b3a9"><td class="memItemLeft" align="right" valign="top"><a id="af645cb2c4f9c4736c3e7b4ecca58b3a9" name="af645cb2c4f9c4736c3e7b4ecca58b3a9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Execute</b> () override</td></tr>
+<tr class="separator:af645cb2c4f9c4736c3e7b4ecca58b3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24202915de671f31ab8e20abbe37794f"><td class="memItemLeft" align="right" valign="top"><a id="a24202915de671f31ab8e20abbe37794f" name="a24202915de671f31ab8e20abbe37794f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>End</b> (bool interrupted) override</td></tr>
+<tr class="separator:a24202915de671f31ab8e20abbe37794f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7b749777e53923915625b0741c93dfe"><td class="memItemLeft" align="right" valign="top"><a id="ad7b749777e53923915625b0741c93dfe" name="ad7b749777e53923915625b0741c93dfe"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsFinished</b> () override</td></tr>
+<tr class="separator:ad7b749777e53923915625b0741c93dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >The <a class="el" href="class_drive_base_subsystem.html">DriveBaseSubsystem</a> class controls the drivebase. </p>
+<div class="textblock"><p >The <a class="el" href="class_drive_joystick_command.html">DriveJoystickCommand</a> class drives the robot by joystick control </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="_drive_base_subsystem_8h_source.html">DriveBaseSubsystem.h</a></li>
+<li><a class="el" href="_drive_joystick_command_8h_source.html">DriveJoystickCommand.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['robot_0',['Robot',['../class_robot.html',1,'']]]
+  ['input_0',['Input',['../class_input.html',1,'']]]
 ];

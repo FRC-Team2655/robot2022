@@ -4,5 +4,7 @@ var searchData=
   ['disabledperiodic_1',['DisabledPeriodic',['../class_robot.html#a8c7309f5f1cb242ea8c74f1abf03b540',1,'Robot']]],
   ['drivebase_2',['driveBase',['../class_robot.html#a02904913f9e0af17a44060bd1c4e36b1',1,'Robot']]],
   ['drivebasesubsystem_3',['DriveBaseSubsystem',['../class_drive_base_subsystem.html',1,'']]],
-  ['drivebasesubsystem_2eh_4',['DriveBaseSubsystem.h',['../_drive_base_subsystem_8h.html',1,'']]]
+  ['drivebasesubsystem_2eh_4',['DriveBaseSubsystem.h',['../_drive_base_subsystem_8h.html',1,'']]],
+  ['drivejoystickcommand_5',['DriveJoystickCommand',['../class_drive_joystick_command.html',1,'']]],
+  ['drivejoystickcommand_2eh_6',['DriveJoystickCommand.h',['../_drive_joystick_command_8h.html',1,'']]]
 ];

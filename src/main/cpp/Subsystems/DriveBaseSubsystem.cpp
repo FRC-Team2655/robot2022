@@ -24,6 +24,22 @@ void DriveBaseSubsystem::arcadeDrive(double xSpeed, double zRotation) {
 }
 
 /**
+ * @brief Run each side of the drivetrain independently at a fixed percentage.
+ * @param leftPercentage The percentage to run the left side at.
+ * @param rightPercentage The percentage to run the right side at.
+ * @return void
+ */ 
+void DriveBaseSubsystem::driveTankPercentage(double leftPercentage, double rightPercentage) {
+	leftLeader.Set(-leftPercentage);
+	leftFollower1.Set(-leftPercentage);
+	leftFollower2.Set(-leftPercentage);
+
+	rightLeader.Set(rightPercentage);
+	rightFollower1.Set(rightPercentage);
+	rightFollower2.Set(rightPercentage);
+}
+
+/**
  * @brief Function used to set all the motor controllers in coast mode.
  * @return void
  */ 

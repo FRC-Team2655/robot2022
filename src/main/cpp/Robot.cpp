@@ -9,6 +9,7 @@
 
 /** Declaring the DriveBaseSubsystem instance. */
 DriveBaseSubsystem Robot::driveBase;
+/** Declaring the Input instance. */
 Input Robot::input;
 
 /**

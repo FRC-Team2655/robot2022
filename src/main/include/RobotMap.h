@@ -5,7 +5,7 @@
  * @brief RobotMap is used to define all the variables used throughout the Robot Program 
 **/
 
-/* Motor Controller ID Definitions */
+/** Motor Controller ID Definitions */
 
 /** Motor ID for the left leader motor controller on drivetrain */
 #define LEFTLEADERID 6

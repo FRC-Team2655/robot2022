@@ -19,6 +19,7 @@ public:
   DriveBaseSubsystem();
 
     void arcadeDrive(double xSpeed, double zRotation);
+    void driveTankPercentage(double leftPercentage, double rightPercentage);
     void setCoastMode();
 private:
   /** Definition for the left leader motor controller on the drivetrain. */
