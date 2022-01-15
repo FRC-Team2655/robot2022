@@ -21,8 +21,8 @@ void DriveJoystickCommand::Initialize() {}
 /** Called repeatedly when this Command is scheduled to run */
 void DriveJoystickCommand::Execute() {
   /** Scaling the raw joystick trigger inputs */
-  double rawForward = (Robot::input.joystick.GetRawAxis(3) + 1) / 2;
-  double rawBackward = (Robot::input.joystick.GetRawAxis(4) + 1) / 2;
+  double rawForward = (Robot::input.joystick->GetRawAxis(3) + 1) / 2;
+  double rawBackward = (Robot::input.joystick->GetRawAxis(4) + 1) / 2;
 
   /** Defining the deadband */
   double deadband = 0.1;
