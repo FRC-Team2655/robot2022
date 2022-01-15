@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['teleopinit_0',['TeleopInit',['../class_robot.html#aa3e246794bfbbb4406fc87f351762038',1,'Robot']]],
-  ['teleopperiodic_1',['TeleopPeriodic',['../class_robot.html#a324322627c63b3870daf7c7ddc5bea63',1,'Robot']]]
+  ['disabledinit_0',['DisabledInit',['../class_robot.html#a810e6143a208a6314491366e3c714357',1,'Robot']]],
+  ['disabledperiodic_1',['DisabledPeriodic',['../class_robot.html#a8c7309f5f1cb242ea8c74f1abf03b540',1,'Robot']]]
 ];

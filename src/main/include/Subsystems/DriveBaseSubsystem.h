@@ -10,13 +10,15 @@
 #include <frc2/command/SubsystemBase.h>
 #include <rev/CANSparkMax.h>
 #include <frc/drive/DifferentialDrive.h>
-#include <frc/Joystick.h>
 #include "RobotMap.h"
+#include "Commands/DriveJoystickCommand.h"
 
 /** The DriveBaseSubsystem class controls the drivebase. */
-class DriveBaseSubsystem : frc2::SubsystemBase {
+class DriveBaseSubsystem : public frc2::SubsystemBase {
 public:
-    void arcadeDrive();
+  DriveBaseSubsystem();
+
+    void arcadeDrive(double xSpeed, double zRotation);
     void setCoastMode();
 private:
   /** Definition for the left leader motor controller on the drivetrain. */
@@ -36,6 +38,6 @@ private:
   /** Assigning the motor controllers to the DifferentialDrive */
   frc::DifferentialDrive robotDrive{leftLeader, rightLeader};
 
-  /** Defining the Joystick */
-  frc::Joystick joystick {0};
+  /** The DriveJoystickCommand instance */
+  DriveJoystickCommand driveJoystick;
 };

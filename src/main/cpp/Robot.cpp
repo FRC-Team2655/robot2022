@@ -9,6 +9,7 @@
 
 /** Declaring the DriveBaseSubsystem instance. */
 DriveBaseSubsystem Robot::driveBase;
+Input Robot::input;
 
 /**
  * @brief This function is run when the Robot is Initialized.
@@ -54,7 +55,6 @@ void Robot::AutonomousPeriodic() {
   * @return void
   */
 void Robot::TeleopPeriodic() {
-  driveBase.arcadeDrive();
 }
 
 /**

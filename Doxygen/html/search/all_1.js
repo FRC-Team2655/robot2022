@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['rightfollower1id_0',['RIGHTFOLLOWER1ID',['../_robot_map_8h.html#a0f63a7b648c204a13efbf0fe5529ee1a',1,'RobotMap.h']]],
-  ['rightfollower2id_1',['RIGHTFOLLOWER2ID',['../_robot_map_8h.html#a1a7630a94ab88143f6c4995f41e3d521',1,'RobotMap.h']]],
-  ['rightleaderid_2',['RIGHTLEADERID',['../_robot_map_8h.html#ac195d4d65e1d3e7f660798fe58022b2d',1,'RobotMap.h']]],
-  ['robot_3',['Robot',['../class_robot.html',1,'']]],
-  ['robot_2ecpp_4',['Robot.cpp',['../_robot_8cpp.html',1,'']]],
-  ['robotinit_5',['RobotInit',['../class_robot.html#a66f23dae271748d525cf3ab046375f79',1,'Robot']]],
-  ['robotmap_2eh_6',['RobotMap.h',['../_robot_map_8h.html',1,'']]]
+  ['disabledinit_0',['DisabledInit',['../class_robot.html#a810e6143a208a6314491366e3c714357',1,'Robot']]],
+  ['disabledperiodic_1',['DisabledPeriodic',['../class_robot.html#a8c7309f5f1cb242ea8c74f1abf03b540',1,'Robot']]],
+  ['drivebase_2',['driveBase',['../class_robot.html#a02904913f9e0af17a44060bd1c4e36b1',1,'Robot']]],
+  ['drivebasesubsystem_3',['DriveBaseSubsystem',['../class_drive_base_subsystem.html',1,'']]],
+  ['drivebasesubsystem_2eh_4',['DriveBaseSubsystem.h',['../_drive_base_subsystem_8h.html',1,'']]]
 ];

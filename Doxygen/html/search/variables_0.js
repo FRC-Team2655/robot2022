@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['joystick_0',['joystick',['../class_robot.html#a04fb8aceaaaaf1bd9ca0d48151c5e69e',1,'Robot']]]
+  ['drivebase_0',['driveBase',['../class_robot.html#a02904913f9e0af17a44060bd1c4e36b1',1,'Robot']]]
 ];

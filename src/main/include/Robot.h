@@ -12,11 +12,14 @@
 #include <frc/motorcontrol/PWMSparkMax.h>
 #include "Subsystems/DriveBaseSubsystem.h"
 #include "RobotMap.h"
+#include <ctre/Phoenix.h>
+#include "Input.h"
 
 /** The Robot class is the central class in the project. */
 class Robot : public frc::TimedRobot {
 public:
   static DriveBaseSubsystem driveBase;
+  static Input input;
 
   void RobotInit() override;
   void RobotPeriodic() override;
