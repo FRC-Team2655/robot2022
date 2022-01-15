@@ -1,5 +1,5 @@
 /**
- * @file Robot.cpp
+ * @file DriveBaseSubsystem.cpp
  * @date 1/13/2022
  * @author Jonah Boan, Aidan Cobb, Alex Nolan
  * @brief Source code dealing with drivetrain control.
@@ -9,7 +9,30 @@
 
 /** The constructor of the drivetrain. */
 DriveBaseSubsystem::DriveBaseSubsystem() {
+    /** Set the DriveJoystickCommand as the default command to be run */
     SetDefaultCommand(driveJoystick);
+
+    /** Make the followers follow the leaders */
+    leftFollower1.Follow(leftLeader);
+    leftFollower2.Follow(leftLeader);
+    rightFollower1.Follow(rightLeader);
+    rightFollower2.Follow(rightLeader);
+
+    /** Assigning the PID loop values for the left side of the drivetrain */
+    leftPID.SetP(kPLeft);
+    leftPID.SetI(kILeft);
+    leftPID.SetD(0);
+    leftPID.SetFF(1/LMaxVelocity);
+    leftPID.SetIZone(0);
+    leftPID.SetOutputRange(-1, 1);
+
+    /** Assigning the PID loop values for the right side of the drivetrain */
+    rightPID.SetP(kPRight);
+    rightPID.SetI(kIRight);
+    rightPID.SetD(0);
+    rightPID.SetFF(1/RMaxVelocity);
+    rightPID.SetIZone(0);
+    rightPID.SetOutputRange(-1, 1);
 }
 
 /**
@@ -30,10 +53,12 @@ void DriveBaseSubsystem::arcadeDrive(double xSpeed, double zRotation) {
  * @return void
  */ 
 void DriveBaseSubsystem::driveTankPercentage(double leftPercentage, double rightPercentage) {
-	leftLeader.Set(-leftPercentage);
-	leftFollower1.Set(-leftPercentage);
-	leftFollower2.Set(-leftPercentage);
+    /** Set the motors to run at the percentage value on the left side of the drivetrain */
+	leftLeader.Set(leftPercentage);
+	leftFollower1.Set(leftPercentage);
+	leftFollower2.Set(leftPercentage);
 
+    /** Set the motors to run at the percentage value on the right side of the drivetrain */
 	rightLeader.Set(rightPercentage);
 	rightFollower1.Set(rightPercentage);
 	rightFollower2.Set(rightPercentage);

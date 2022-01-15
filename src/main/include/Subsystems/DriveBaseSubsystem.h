@@ -18,9 +18,14 @@ class DriveBaseSubsystem : public frc2::SubsystemBase {
 public:
   DriveBaseSubsystem();
 
-    void arcadeDrive(double xSpeed, double zRotation);
-    void driveTankPercentage(double leftPercentage, double rightPercentage);
-    void setCoastMode();
+  void arcadeDrive(double xSpeed, double zRotation);
+  void driveTankPercentage(double leftPercentage, double rightPercentage);
+  void setCoastMode();
+
+  /** PID controller for the left side of the drivetrain */
+  rev::SparkMaxPIDController leftPID = leftLeader.GetPIDController();
+  /** PID controller for the right side of the drivetrain */
+  rev::SparkMaxPIDController rightPID = rightLeader.GetPIDController();
 private:
   /** Definition for the left leader motor controller on the drivetrain. */
   rev::CANSparkMax leftLeader {LEFTLEADERID, rev::CANSparkMax::MotorType::kBrushless};
