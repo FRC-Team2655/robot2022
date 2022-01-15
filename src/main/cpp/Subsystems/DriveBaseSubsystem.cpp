@@ -19,18 +19,18 @@ DriveBaseSubsystem::DriveBaseSubsystem() {
     rightFollower2.Follow(rightLeader);
 
     /** Assigning the PID loop values for the left side of the drivetrain */
-    leftPID.SetP(kPLeft);
-    leftPID.SetI(kILeft);
+    leftPID.SetP(KPLEFT);
+    leftPID.SetI(KILEFT);
     leftPID.SetD(0);
-    leftPID.SetFF(1/LMaxVelocity);
+    leftPID.SetFF(1/LMAXVELOCITY);
     leftPID.SetIZone(0);
     leftPID.SetOutputRange(-1, 1);
 
     /** Assigning the PID loop values for the right side of the drivetrain */
-    rightPID.SetP(kPRight);
-    rightPID.SetI(kIRight);
+    rightPID.SetP(KPRIGHT);
+    rightPID.SetI(KIRIGHT);
     rightPID.SetD(0);
-    rightPID.SetFF(1/RMaxVelocity);
+    rightPID.SetFF(1/RMAXVELOCITY);
     rightPID.SetIZone(0);
     rightPID.SetOutputRange(-1, 1);
 }

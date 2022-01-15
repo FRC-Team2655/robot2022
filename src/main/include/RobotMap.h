@@ -21,26 +21,32 @@
 /** Motor ID for the second right follower motor controller on drivetrain */
 #define RIGHTFOLLOWER2ID 3
 
+/** Motor ID for the Intake */
+#define INTAKEID 9
+
 
 
 /** PID Value Definitions */
 
 /** Left side drivetrain P value */
-#define kPLeft 0.1
+#define KPLEFT 0.1
 /** Left side drivetrain I value */
-#define kILeft 0.1
+#define KILEFT 0.1
 
 /** Right side drivetrain P value */
-#define kPRight 0.0001
+#define KPRIGHT 0.0001
 /** Right side drivetrain I value */
-#define kIRight 0.0001
+#define KIRIGHT 0.0001
 
 
 
 /** Max Velocities */
 
 /** Right side drivetrain max velocity */
-#define RMaxVelocity 5500
+#define RMAXVELOCITY 5500
 
 /** Left side drivetrain max velocity */
-#define LMaxVelocity 5500
+#define LMAXVELOCITY 5500
+
+/** Intake percentage speed */
+#define INTAKESPEED 0.8

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['leftfollower1id_0',['LEFTFOLLOWER1ID',['../_robot_map_8h.html#afc47bcdd63752d43f994fe3544418a0d',1,'RobotMap.h']]],
-  ['leftfollower2id_1',['LEFTFOLLOWER2ID',['../_robot_map_8h.html#a21d433ff353596a38bc0b13691c5bebb',1,'RobotMap.h']]],
-  ['leftleaderid_2',['LEFTLEADERID',['../_robot_map_8h.html#aa66198cd33267349bbea3059bc486fa4',1,'RobotMap.h']]]
+  ['kileft_0',['KILEFT',['../_robot_map_8h.html#aa91531fe8ca82943c4c34507a20e307d',1,'RobotMap.h']]],
+  ['kiright_1',['KIRIGHT',['../_robot_map_8h.html#ad28142ddece898e22069e6b98e6738df',1,'RobotMap.h']]],
+  ['kpleft_2',['KPLEFT',['../_robot_map_8h.html#a56032c0b5703590305a4e7315c44b6f8',1,'RobotMap.h']]],
+  ['kpright_3',['KPRIGHT',['../_robot_map_8h.html#a1ff65677bd27f87a93939298e0069d37',1,'RobotMap.h']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['joystick_0',['joystick',['../class_input.html#a0cb913c56610c593d2a55e07e9fff58c',1,'Input']]]
+  ['joystick_0',['joystick',['../class_input.html#a216a4d2fd7289ab8141922825dfc41e2',1,'Input']]]
 ];

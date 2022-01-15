@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['leftfollower1id_0',['LEFTFOLLOWER1ID',['../_robot_map_8h.html#afc47bcdd63752d43f994fe3544418a0d',1,'RobotMap.h']]],
-  ['leftfollower2id_1',['LEFTFOLLOWER2ID',['../_robot_map_8h.html#a21d433ff353596a38bc0b13691c5bebb',1,'RobotMap.h']]],
-  ['leftleaderid_2',['LEFTLEADERID',['../_robot_map_8h.html#aa66198cd33267349bbea3059bc486fa4',1,'RobotMap.h']]]
+  ['intakeid_0',['INTAKEID',['../_robot_map_8h.html#aaf0d3e2e2d5ef4c8f7fce90fd0d50e67',1,'RobotMap.h']]],
+  ['intakespeed_1',['INTAKESPEED',['../_robot_8h.html#a9e5e6c753ef8ae6f7691d2de46a743d3',1,'RobotMap.h']]]
 ];
