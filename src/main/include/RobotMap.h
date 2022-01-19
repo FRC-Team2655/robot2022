@@ -21,6 +21,16 @@
 /** Motor ID for the second right follower motor controller on drivetrain */
 #define RIGHTFOLLOWER2ID 3
 
+/** Motor ID for the first belt */
+#define BELTID1 10
+/** Motor ID for the second belt */
+#define BELTID2 11
+
+/** For the first shooter motor controller */
+#define SHOOTER1 12
+/** For the second shooter motor controller */
+#define SHOOTER2 13
+
 /** Motor ID for the Intake */
 #define INTAKEID 9
 
@@ -43,6 +53,16 @@
 /** Right side drivetrain I value */
 #define KIRIGHT 0.0001
 
+/** P value for the shooter */
+#define KPSHOOTER 0.0001
+/** I value for the shooter */
+#define KISHOOTER 0
+/** D value for the shooter */
+#define KDSHOOTER 0
+
+/** FeedForward value for the shooter */
+#define KFFSHOOTER 0
+
 
 
 /** Max Velocities */
@@ -55,4 +75,13 @@
 
 /** Intake percentage speed */
 #define INTAKESPEED 0.8
+
+/** Speed to run the belt */
+#define BELTSPEED 0.7
+
+/** Speed to run shootor motor controllers */
+ #define SHOOTERPERCENTAGE 0.8
+ 
+/** Shooter max velocity */
+#define SHOOTERVELOCITY 5000
 
