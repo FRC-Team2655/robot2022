@@ -24,6 +24,11 @@
 /** Motor ID for the Intake */
 #define INTAKEID 9
 
+/** Solenoid ID for the Intake */
+#define INTAKESOLA 5
+/** Second Solenoid ID for the Intake */
+#define INTAKESOLB 6
+
 
 
 /** PID Value Definitions */
@@ -50,3 +55,4 @@
 
 /** Intake percentage speed */
 #define INTAKESPEED 0.8
+

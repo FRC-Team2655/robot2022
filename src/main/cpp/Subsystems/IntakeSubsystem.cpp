@@ -17,3 +17,13 @@ void IntakeSubsystem::RunInatekMotor() {
 
 /** This method will be called once per scheduler run */
 void IntakeSubsystem::Periodic() {}
+
+/** Controls the Solenoid to bring the intake out */
+void IntakeSubsystem::IntakeOut() {
+    intakeSol.Set(frc::DoubleSolenoid::Value::kForward);
+}
+
+/** Controls the Solenoid to bring the intake in */
+void IntakeSubsystem::IntakeIn() {
+    intakeSol.Set(frc::DoubleSolenoid::Value::kReverse);
+}
