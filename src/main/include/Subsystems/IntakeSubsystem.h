@@ -26,8 +26,6 @@ class IntakeSubsystem : public frc2::SubsystemBase {
   
   void IntakeIn();
 
-
-
  private:
  /** Intake Motor definition */
 rev::CANSparkMax intake {INTAKEID, rev::CANSparkMax::MotorType::kBrushless};

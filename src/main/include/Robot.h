@@ -14,12 +14,14 @@
 #include "RobotMap.h"
 #include <ctre/Phoenix.h>
 #include "Input.h"
+#include "Subsystems/LimelightSubsystem.h"
 
 /** The Robot class is the central class in the project. */
 class Robot : public frc::TimedRobot {
 public:
   static DriveBaseSubsystem driveBase;
   static Input input;
+  static LimelightSubsystem limelight;
 
   void RobotInit() override;
   void RobotPeriodic() override;

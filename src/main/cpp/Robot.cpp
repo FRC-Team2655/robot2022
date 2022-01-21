@@ -11,6 +11,8 @@
 DriveBaseSubsystem Robot::driveBase;
 /** Declaring the Input instance. */
 Input Robot::input;
+/** Declaring the Limelight instance */
+LimelightSubsystem Robot::limelight;
 
 /**
  * @brief This function is run when the Robot is Initialized.
@@ -25,6 +27,7 @@ void Robot::RobotInit() {
  * @return void
  */ 
 void Robot::RobotPeriodic() {
+  limelight.UpdateValues();
 }
 
 /**

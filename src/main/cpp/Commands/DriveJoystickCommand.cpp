@@ -38,7 +38,7 @@ void DriveJoystickCommand::Execute() {
   else if (rawBackward > deadband) driveDirection = -rawBackward;
 
 
-  double rotate = -0.5 * team2655::jshelper::getAxisValue(Robot::input.rotateAxisConfig, Robot::input.joystick->GetRawAxis(0));
+  double rotate = 0.5 * team2655::jshelper::getAxisValue(Robot::input.rotateAxisConfig, Robot::input.joystick->GetRawAxis(0));
   double power = team2655::jshelper::getAxisValue(Robot::input.driveAxisConfig, driveDirection);
 
 

@@ -16,7 +16,6 @@ ShooterSubsystem::ShooterSubsystem() {
     shooterPID.SetI(KISHOOTER);
     shooterPID.SetD(KDSHOOTER);
     shooterPID.SetFF(KFFSHOOTER);
-    
 }
 
 
