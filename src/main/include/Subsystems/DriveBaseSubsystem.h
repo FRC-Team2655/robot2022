@@ -18,9 +18,9 @@ class DriveBaseSubsystem : public frc2::SubsystemBase {
 public:
   DriveBaseSubsystem();
 
-  void arcadeDrive(double xSpeed, double zRotation);
-  void driveTankPercentage(double leftPercentage, double rightPercentage);
-  void setCoastMode();
+  void ArcadeDrive(double xSpeed, double zRotation);
+  void DriveTankPercentage(double leftPercentage, double rightPercentage);
+  void SetCoastMode();
 
   /** PID controller for the left side of the drivetrain */
   rev::SparkMaxPIDController leftPID = leftLeader.GetPIDController();
@@ -42,7 +42,7 @@ private:
   rev::CANSparkMax rightFollower2 {RIGHTFOLLOWER2ID, rev::CANSparkMax::MotorType::kBrushless};
 
   /** Assigning the motor controllers to the DifferentialDrive */
-  frc::DifferentialDrive robotDrive{leftLeader, rightLeader};
+  frc::DifferentialDrive robotDrive {leftLeader, rightLeader};
 
   /** The DriveJoystickCommand instance */
   DriveJoystickCommand driveJoystick;

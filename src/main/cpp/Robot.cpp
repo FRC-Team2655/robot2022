@@ -28,6 +28,7 @@ void Robot::RobotInit() {
  */ 
 void Robot::RobotPeriodic() {
   limelight.UpdateValues();
+  limelight.PrintValues(); 
 }
 
 /**
@@ -51,7 +52,7 @@ void Robot::AutonomousPeriodic() {
   * @return void
   */
  void Robot::TeleopInit() {
-   driveBase.setCoastMode();
+   driveBase.SetCoastMode();
  }
 
 /** 

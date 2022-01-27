@@ -21,3 +21,12 @@ void LimelightSubsystem::UpdateValues() {
   double targetSkew = limelightTable->GetNumber("ts",0.0);
   double identifyTarget = limelightTable->GetNumber("tv", 0.0);
 }
+
+/** Prints the Limelight's values */
+void LimelightSubsystem::PrintValues() {
+    std::cout << "tx: " << targetOffsetAngle_Horizontal << std::endl;
+    std::cout << "ty: " << targetOffsetAngle_Vertical << std::endl;
+    std::cout << "ta: " << targetArea << std::endl;
+    std::cout << "ts: " << targetSkew << std::endl;
+    std::cout << "tv: " << identifyTarget << std::endl;
+}

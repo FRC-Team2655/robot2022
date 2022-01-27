@@ -42,7 +42,7 @@ void DriveJoystickCommand::Execute() {
   double power = team2655::jshelper::getAxisValue(Robot::input.driveAxisConfig, driveDirection);
 
 
-	Robot::driveBase.arcadeDrive(power, rotate);
+	Robot::driveBase.ArcadeDrive(power, rotate);
 }
 
 /** Called once the command ends or is interrupted. */

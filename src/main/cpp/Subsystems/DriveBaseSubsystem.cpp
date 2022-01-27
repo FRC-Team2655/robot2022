@@ -41,7 +41,7 @@ DriveBaseSubsystem::DriveBaseSubsystem() {
  * @param zRotation the rotation to drive the robot about the z-axis
  * @return void
  */ 
-void DriveBaseSubsystem::arcadeDrive(double xSpeed, double zRotation) {
+void DriveBaseSubsystem::ArcadeDrive(double xSpeed, double zRotation) {
     // Drive with arcade style
     robotDrive.ArcadeDrive(xSpeed, zRotation);
 }
@@ -52,7 +52,7 @@ void DriveBaseSubsystem::arcadeDrive(double xSpeed, double zRotation) {
  * @param rightPercentage The percentage to run the right side at.
  * @return void
  */ 
-void DriveBaseSubsystem::driveTankPercentage(double leftPercentage, double rightPercentage) {
+void DriveBaseSubsystem::DriveTankPercentage(double leftPercentage, double rightPercentage) {
     /** Set the motors to run at the percentage value on the left side of the drivetrain */
 	leftLeader.Set(leftPercentage);
 	leftFollower1.Set(leftPercentage);
@@ -68,7 +68,7 @@ void DriveBaseSubsystem::driveTankPercentage(double leftPercentage, double right
  * @brief Function used to set all the motor controllers in coast mode.
  * @return void
  */ 
-void DriveBaseSubsystem::setCoastMode() {
+void DriveBaseSubsystem::SetCoastMode() {
     /** Set the Motor Controllers in Coast Mode */
    leftLeader.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
    leftFollower1.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
