@@ -7,8 +7,10 @@
 
 #include "Subsystems/DriveBaseSubsystem.h"
 
+
 /** The constructor of the drivetrain. */
 DriveBaseSubsystem::DriveBaseSubsystem() {
+
     /** Set the DriveJoystickCommand as the default command to be run */
     SetDefaultCommand(driveJoystick);
 
@@ -77,4 +79,20 @@ void DriveBaseSubsystem::SetCoastMode() {
    rightLeader.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
    rightFollower1.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
    rightFollower2.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
+}
+
+/**
+ * @brief Used to get the current angle of the IMU.
+ * @return The IMU angle in degrees.
+ */ 
+units::degree_t DriveBaseSubsystem::GetIMUAngle() {
+    return imu.GetAngle();
+}
+
+/**
+ * @brief Used to reset the angle of the IMU.
+ * @return void
+ */ 
+void DriveBaseSubsystem::ResetIMUAngle() {
+    imu.Reset();
 }

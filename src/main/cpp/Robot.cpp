@@ -36,7 +36,7 @@ void Robot::RobotPeriodic() {
  * @return void
  */ 
 void Robot::AutonomousInit() {
-
+  driveBase.ResetIMUAngle();
 }
 
 /**

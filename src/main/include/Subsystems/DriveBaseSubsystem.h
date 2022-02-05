@@ -13,6 +13,8 @@
 #include "RobotMap.h"
 #include "Commands/DriveJoystickCommand.h"
 
+#include <frc/ADIS16470_IMU.h>
+
 /** The DriveBaseSubsystem class controls the drivebase. */
 class DriveBaseSubsystem : public frc2::SubsystemBase {
 public:
@@ -21,6 +23,9 @@ public:
   void ArcadeDrive(double xSpeed, double zRotation);
   void DriveTankPercentage(double leftPercentage, double rightPercentage);
   void SetCoastMode();
+
+  units::degree_t GetIMUAngle();
+  void ResetIMUAngle();
 
   /** PID controller for the left side of the drivetrain */
   rev::SparkMaxPIDController leftPID = leftLeader.GetPIDController();
@@ -46,4 +51,7 @@ private:
 
   /** The DriveJoystickCommand instance */
   DriveJoystickCommand driveJoystick;
+
+  /** Creating the IMU instance */
+  frc::ADIS16470_IMU imu {};
 };
