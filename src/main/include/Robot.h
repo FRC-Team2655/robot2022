@@ -14,8 +14,6 @@
 #include "RobotMap.h"
 #include <ctre/Phoenix.h>
 #include "Input.h"
-#include "Subsystems/LimelightSubsystem.h"
-
 
 #include "rev/ColorSensorV3.h"
 #include "rev/ColorMatch.h"
@@ -25,7 +23,6 @@ class Robot : public frc::TimedRobot {
 public:
   static DriveBaseSubsystem driveBase;
   static Input input;
-  static LimelightSubsystem limelight;
 
   void RobotInit() override;
   void RobotPeriodic() override;
@@ -36,4 +33,5 @@ public:
   void TeleopInit() override;
   void TeleopPeriodic() override;
 private:
+  DriveJoystickCommand driveJoystick;
 };

@@ -8,11 +8,11 @@
 /** Motor Controller ID Definitions */
 
 /** Motor ID for the left leader motor controller on drivetrain */
-#define LEFTLEADERID 6
+#define LEFTLEADERID 4
 /** Motor ID for the first left follower motor controller on drivetrain */
 #define LEFTFOLLOWER1ID 5
 /** Motor ID for the second left follower motor controller on drivetrain */
-#define LEFTFOLLOWER2ID 4
+#define LEFTFOLLOWER2ID 6
 
 /** Motor ID for the right leader motor controller on drivetrain */
 #define RIGHTLEADERID 1
@@ -20,24 +20,6 @@
 #define RIGHTFOLLOWER1ID 2
 /** Motor ID for the second right follower motor controller on drivetrain */
 #define RIGHTFOLLOWER2ID 3
-
-/** Motor ID for the first belt */
-#define BELTID1 10
-/** Motor ID for the second belt */
-#define BELTID2 11
-
-/** For the first shooter motor controller */
-#define SHOOTER1 12
-/** For the second shooter motor controller */
-#define SHOOTER2 13
-
-/** Motor ID for the Intake */
-#define INTAKEID 9
-
-/** Solenoid ID for the Intake */
-#define INTAKESOLA 5
-/** Second Solenoid ID for the Intake */
-#define INTAKESOLB 6
 
 
 

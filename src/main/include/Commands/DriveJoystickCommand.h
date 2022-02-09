@@ -11,6 +11,8 @@
 #include <frc2/command/CommandHelper.h>
 #include "team2655/joystick.hpp"
 
+#include <iostream>
+
 /** The DriveJoystickCommand class drives the robot by joystick control */
 class DriveJoystickCommand
     : public frc2::CommandHelper<frc2::CommandBase, DriveJoystickCommand> {

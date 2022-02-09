@@ -43,6 +43,8 @@ void DriveJoystickCommand::Execute() {
 
 
 	Robot::driveBase.ArcadeDrive(power, rotate);
+
+  std::cout << "Drive Joystick is run" << std::endl;
 }
 
 /** Called once the command ends or is interrupted. */

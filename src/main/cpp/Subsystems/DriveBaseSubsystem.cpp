@@ -12,7 +12,7 @@
 DriveBaseSubsystem::DriveBaseSubsystem() {
 
     /** Set the DriveJoystickCommand as the default command to be run */
-    SetDefaultCommand(driveJoystick);
+    //SetDefaultCommand(driveJoystick);
 
     /** Make the followers follow the leaders */
     leftFollower1.Follow(leftLeader);
