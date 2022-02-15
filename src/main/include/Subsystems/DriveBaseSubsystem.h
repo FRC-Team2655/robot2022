@@ -12,6 +12,7 @@
 #include <frc/drive/DifferentialDrive.h>
 #include "RobotMap.h"
 #include "Commands/DriveJoystickCommand.h"
+#include <frc/motorcontrol/MotorControllerGroup.h>
 
 #include <frc/ADIS16470_IMU.h>
 
@@ -46,8 +47,12 @@ private:
   /** Definition for the second right follower motor controller on the drivetrain. */
   rev::CANSparkMax rightFollower2 {RIGHTFOLLOWER2ID, rev::CANSparkMax::MotorType::kBrushless};
 
+  /** Grouping the left and right motor controllers */
+  frc::MotorControllerGroup leftSide {leftLeader, leftFollower1, leftFollower2};
+  frc::MotorControllerGroup rightSide {rightLeader, rightFollower1, rightFollower2};
+
   /** Assigning the motor controllers to the DifferentialDrive */
-  frc::DifferentialDrive robotDrive {leftLeader, rightLeader};
+  frc::DifferentialDrive robotDrive {leftSide, rightSide};
 
   /** The DriveJoystickCommand instance */
   DriveJoystickCommand driveJoystick;

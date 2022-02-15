@@ -29,6 +29,8 @@ void Robot::RobotInit() {
 void Robot::RobotPeriodic() {
   limelight.UpdateValues();
   limelight.PrintValues(); 
+
+  frc2::CommandScheduler::GetInstance().Run();
 }
 
 /**
