@@ -25,7 +25,7 @@ public:
   void DriveTankPercentage(double leftPercentage, double rightPercentage);
   void SetCoastMode();
 
-  units::degree_t GetIMUAngle();
+  double GetIMUAngle();
   void ResetIMUAngle();
 
   /** PID controller for the left side of the drivetrain */

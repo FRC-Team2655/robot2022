@@ -7,6 +7,8 @@
 
 #pragma once
 
+#include <frc/smartdashboard/SmartDashboard.h>
+
 #include <frc/TimedRobot.h>
 #include "frc/Controller/RamseteController.h"
 #include <frc/motorcontrol/PWMSparkMax.h>

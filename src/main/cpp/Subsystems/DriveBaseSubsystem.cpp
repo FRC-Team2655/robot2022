@@ -85,8 +85,11 @@ void DriveBaseSubsystem::SetCoastMode() {
  * @brief Used to get the current angle of the IMU.
  * @return The IMU angle in degrees.
  */ 
-units::degree_t DriveBaseSubsystem::GetIMUAngle() {
-    return imu.GetAngle();
+double DriveBaseSubsystem::GetIMUAngle() {
+    units::degree_t angleDegrees = imu.GetAngle();
+    double angle = angleDegrees.value();
+
+    return angle;
 }
 
 /**

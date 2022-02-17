@@ -19,7 +19,7 @@ LimelightSubsystem Robot::limelight;
  * @return void
  */ 
 void Robot::RobotInit() {
-
+  frc::SmartDashboard::PutNumber("IMU Angle", 0);
 }
 
 /**
@@ -27,6 +27,8 @@ void Robot::RobotInit() {
  * @return void
  */ 
 void Robot::RobotPeriodic() {
+  frc::SmartDashboard::PutNumber("IMU Angle", driveBase.GetIMUAngle());
+
   limelight.UpdateValues();
   limelight.PrintValues(); 
 
