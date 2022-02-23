@@ -80,8 +80,23 @@
 #define BELTSPEED 0.7
 
 /** Speed to run shootor motor controllers */
- #define SHOOTERPERCENTAGE 0.8
+#define SHOOTERPERCENTAGE 0.8
  
 /** Shooter max velocity */
 #define SHOOTERVELOCITY 5000
 
+
+
+/** Solenoid Ports */
+
+/** Intake Solenoid 1 Forward Port */
+#define INTAKESOL1FORWARDPORT 0
+
+/** Intake Solenoid 1 Reverse Port */
+#define INTAKESOL1REVERSEPORT 1
+
+/** Intake Solenoid 2 Forward Port */
+#define INTAKESOL2FORWARDPORT 14
+
+/** Intake Solenoid 2 Reverse Port */
+#define INTAKESOL2REVERSEPORT 15

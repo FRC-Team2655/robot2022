@@ -27,10 +27,11 @@ class IntakeSubsystem : public frc2::SubsystemBase {
   void IntakeIn();
 
  private:
- /** Intake Motor definition */
-rev::CANSparkMax intake {INTAKEID, rev::CANSparkMax::MotorType::kBrushless};
-/** Intake Solenoid definition */
-frc::DoubleSolenoid intakeSol{frc::PneumaticsModuleType::CTREPCM, INTAKESOLA, INTAKESOLB};
+  /** Intake Motor definition */
+  rev::CANSparkMax intake {INTAKEID, rev::CANSparkMax::MotorType::kBrushless};
+  /** Intake Solenoid definition */
+  frc::DoubleSolenoid intakeSol1 {1, frc::PneumaticsModuleType::REVPH, INTAKESOL1FORWARDPORT, INTAKESOL1REVERSEPORT};
+  frc::DoubleSolenoid intakeSol2 {1, frc::PneumaticsModuleType::REVPH, INTAKESOL2FORWARDPORT, INTAKESOL2REVERSEPORT};
 };
 
 

@@ -20,10 +20,12 @@ void IntakeSubsystem::Periodic() {}
 
 /** Controls the Solenoid to bring the intake out */
 void IntakeSubsystem::IntakeOut() {
-    intakeSol.Set(frc::DoubleSolenoid::Value::kForward);
+    intakeSol1.Set(frc::DoubleSolenoid::kForward);
+    intakeSol2.Set(frc::DoubleSolenoid::kForward);
 }
 
 /** Controls the Solenoid to bring the intake in */
 void IntakeSubsystem::IntakeIn() {
-    intakeSol.Set(frc::DoubleSolenoid::Value::kReverse);
+    intakeSol1.Set(frc::DoubleSolenoid::kReverse);
+    intakeSol2.Set(frc::DoubleSolenoid::kReverse);
 }
