@@ -100,3 +100,10 @@
 
 /** Intake Solenoid 2 Reverse Port */
 #define INTAKESOL2REVERSEPORT 15
+
+
+
+/** PWM Ports */
+
+/** The LED PWM Port */
+#define LEDPWMPORT 0
