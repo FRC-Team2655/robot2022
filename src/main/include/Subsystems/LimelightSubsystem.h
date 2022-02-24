@@ -15,6 +15,7 @@
 #include <frc2/command/SubsystemBase.h>
 #include <iostream>
 
+/** Subsystem to control the limelight */
 class LimelightSubsystem : public frc2::SubsystemBase {
  public:
   LimelightSubsystem();

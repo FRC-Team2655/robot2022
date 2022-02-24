@@ -13,6 +13,7 @@
 
 #include <frc/motorcontrol/PWMSparkMax.h>
 
+/** Class to control the LEDs */
 class LEDSubsystem : public frc2::SubsystemBase {
  public:
   LEDSubsystem();
