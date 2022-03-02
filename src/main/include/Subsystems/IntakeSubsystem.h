@@ -20,7 +20,7 @@ class IntakeSubsystem : public frc2::SubsystemBase {
 
   void Periodic() override;
 
-  void RunInatekMotor();
+  void RunIntakeRollers();
 
   void IntakeOut();
   
@@ -28,7 +28,7 @@ class IntakeSubsystem : public frc2::SubsystemBase {
 
  private:
   /** Intake Motor definition */
-  rev::CANSparkMax intake {INTAKEID, rev::CANSparkMax::MotorType::kBrushless};
+  rev::CANSparkMax intakeRollers {INTAKEROLLERSID, rev::CANSparkMax::MotorType::kBrushless};
   /** Intake Solenoid definition */
   frc::DoubleSolenoid intakeSol1 {1, frc::PneumaticsModuleType::REVPH, INTAKESOL1FORWARDPORT, INTAKESOL1REVERSEPORT};
   frc::DoubleSolenoid intakeSol2 {1, frc::PneumaticsModuleType::REVPH, INTAKESOL2FORWARDPORT, INTAKESOL2REVERSEPORT};

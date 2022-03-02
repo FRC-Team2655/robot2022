@@ -11,8 +11,8 @@
 IntakeSubsystem::IntakeSubsystem() {
 }
 
-void IntakeSubsystem::RunInatekMotor() {
-    intake.Set(INTAKESPEED);
+void IntakeSubsystem::RunIntakeRollers() {
+    intakeRollers.Set(INTAKESPEED);
 }
 
 /** This method will be called once per scheduler run */

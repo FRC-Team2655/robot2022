@@ -36,7 +36,7 @@
 #define SHOOTER2 13
 
 /** Motor ID for the Intake */
-#define INTAKEID 9
+#define INTAKEROLLERSID 9
 
 /** Solenoid ID for the Intake */
 #define INTAKESOLA 5
