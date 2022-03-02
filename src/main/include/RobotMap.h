@@ -21,10 +21,14 @@
 /** Motor ID for the second right follower motor controller on drivetrain */
 #define RIGHTFOLLOWER2ID 3
 
-/** Motor ID for the first belt */
-#define BELTID1 10
-/** Motor ID for the second belt */
-#define BELTID2 11
+/** Motor ID for the lower left belt motor controller */
+#define LOWERBELTLEFTID 10
+/** Motor ID for the lower right belt motor controller */
+#define LOWERBELTRIGHTID 11
+/** Motor ID for the upper left belt motor controller */
+#define UPPERBELTLEFTID 12
+/** Motor ID for the upper right belt motor controller */
+#define UPPERBELTRIGHTID 13
 
 /** For the first shooter motor controller */
 #define SHOOTER1 12
@@ -107,3 +111,15 @@
 
 /** The LED PWM Port */
 #define LEDPWMPORT 0
+
+
+
+/** DIO Ports */
+
+/** The Proximity Sensor DIO Port */
+#define PROXIMITYSENSORPORT 1
+
+
+
+/** How close the ball has to be to the color sensor for it to be considered "triggered" */
+#define COLORSENSORPROXIMITYDISTANCE 10
