@@ -15,6 +15,8 @@ Input Robot::input;
 LimelightSubsystem Robot::limelight;
 /** Declaring the Belts instance */
 BeltSubsystem Robot::belts;
+/** Declaring the Intake instance */
+IntakeSubsystem Robot::intake;
 
 /**
  * @brief This function is run when the Robot is Initialized.

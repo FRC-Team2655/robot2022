@@ -14,6 +14,7 @@
 #include <frc/motorcontrol/PWMSparkMax.h>
 #include "Subsystems/DriveBaseSubsystem.h"
 #include "Subsystems/BeltSubsystem.h"
+#include "Subsystems/IntakeSubsystem.h"
 #include "RobotMap.h"
 #include <ctre/Phoenix.h>
 #include "Input.h"
@@ -30,6 +31,7 @@ public:
   static Input input;
   static LimelightSubsystem limelight;
   static BeltSubsystem belts;
+  static IntakeSubsystem intake;
 
   void RobotInit() override;
   void RobotPeriodic() override;

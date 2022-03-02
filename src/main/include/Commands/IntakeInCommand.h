@@ -1,8 +1,8 @@
 /**
- * @file RunBeltsCommand.h
- * @date 3/1/2022
+ * @file IntakeInCommand.h
+ * @date 3/1/20222
  * @author Jonah Boan, Aidan Cobb, Alex Nolan
- * @brief Declaring the RunBeltsCommand.h class.
+ * @brief Declaring the IntakeInCommand class.
 **/
 
 #pragma once
@@ -10,11 +10,11 @@
 #include <frc2/command/CommandBase.h>
 #include <frc2/command/CommandHelper.h>
 
-/** The RunBeltsCommand runs the belts using the belt logic */
-class RunBeltsCommand
-    : public frc2::CommandHelper<frc2::CommandBase, RunBeltsCommand> {
+/** The IntakeInCommand extends the intake arm out */
+class IntakeInCommand
+    : public frc2::CommandHelper<frc2::CommandBase, IntakeInCommand> {
  public:
-  RunBeltsCommand();
+  IntakeInCommand();
 
   void Initialize() override;
 
