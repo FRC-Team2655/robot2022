@@ -13,6 +13,8 @@ DriveBaseSubsystem Robot::driveBase;
 Input Robot::input;
 /** Declaring the Limelight instance */
 LimelightSubsystem Robot::limelight;
+/** Declaring the Belts instance */
+BeltSubsystem Robot::belts;
 
 /**
  * @brief This function is run when the Robot is Initialized.

@@ -10,6 +10,8 @@
 #include <frc/Joystick.h>
 #include <frc2/command/button/JoystickButton.h>
 
+#include "Commands/RunBeltsCommand.h"
+
 #include "team2655/joystick.hpp"
 
 /** This is the input class. It deals with the joystick input. */

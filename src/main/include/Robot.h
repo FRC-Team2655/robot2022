@@ -13,6 +13,7 @@
 #include "frc/Controller/RamseteController.h"
 #include <frc/motorcontrol/PWMSparkMax.h>
 #include "Subsystems/DriveBaseSubsystem.h"
+#include "Subsystems/BeltSubsystem.h"
 #include "RobotMap.h"
 #include <ctre/Phoenix.h>
 #include "Input.h"
@@ -28,6 +29,7 @@ public:
   static DriveBaseSubsystem driveBase;
   static Input input;
   static LimelightSubsystem limelight;
+  static BeltSubsystem belts;
 
   void RobotInit() override;
   void RobotPeriodic() override;
