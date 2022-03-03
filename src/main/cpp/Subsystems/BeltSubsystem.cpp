@@ -20,15 +20,15 @@ void BeltSubsystem::Periodic() {}
 /** Function for running upper belts */
 void BeltSubsystem::RunUpperBelts() {
     /** Set the upper belts to the belt speed */
-    upperBeltLeft.Set(BELTSPEED);
-    upperBeltRight.Set(BELTSPEED);
+    upperBelt1.Set(BELTSPEED);
+    upperBelt2.Set(BELTSPEED);
 }
 
 /** Function for running lower belts */
 void BeltSubsystem::RunLowerBelts() {
     /** Set the lower belts to the belt speed */
-    lowerBeltLeft.Set(BELTSPEED);
-    lowerBeltRight.Set(BELTSPEED);
+    lowerBelt1.Set(BELTSPEED);
+    lowerBelt2.Set(BELTSPEED);
 }
 
 /** Function for running all belts */
@@ -40,14 +40,14 @@ void BeltSubsystem::RunAllBelts() {
 
 /** Function to stop the upper belts from running */
 void BeltSubsystem::StopUpperBelts() {
-    upperBeltLeft.Set(0);
-    upperBeltRight.Set(0);
+    upperBelt1.Set(0);
+    upperBelt2.Set(0);
 }
 
 /** Function to stop the lower belts from running */
 void BeltSubsystem::StopLowerBelts() {
-    lowerBeltLeft.Set(0);
-    lowerBeltRight.Set(0);
+    lowerBelt1.Set(0);
+    lowerBelt2.Set(0);
 }
 
 /** Function to stop all the belts from running */

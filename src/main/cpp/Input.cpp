@@ -25,4 +25,8 @@ Input::Input() {
   optionsBtn = new frc2::JoystickButton(joystick, 10);
   rightStickBtn = new frc2::JoystickButton(joystick, 12);
 
+  /** When the square button is pressed, move the intake in */
+  squareBtn->WhenPressed(intakeIn);
+  /** When the x button is pressed, move the intake out and run the belts */
+  xBtn->WhenPressed(frc2::SequentialCommandGroup(IntakeOutCommand(), RunBeltsCommand()));
 }

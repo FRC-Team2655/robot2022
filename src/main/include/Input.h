@@ -9,8 +9,11 @@
 
 #include <frc/Joystick.h>
 #include <frc2/command/button/JoystickButton.h>
+#include <frc2/command/SequentialCommandGroup.h>
 
 #include "Commands/RunBeltsCommand.h"
+#include "Commands/IntakeOutCommand.h"
+#include "Commands/IntakeInCommand.h"
 
 #include "team2655/joystick.hpp"
 
@@ -35,8 +38,14 @@ public:
     frc2::JoystickButton *optionsBtn;
     frc2::JoystickButton *rightStickBtn;
 
-    // Configurations for the joystick deadband and cubic function.
+    /** Configurations for the joystick deadband and cubic function. */
     team2655::jshelper::AxisConfig driveAxisConfig = team2655::jshelper::createAxisConfig(.1, 0, 0.5);
     team2655::jshelper::AxisConfig rotateAxisConfig = team2655::jshelper::createAxisConfig(0.1);
 private:
+    /** Instance of the intake out command */
+    IntakeOutCommand intakeOut {};
+    /** Instance of the intake in command */
+    IntakeInCommand intakeIn {};
+    /** Instance of the run belts command */
+    RunBeltsCommand runBelts {};
 };

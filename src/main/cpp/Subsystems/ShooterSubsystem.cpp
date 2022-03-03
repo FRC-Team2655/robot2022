@@ -25,12 +25,12 @@ ShooterSubsystem::ShooterSubsystem() {
 void ShooterSubsystem::Periodic() {}
 
 /** Running the shooter at a fixed percentage */
-void ShooterSubsystem::RunShooterPercentage() {
-    shooter1.Set(SHOOTERPERCENTAGE);
-    shooter2.Set(SHOOTERPERCENTAGE);
+void ShooterSubsystem::RunShooterPercentage(double percentage) {
+    shooter1.Set(percentage);
+    shooter2.Set(percentage);
 }
 
 /** Running the shooter using the PID loop */
-void ShooterSubsystem::RunShooterVelocity() {
-    shooterPID.SetReference(SHOOTERVELOCITY, rev::ControlType::kVelocity);
+void ShooterSubsystem::RunShooterVelocity(double velocity) {
+    shooterPID.SetReference(velocity, rev::ControlType::kVelocity);
 }

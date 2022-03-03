@@ -10,12 +10,16 @@
 
 /** Constructor for the IntakeInCommand class */
 IntakeInCommand::IntakeInCommand() {
+  // Require the intake for this command
   AddRequirements(&Robot::intake);
 }
 
 /** Called when the command is initially scheduled. */
 void IntakeInCommand::Initialize() {
+  // Run the command to move the intake in
   Robot::intake.IntakeIn();
+  // Set the variable to track whether the intake is in to true
+  Robot::intake.isIntakeIn = true;
 }
 
 /** Called repeatedly when this Command is scheduled to run */
@@ -26,5 +30,6 @@ void IntakeInCommand::End(bool interrupted) {}
 
 /** Returns true when the command should end. */
 bool IntakeInCommand::IsFinished() {
-  return false;
+  // End the command after the first run
+  return true;
 }

@@ -11,6 +11,7 @@
 IntakeSubsystem::IntakeSubsystem() {
 }
 
+/** Run the intake rollers at a set speed */
 void IntakeSubsystem::RunIntakeRollers() {
     intakeRollers.Set(INTAKESPEED);
 }

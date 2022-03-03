@@ -22,13 +22,13 @@
 #define RIGHTFOLLOWER2ID 3
 
 /** Motor ID for the lower left belt motor controller */
-#define LOWERBELTLEFTID 10
+#define LOWERBELT1ID 10
 /** Motor ID for the lower right belt motor controller */
-#define LOWERBELTRIGHTID 11
+#define LOWERBELT2ID 11
 /** Motor ID for the upper left belt motor controller */
-#define UPPERBELTLEFTID 12
+#define UPPERBELT1ID 12
 /** Motor ID for the upper right belt motor controller */
-#define UPPERBELTRIGHTID 13
+#define UPPERBELT2ID 13
 
 /** For the first shooter motor controller */
 #define SHOOTER1 12
@@ -69,7 +69,7 @@
 
 
 
-/** Max Velocities */
+/** Velocities */
 
 /** Right side drivetrain max velocity */
 #define RMAXVELOCITY 5500
@@ -88,6 +88,9 @@
  
 /** Shooter max velocity */
 #define SHOOTERVELOCITY 5000
+
+/** Speed for the shooter to run at a very slow speed such that the ball "drips" out. */
+#define SHOOTERDRIPOUTSPEED 500
 
 
 

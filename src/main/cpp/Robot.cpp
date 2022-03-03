@@ -17,6 +17,8 @@ LimelightSubsystem Robot::limelight;
 BeltSubsystem Robot::belts;
 /** Declaring the Intake instance */
 IntakeSubsystem Robot::intake;
+/** Declaring the Shooter instance. */
+ShooterSubsystem Robot::shooter;
 
 /**
  * @brief This function is run when the Robot is Initialized.

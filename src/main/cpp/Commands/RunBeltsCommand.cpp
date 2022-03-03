@@ -10,6 +10,7 @@
 
 /** Constructor for the RunBeltsCommand. */
 RunBeltsCommand::RunBeltsCommand() {
+  // Require the belts subsystem for this command
   AddRequirements(&Robot::belts);
 }
 
@@ -30,5 +31,6 @@ void RunBeltsCommand::End(bool interrupted) {
 
 /** Returns true when the command should end. */
 bool RunBeltsCommand::IsFinished() {
-  return false;
+  // Returns true, and the command ends, when the intake is in.
+  return Robot::intake.isIntakeIn;
 }

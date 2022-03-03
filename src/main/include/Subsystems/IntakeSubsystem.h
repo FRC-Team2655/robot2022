@@ -26,6 +26,9 @@ class IntakeSubsystem : public frc2::SubsystemBase {
   
   void IntakeIn();
 
+  /** Boolean variable to track whether the intake is out or in */
+  bool isIntakeIn = false;
+
  private:
   /** Intake Motor definition */
   rev::CANSparkMax intakeRollers {INTAKEROLLERSID, rev::CANSparkMax::MotorType::kBrushless};

@@ -18,9 +18,9 @@ class ShooterSubsystem : public frc2::SubsystemBase {
 
   void Periodic() override;
 
-  void RunShooterPercentage();
+  void RunShooterPercentage(double percentage);
 
-  void RunShooterVelocity();
+  void RunShooterVelocity(double velocity);
 
   /** PID Controller for the shooter */
   rev::SparkMaxPIDController shooterPID = shooter1.GetPIDController();

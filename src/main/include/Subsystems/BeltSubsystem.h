@@ -42,13 +42,13 @@ class BeltSubsystem : public frc2::SubsystemBase {
 
  private:
  /** Lower belt on the left side motor controller definition */
-  rev::CANSparkMax lowerBeltLeft {LOWERBELTLEFTID, rev::CANSparkMax::MotorType::kBrushless};
+  rev::CANSparkMax lowerBelt1 {LOWERBELT1ID, rev::CANSparkMax::MotorType::kBrushless};
   /** Lower belt on the right side motor controller definition */
-  rev::CANSparkMax lowerBeltRight {LOWERBELTRIGHTID, rev::CANSparkMax::MotorType::kBrushless};
+  rev::CANSparkMax lowerBelt2 {LOWERBELT2ID, rev::CANSparkMax::MotorType::kBrushless};
   /** Upper belt on the left side motor controller definition */
-  rev::CANSparkMax upperBeltLeft {UPPERBELTLEFTID, rev::CANSparkMax::MotorType::kBrushless};
+  rev::CANSparkMax upperBelt1 {UPPERBELT1ID, rev::CANSparkMax::MotorType::kBrushless};
   /** Upper belt on the right side motor controller definition */
-  rev::CANSparkMax upperBeltRight {UPPERBELTRIGHTID, rev::CANSparkMax::MotorType::kBrushless};
+  rev::CANSparkMax upperBelt2 {UPPERBELT2ID, rev::CANSparkMax::MotorType::kBrushless};
 
   /** Proximity Sensor Definition */
   frc::DigitalInput proximSensor {PROXIMITYSENSORPORT};
