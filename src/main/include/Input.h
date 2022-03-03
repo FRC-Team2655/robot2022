@@ -14,6 +14,8 @@
 #include "Commands/RunBeltsCommand.h"
 #include "Commands/IntakeOutCommand.h"
 #include "Commands/IntakeInCommand.h"
+#include "Commands/RunShooterDripoutSpeedCommand.h"
+#include "Commands/RunShooterVelocityCommand.h"
 
 #include "team2655/joystick.hpp"
 
@@ -48,4 +50,8 @@ private:
     IntakeInCommand intakeIn {};
     /** Instance of the run belts command */
     RunBeltsCommand runBelts {};
+    /** Instance of the run shooter dripout speed command */
+    RunShooterDripoutSpeedCommand runShooterDripoutSpeed {};
+    /** Instance of the run shooter velocity command */
+    RunShooterVelocityCommand runShooterVelocity {};
 };

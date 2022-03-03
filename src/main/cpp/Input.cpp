@@ -29,4 +29,8 @@ Input::Input() {
   squareBtn->WhenPressed(intakeIn);
   /** When the x button is pressed, move the intake out and run the belts */
   xBtn->WhenPressed(frc2::SequentialCommandGroup(IntakeOutCommand(), RunBeltsCommand()));
+  /** When the circle button is pressed, run the shooter at the "dripout" speed. */
+  circleBtn->WhenHeld(runShooterDripoutSpeed);
+  /** When the triangle button is pressed, run the shooter at the shooter velocity */
+  triangleBtn->WhenHeld(runShooterVelocity);
 }
