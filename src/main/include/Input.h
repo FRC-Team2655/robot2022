@@ -11,13 +11,14 @@
 #include <frc2/command/button/JoystickButton.h>
 #include <frc2/command/SequentialCommandGroup.h>
 
+#include "team2655/joystick.hpp"
+
 #include "Commands/RunBeltsCommand.h"
 #include "Commands/IntakeOutCommand.h"
 #include "Commands/IntakeInCommand.h"
 #include "Commands/RunShooterDripoutSpeedCommand.h"
 #include "Commands/RunShooterVelocityCommand.h"
-
-#include "team2655/joystick.hpp"
+#include "Commands/RunAllBeltsCommand.h"
 
 /** This is the input class. It deals with the joystick input. */
 class Input {
@@ -48,10 +49,12 @@ private:
     IntakeOutCommand intakeOut {};
     /** Instance of the intake in command */
     IntakeInCommand intakeIn {};
-    /** Instance of the run belts command */
+    /** Instance of the run belts with belt logic command */
     RunBeltsCommand runBelts {};
     /** Instance of the run shooter dripout speed command */
     RunShooterDripoutSpeedCommand runShooterDripoutSpeed {};
     /** Instance of the run shooter velocity command */
     RunShooterVelocityCommand runShooterVelocity {};
+    /** Instance of the run all belts without belt logic command. */
+    RunAllBeltsCommand runAllBelts {};
 };
