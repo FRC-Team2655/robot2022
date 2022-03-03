@@ -35,4 +35,6 @@ Input::Input() {
   triangleBtn->WhenHeld(runShooterVelocity);
   /** When the L1 button is held, run all the belts without belt logic */
   l1Btn->WhenHeld(runAllBelts);
+  /** When the R1 button is held, run the intake rollers. */
+  r1Btn->WhenHeld(runIntakeRollers);
 }

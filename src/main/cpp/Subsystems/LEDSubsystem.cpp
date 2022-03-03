@@ -8,12 +8,17 @@
 #include "Subsystems/LEDSubsystem.h"
 
 /** The Constructor for the LEDSubsystem class */
-LEDSubsystem::LEDSubsystem() = default;
+LEDSubsystem::LEDSubsystem() {};
 
-/** This method will be called once per scheduler run */
+/** @brief This method will be called once per scheduler run 
+ * @return void
+*/
 void LEDSubsystem::Periodic() {}
 
-/** Function to set LEDS to a solid color */
+/** @brief Function to set LEDS to a solid color 
+ * @param color The color to set the LEDs to.
+ * @return void
+*/
 void LEDSubsystem::SetLEDColor(LEDSubsystem::LEDColors color)
 {
     /* Validate input */
@@ -30,14 +35,18 @@ void LEDSubsystem::SetLEDColor(LEDSubsystem::LEDColors color)
     currentColor = color;
 }
 
-/* Function to set dual pattern idle mode (purple + gold) */
+/** @brief Function to set dual pattern idle mode (purple + gold) 
+ * @return void
+*/
 void LEDSubsystem::setDualColorMode()
 {
     /* Dual colors, wave mode */
     LEDController.Set(0.53);
 }
 
-/** Function to get the current LED color setting */
+/** @brief Function to get the current LED color setting 
+ * @return The current LED color of type LEDSubsystem::LEDColors.
+*/
 LEDSubsystem::LEDColors LEDSubsystem::GetLEDColor()
 {
     return currentColor;

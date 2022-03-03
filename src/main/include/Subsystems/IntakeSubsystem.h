@@ -20,7 +20,7 @@ class IntakeSubsystem : public frc2::SubsystemBase {
 
   void Periodic() override;
 
-  void RunIntakeRollers();
+  void RunIntakeRollers(double percentage);
 
   void IntakeOut();
   

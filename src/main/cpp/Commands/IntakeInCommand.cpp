@@ -14,7 +14,9 @@ IntakeInCommand::IntakeInCommand() {
   AddRequirements(&Robot::intake);
 }
 
-/** Called when the command is initially scheduled. */
+/** @brief Called when the command is initially scheduled. 
+ * @return void
+*/
 void IntakeInCommand::Initialize() {
   // Run the command to move the intake in
   Robot::intake.IntakeIn();
@@ -22,13 +24,19 @@ void IntakeInCommand::Initialize() {
   Robot::intake.isIntakeIn = true;
 }
 
-/** Called repeatedly when this Command is scheduled to run */
+/** @brief Called repeatedly when this Command is scheduled to run 
+ * @return void
+*/
 void IntakeInCommand::Execute() {}
 
-/** Called once the command ends or is interrupted. */
+/** @brief Called once the command ends or is interrupted. 
+ * @return void
+*/
 void IntakeInCommand::End(bool interrupted) {}
 
-/** Returns true when the command should end. */
+/** @brief Returns true when the command should end. 
+ * @return Whether the command should finish.
+*/
 bool IntakeInCommand::IsFinished() {
   // End the command after the first run
   return true;

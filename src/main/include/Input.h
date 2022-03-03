@@ -19,6 +19,7 @@
 #include "Commands/RunShooterDripoutSpeedCommand.h"
 #include "Commands/RunShooterVelocityCommand.h"
 #include "Commands/RunAllBeltsCommand.h"
+#include "Commands/RunIntakeRollersCommand.h"
 
 /** This is the input class. It deals with the joystick input. */
 class Input {
@@ -57,4 +58,6 @@ private:
     RunShooterVelocityCommand runShooterVelocity {};
     /** Instance of the run all belts without belt logic command. */
     RunAllBeltsCommand runAllBelts {};
+    /** Instance of the run intake rollers command. */
+    RunIntakeRollersCommand runIntakeRollers {};
 };

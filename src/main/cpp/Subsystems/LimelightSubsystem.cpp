@@ -8,12 +8,16 @@
 #include "Subsystems/LimelightSubsystem.h"
 
 /** Constructor for the limlight subsystem */
-LimelightSubsystem::LimelightSubsystem() = default;
+LimelightSubsystem::LimelightSubsystem() {};
 
-/** This method will be called once per scheduler run */
+/** @brief This method will be called once per scheduler run 
+ * @return void
+*/
 void LimelightSubsystem::Periodic() {}
 
-/** Updates the values from the limelight periodically */
+/** @brief Updates the values from the limelight periodically 
+ * @return void
+*/
 void LimelightSubsystem::UpdateValues() {
   double targetOffsetAngle_Horizontal = limelightTable->GetNumber("tx",0.0);
   double targetOffsetAngle_Vertical = limelightTable->GetNumber("ty",0.0);
@@ -22,7 +26,9 @@ void LimelightSubsystem::UpdateValues() {
   double identifyTarget = limelightTable->GetNumber("tv", 0.0);
 }
 
-/** Prints the Limelight's values */
+/** @brief Prints the Limelight's values 
+ * @return void
+*/
 void LimelightSubsystem::PrintValues() {
     std::cout << "tx: " << targetOffsetAngle_Horizontal << std::endl;
     std::cout << "ty: " << targetOffsetAngle_Vertical << std::endl;

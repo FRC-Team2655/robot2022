@@ -10,7 +10,9 @@
 /** The constructor for the Autonomous class */
 Autonomous::Autonomous() {}
 
-/** Autonomous routine to shoot the preload and drive away from the goal. Start lined up with the goal. */
+/** @brief Autonomous routine to shoot the preload and drive away from the goal. Start lined up with the goal. 
+ * @return void
+*/
 void Autonomous::ShootPreload() {
     // Run shooter to shoot preload.
 
@@ -23,7 +25,9 @@ void Autonomous::ShootPreload() {
     // Do a 180
 }
 
-/** Autonmous routine to pick up a second ball and shoot the preloads. Start facing the second ball. */
+/** @brief Autonmous routine to pick up a second ball and shoot the preloads. Start facing the second ball. 
+ * @return void
+*/
 void Autonomous::TwoBallAuto() {
     // Put the intake out
 

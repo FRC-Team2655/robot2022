@@ -77,8 +77,8 @@
 /** Left side drivetrain max velocity */
 #define LMAXVELOCITY 5500
 
-/** Intake percentage speed */
-#define INTAKESPEED 0.8
+/** Intake rollers percentage speed */
+#define INTAKEROLLERSSPEED 0.8
 
 /** Speed to run the belt */
 #define BELTSPEED 0.7

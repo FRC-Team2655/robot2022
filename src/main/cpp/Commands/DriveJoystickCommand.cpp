@@ -15,10 +15,14 @@ DriveJoystickCommand::DriveJoystickCommand() {
   AddRequirements(&Robot::driveBase);
 }
 
-/** Called when the command is initially scheduled. */
+/** @brief Called when the command is initially scheduled. 
+ * @return void
+*/
 void DriveJoystickCommand::Initialize() {}
 
-/** Called repeatedly when this Command is scheduled to run */
+/** @brief Called repeatedly when this Command is scheduled to run 
+ * @return void
+*/
 void DriveJoystickCommand::Execute() {
   /** Scaling the raw joystick trigger inputs */
   double rawForward = (Robot::input.joystick->GetRawAxis(3) + 1) / 2;
@@ -45,10 +49,14 @@ void DriveJoystickCommand::Execute() {
 	Robot::driveBase.ArcadeDrive(power, rotate);
 }
 
-/** Called once the command ends or is interrupted. */
+/** @brief Called once the command ends or is interrupted. 
+ * @return void
+*/
 void DriveJoystickCommand::End(bool interrupted) {}
 
-/** Returns true when the command should end. */
+/** @brief Returns true when the command should end. 
+ * @return Whether the command should finish.
+*/
 bool DriveJoystickCommand::IsFinished() {
   return false;
 }

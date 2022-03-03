@@ -14,22 +14,30 @@ RunBeltsCommand::RunBeltsCommand() {
   AddRequirements(&Robot::belts);
 }
 
-/** Called when the command is initially scheduled. */
+/** @brief Called when the command is initially scheduled. 
+ * @return void
+*/
 void RunBeltsCommand::Initialize() {}
 
-/** Called repeatedly when this Command is scheduled to run */
+/** @brief Called repeatedly when this Command is scheduled to run 
+ * @return void
+*/
 void RunBeltsCommand::Execute() {
   // Run the belts using belt logic.
   Robot::belts.RunBelts();
 }
 
-/** Called once the command ends or is interrupted. */
+/** @brief Called once the command ends or is interrupted. 
+ * @return void
+*/
 void RunBeltsCommand::End(bool interrupted) {
   // Stop all the belts.
   Robot::belts.StopAllBelts();
 }
 
-/** Returns true when the command should end. */
+/** @brief Returns true when the command should end. 
+ * @return Whether the command should finish.
+*/
 bool RunBeltsCommand::IsFinished() {
   // Returns true, and the command ends, when the intake is in.
   return Robot::intake.isIntakeIn;

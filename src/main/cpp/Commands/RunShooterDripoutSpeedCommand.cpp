@@ -15,22 +15,30 @@ RunShooterDripoutSpeedCommand::RunShooterDripoutSpeedCommand() {
   AddRequirements(&Robot::shooter);
 }
 
-/** Called when the command is initially scheduled. */
+/** @brief Called when the command is initially scheduled. 
+ * @return void
+*/
 void RunShooterDripoutSpeedCommand::Initialize() {}
 
-/** Called repeatedly when this Command is scheduled to run */
+/** @brief Called repeatedly when this Command is scheduled to run 
+ * @return void
+*/
 void RunShooterDripoutSpeedCommand::Execute() {
   // Running the shooter at the "dripout" speed.
   Robot::shooter.RunShooterVelocity(SHOOTERDRIPOUTSPEED);
 }
 
-/** Called once the command ends or is interrupted. */
+/** @brief Called once the command ends or is interrupted. 
+ * @return void
+*/
 void RunShooterDripoutSpeedCommand::End(bool interrupted) {
   // Stopping the shooter.
   Robot::shooter.RunShooterPercentage(0);
 }
 
-/** Returns true when the command should end. */
+/** @brief Returns true when the command should end. 
+ * @return Whether the command should finish.
+*/
 bool RunShooterDripoutSpeedCommand::IsFinished() {
   return false;
 }

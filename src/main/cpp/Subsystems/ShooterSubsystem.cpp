@@ -21,16 +21,24 @@ ShooterSubsystem::ShooterSubsystem() {
 }
 
 
-/** This method will be called once per scheduler run */
+/** @brief This method will be called once per scheduler run 
+ * @return void
+*/
 void ShooterSubsystem::Periodic() {}
 
-/** Running the shooter at a fixed percentage */
+/** @brief Running the shooter at a fixed percentage 
+ * @param percentage The percentage to run the shooter at.
+ * @return void
+*/
 void ShooterSubsystem::RunShooterPercentage(double percentage) {
     shooter1.Set(percentage);
     shooter2.Set(percentage);
 }
 
-/** Running the shooter using the PID loop */
+/** @brief Running the shooter using the PID loop 
+ * @param velocity The velocity to run the shooter at.
+ * @return void
+*/
 void ShooterSubsystem::RunShooterVelocity(double velocity) {
     shooterPID.SetReference(velocity, rev::ControlType::kVelocity);
 }

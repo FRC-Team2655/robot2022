@@ -14,22 +14,30 @@ RunAllBeltsCommand::RunAllBeltsCommand() {
   AddRequirements(&Robot::belts);
 }
 
-/** Called when the command is initially scheduled. */
+/** @brief Called when the command is initially scheduled. 
+ * @return void
+*/
 void RunAllBeltsCommand::Initialize() {}
 
-/** Called repeatedly when this Command is scheduled to run */
+/** @brief Called repeatedly when this Command is scheduled to run 
+ * @return void
+*/
 void RunAllBeltsCommand::Execute() {
   // Running all the belts at a fixed percentage without belt logic.
   Robot::belts.RunAllBelts();
 }
 
-/** Called once the command ends or is interrupted. */
+/** @brief Called once the command ends or is interrupted. 
+ * @return void
+*/
 void RunAllBeltsCommand::End(bool interrupted) {
   // Stop all the belts from running.
   Robot::belts.StopAllBelts();
 }
 
-/** Returns true when the command should end. */
+/** @brief Returns true when the command should end. 
+ * @return Whether the command should finish.
+*/
 bool RunAllBeltsCommand::IsFinished() {
   return false;
 }
