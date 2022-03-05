@@ -6,6 +6,8 @@
 **/
 #include "Subsystems/ShooterSubsystem.h"
 
+#include <frc/motorcontrol/Spark.h>
+
 /** Constructor for the shooter subsystem */
 ShooterSubsystem::ShooterSubsystem() {
     /** Making shooter 2 follow shooter 1 */
@@ -41,4 +43,11 @@ void ShooterSubsystem::RunShooterPercentage(double percentage) {
 */
 void ShooterSubsystem::RunShooterVelocity(double velocity) {
     shooterPID.SetReference(velocity, rev::ControlType::kVelocity);
+}
+
+/** @brief Get the current shooter velocity in RPM.
+ * @return The shooter velocity in RPM as a double.
+ */
+double ShooterSubsystem::GetShooterVelocity() {
+    return shooterEncoder.GetVelocity();
 }

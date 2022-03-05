@@ -25,6 +25,8 @@
 #include "rev/ColorSensorV3.h"
 #include "rev/ColorMatch.h"
 
+#include <frc/motorcontrol/Spark.h>
+
 /** The Robot class is the central class in the project. */
 class Robot : public frc::TimedRobot {
 public:
@@ -44,4 +46,12 @@ public:
   void TeleopInit() override;
   void TeleopPeriodic() override;
 private:
+
+  /** Declaring the controller for the LED via PWM */
+  frc::Spark LEDController {LEDPWMPORT};
+
+  /** A boolean to track whether the shooter is at maximum velocity. True is at max, false is not. */
+  bool isShooterAtMax = false;
+  /** A boolean to track whether the shooter is running. True is running, false is not. */
+  bool isShooterRunning = false;
 };

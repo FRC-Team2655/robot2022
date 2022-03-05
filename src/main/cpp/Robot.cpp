@@ -70,6 +70,38 @@ void Robot::AutonomousPeriodic() {
   * @return void
   */
 void Robot::TeleopPeriodic() {
+  /** Logic to track whether the shooter is running and whether the shooter is at its maximum velocity */
+  if (shooter.GetShooterVelocity() <= 1.0) {
+    isShooterAtMax = false;
+    isShooterRunning = false;
+  }else if ((shooter.GetShooterVelocity() < SHOOTERVELOCITY) && (shooter.GetShooterVelocity() > 0.0)) {
+    isShooterAtMax = false;
+    isShooterRunning = true;
+  }else if (shooter.GetShooterVelocity() >= SHOOTERVELOCITY) {
+    isShooterAtMax = true;
+    isShooterRunning = true;
+  }
+
+  /** Logic to control the LED colors when shooting. Red and blue corresponding to the detected ball by the color sensor. 
+   * Strobe = shooter ramping up. Solid = up to speed. Dual color = shooter not running.
+   */ 
+  if (isShooterRunning) {
+    if (!isShooterAtMax) {
+      if (belts.GetDetectedColor() == "Blue") {
+        LEDController.Set(STROBEBLUE);
+      }else if (belts.GetDetectedColor() == "Red") {
+        LEDController.Set(STROBERED);
+      }
+    }else{
+      if (belts.GetDetectedColor() == "Blue") {
+        LEDController.Set(SOLIDRED);
+      }else if (belts.GetDetectedColor() == "Red") {
+        LEDController.Set(SOLIDBLUE);
+      }
+    }
+  }else{
+    LEDController.Set(DUALCOLOR);
+  }
 }
 
 /**

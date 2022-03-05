@@ -22,6 +22,8 @@ class ShooterSubsystem : public frc2::SubsystemBase {
 
   void RunShooterVelocity(double velocity);
 
+  double GetShooterVelocity();
+
   /** PID Controller for the shooter */
   rev::SparkMaxPIDController shooterPID = shooter1.GetPIDController();
 
@@ -30,4 +32,7 @@ class ShooterSubsystem : public frc2::SubsystemBase {
   rev::CANSparkMax shooter1 {SHOOTER1, rev::CANSparkMax::MotorType::kBrushless};
   /** Second shooter motor controller definition */
   rev::CANSparkMax shooter2 {SHOOTER2, rev::CANSparkMax::MotorType::kBrushless};
+
+  /** Shooter motor controller 1 encoder definition */
+  rev::SparkMaxRelativeEncoder shooterEncoder = shooter1.GetEncoder();
 };

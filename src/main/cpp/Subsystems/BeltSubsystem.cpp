@@ -14,49 +14,65 @@ BeltSubsystem::BeltSubsystem() {
     colorMatcher.AddColorMatch(redTarget);
 }
 
-/** This method will be called once per scheduler run */
+/** @brief This method will be called once per scheduler run 
+ * @return void
+*/
 void BeltSubsystem::Periodic() {}
 
-/** Function for running upper belts */
+/** @brief Function for running upper belts 
+ * @return void
+*/
 void BeltSubsystem::RunUpperBelts() {
     /** Set the upper belts to the belt speed */
     upperBelt1.Set(BELTSPEED);
     upperBelt2.Set(BELTSPEED);
 }
 
-/** Function for running lower belts */
+/** @brief Function for running lower belts 
+ * @return void
+*/
 void BeltSubsystem::RunLowerBelts() {
     /** Set the lower belts to the belt speed */
     lowerBelt1.Set(BELTSPEED);
     lowerBelt2.Set(BELTSPEED);
 }
 
-/** Function for running all belts */
+/** @brief Function for running all belts 
+ * @return void
+*/
 void BeltSubsystem::RunAllBelts() {
     /** Run the override functions for the upper and lower belts */
     RunUpperBelts();
     RunLowerBelts();
 }
 
-/** Function to stop the upper belts from running */
+/** @brief Function to stop the upper belts from running 
+ * @return void
+*/
 void BeltSubsystem::StopUpperBelts() {
     upperBelt1.Set(0);
     upperBelt2.Set(0);
 }
 
-/** Function to stop the lower belts from running */
+/** @brief Function to stop the lower belts from running 
+ * @return void
+*/
 void BeltSubsystem::StopLowerBelts() {
     lowerBelt1.Set(0);
     lowerBelt2.Set(0);
 }
 
-/** Function to stop all the belts from running */
+/** @brief Function to stop all the belts from running 
+ * @return void
+*/
 void BeltSubsystem::StopAllBelts() {
     StopUpperBelts();
     StopLowerBelts();
 }
 
-/** Check whether the proximity sensor on the color sensor detects a ball */
+/** @brief Check whether the proximity sensor on the color sensor detects a ball 
+ * @return A bool determining whether the proximity sensor is triggered.
+*/
 bool BeltSubsystem::GetColorSensorProximity() {
     /** If the color sensor proximity distance is less than the proximity distance threshold, then the proximity sensor is not considered "triggered" */
     if (colorSensor.GetProximity() < COLORSENSORPROXIMITYDISTANCE) {
@@ -70,7 +86,9 @@ bool BeltSubsystem::GetColorSensorProximity() {
     return isColorSensorProximityTriggered;
 }
 
-/** Function to get the currently detected color */
+/** @brief Function to get the currently detected color 
+ * @return A string containing the detected color: blue, red, or unknown.
+*/
 std::string BeltSubsystem::GetDetectedColor() {
     /** Get the currently detected color */
     frc::Color detectedColor = colorSensor.GetColor();
@@ -92,7 +110,9 @@ std::string BeltSubsystem::GetDetectedColor() {
     return colorString;
 }
 
-/** Function to run belts using belt logic */
+/** @brief Function to run belts using belt logic 
+ * @return void
+*/
 void BeltSubsystem::RunBelts() {
     /** If the upper and lower proximity sensors are not triggered, run all belts */
     if ((GetColorSensorProximity() == false) && (proximSensor.Get() == false)) {

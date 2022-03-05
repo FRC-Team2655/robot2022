@@ -124,5 +124,14 @@
 
 
 
+/** LED Color codes (Referencing Blinkin manual pg. 14) */
+#define STROBERED -0.11
+#define STROBEBLUE -0.09
+#define SOLIDRED 0.61
+#define SOLIDBLUE 0.87
+#define DUALCOLOR 0.53
+
+
+
 /** How close the ball has to be to the color sensor for it to be considered "triggered" */
 #define COLORSENSORPROXIMITYDISTANCE 10
