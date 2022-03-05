@@ -13,6 +13,8 @@
 
 #include "team2655/joystick.hpp"
 
+#include "RobotMap.h"
+
 #include "Commands/RunBeltsCommand.h"
 #include "Commands/IntakeOutCommand.h"
 #include "Commands/IntakeInCommand.h"
@@ -20,6 +22,9 @@
 #include "Commands/RunShooterVelocityCommand.h"
 #include "Commands/RunAllBeltsCommand.h"
 #include "Commands/RunIntakeRollersCommand.h"
+#include "Commands/MoveClimberDownCommand.h"
+#include "Commands/MoveClimberUpCommand.h"
+#include "Commands/ReleaseClimberCommand.h"
 
 /** This is the input class. It deals with the joystick input. */
 class Input {
@@ -60,4 +65,10 @@ private:
     RunAllBeltsCommand runAllBelts {};
     /** Instance of the run intake rollers command. */
     RunIntakeRollersCommand runIntakeRollers {};
+    /** Instance of the move climber up command */
+    MoveClimberUpCommand moveClimberUp {CLIMBERTESTINGSPEED};
+    /** Instance of the move climber down command */
+    MoveClimberDownCommand moveClimberDown {CLIMBERTESTINGSPEED};
+    /** Instance of the release climber command (moving climber up using PID) */
+    ReleaseClimberCommand releaseClimber {};
 };

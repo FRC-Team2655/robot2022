@@ -16,6 +16,7 @@
 #include "Subsystems/BeltSubsystem.h"
 #include "Subsystems/IntakeSubsystem.h"
 #include "Subsystems/ShooterSubsystem.h"
+#include "Subsystems/ClimbSubsystem.h"
 #include "RobotMap.h"
 #include <ctre/Phoenix.h>
 #include "Input.h"
@@ -36,6 +37,7 @@ public:
   static BeltSubsystem belts;
   static IntakeSubsystem intake;
   static ShooterSubsystem shooter;
+  static ClimbSubsystem climber;
 
   void RobotInit() override;
   void RobotPeriodic() override;

@@ -2,7 +2,7 @@
  * @file RunAllBeltsCommand.h
  * @date 3/2/2022
  * @author Jonah Boan, Aidan Cobb, Alex Nolan
- * @brief Declaring the RunAllBeltsCommand.h class.
+ * @brief Declaring the RunAllBeltsCommand class.
 **/
 
 #pragma once

@@ -51,3 +51,21 @@ void ShooterSubsystem::RunShooterVelocity(double velocity) {
 double ShooterSubsystem::GetShooterVelocity() {
     return shooterEncoder.GetVelocity();
 }
+
+/** @brief Setting the shooter into brake mode.
+ * @return void
+ */ 
+void ShooterSubsystem::SetShooterBrakeMode() {
+    // Setting the shooter motor controllers into brake mode.
+    shooter1.SetIdleMode(rev::CANSparkMax::IdleMode::kBrake);
+    shooter2.SetIdleMode(rev::CANSparkMax::IdleMode::kBrake);
+}
+
+/** @brief Setting the shooter into coast mode.
+ * @return void
+ */ 
+void ShooterSubsystem::SetShooterCoastMode() {
+    // Setting the shooter motor controllers into coast mode.
+    shooter1.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
+    shooter2.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
+}

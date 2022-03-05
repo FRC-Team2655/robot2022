@@ -43,6 +43,11 @@
 /** Second Solenoid ID for the Intake */
 #define INTAKESOLB 6
 
+/** Climber ID for the left climber  */
+#define LEFTCLIMBERID 5
+/** CLimber ID for the right climber */
+#define RIGHTCLIMBERID 6
+
 
 
 /** PID Value Definitions */
@@ -51,7 +56,6 @@
 #define KPLEFT 0.1
 /** Left side drivetrain I value */
 #define KILEFT 0.1
-
 /** Right side drivetrain P value */
 #define KPRIGHT 0.0001
 /** Right side drivetrain I value */
@@ -63,11 +67,25 @@
 #define KISHOOTER 0
 /** D value for the shooter */
 #define KDSHOOTER 0
-
 /** FeedForward value for the shooter */
 #define KFFSHOOTER 0
 
-
+/** P value for the right climber */
+#define KPRIGHTCLIMBER 0.015
+/** I value for the right climber */
+#define KIRIGHTCLIMBER 0
+/** D value for the right climber */
+#define KDRIGHTCLIMBER 0
+/** FeedForward value for the right climber */
+#define KFFRIGHTCLIMBER 1/150
+/** P value for the left climber */
+#define KPLEFTCLIMBER 0.015
+/** I value for the left climber */
+#define KILEFTCLIMBER 0
+/** D value for the left climber */
+#define KDLEFTCLIMBER 0
+/** FeedForward value for the left climber */
+#define KFFLEFTCLIMBER 1/150
 
 /** Velocities */
 
@@ -91,6 +109,9 @@
 
 /** Speed for the shooter to run at a very slow speed such that the ball "drips" out. */
 #define SHOOTERDRIPOUTSPEED 500
+
+/** The speed to test the climber at (moving up and down) */
+#define CLIMBERTESTINGSPEED 0.1
 
 
 

@@ -37,4 +37,10 @@ Input::Input() {
   l1Btn->WhenHeld(runAllBelts);
   /** When the R1 button is held, run the intake rollers. */
   r1Btn->WhenHeld(runIntakeRollers);
+  /** When the L2 button is held, move the climber up without PID */
+  l2Btn->WhenHeld(moveClimberUp);
+  /** When the R2 button is held, move the climber down without PID */
+  r2Btn->WhenHeld(moveClimberDown);
+  /** When the share button is pressed, release the climber and move it up using PID */
+  shareBtn->WhenPressed(releaseClimber);
 }

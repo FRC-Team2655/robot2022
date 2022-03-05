@@ -82,6 +82,21 @@ void DriveBaseSubsystem::SetCoastMode() {
 }
 
 /**
+ * @brief Function used to set all the motor controllers in brake mode.
+ * @return void
+ */ 
+void DriveBaseSubsystem::SetBrakeMode() {
+    /** Set the Motor Controllers in Coast Mode */
+   leftLeader.SetIdleMode(rev::CANSparkMax::IdleMode::kBrake);
+   leftFollower1.SetIdleMode(rev::CANSparkMax::IdleMode::kBrake);
+   leftFollower2.SetIdleMode(rev::CANSparkMax::IdleMode::kBrake);
+
+   rightLeader.SetIdleMode(rev::CANSparkMax::IdleMode::kBrake);
+   rightFollower1.SetIdleMode(rev::CANSparkMax::IdleMode::kBrake);
+   rightFollower2.SetIdleMode(rev::CANSparkMax::IdleMode::kBrake);
+}
+
+/**
  * @brief Used to get the current angle of the IMU.
  * @return The IMU angle in degrees.
  */ 

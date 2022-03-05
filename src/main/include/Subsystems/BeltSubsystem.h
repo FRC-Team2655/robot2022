@@ -38,6 +38,9 @@ class BeltSubsystem : public frc2::SubsystemBase {
 
   bool GetColorSensorProximity();
 
+  void SetBeltsBrakeMode();
+  void SetBeltsCoastMode();
+
   std::string GetDetectedColor();
 
  private:

@@ -36,5 +36,4 @@ class LimelightSubsystem : public frc2::SubsystemBase {
   int identifyTarget = limelightTable->GetNumber("tv", 0);
 
  private:
-  
 };

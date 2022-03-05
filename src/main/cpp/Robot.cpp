@@ -19,13 +19,25 @@ BeltSubsystem Robot::belts;
 IntakeSubsystem Robot::intake;
 /** Declaring the Shooter instance. */
 ShooterSubsystem Robot::shooter;
+/** Declaring the climber instance */
+ClimbSubsystem Robot::climber;
 
 /**
  * @brief This function is run when the Robot is Initialized.
  * @return void
  */ 
 void Robot::RobotInit() {
+
+  // Putting the IMU Angle onto smartdashboard.
   frc::SmartDashboard::PutNumber("IMU Angle", 0);
+
+  // Setting (most) of the motor controllers into coast mode.
+  belts.SetBeltsCoastMode();
+  intake.SetIntakeRollersCoastMode();
+  shooter.SetShooterCoastMode();
+
+  // Put the climber in brake mode
+  climber.SetClimberBrakeMode();
 }
 
 /**
@@ -33,11 +45,13 @@ void Robot::RobotInit() {
  * @return void
  */ 
 void Robot::RobotPeriodic() {
+  // Updating the IMU Angle on smartdashboard
   frc::SmartDashboard::PutNumber("IMU Angle", driveBase.GetIMUAngle());
 
+  // Update the limelight values
   limelight.UpdateValues();
-  limelight.PrintValues(); 
 
+  // Update the command scheduler periodically, VERY IMPORTANT! Commands will not run otherwise.
   frc2::CommandScheduler::GetInstance().Run();
 }
 
@@ -46,6 +60,7 @@ void Robot::RobotPeriodic() {
  * @return void
  */ 
 void Robot::AutonomousInit() {
+  // Reset the IMU Angle at the beginning of auto
   driveBase.ResetIMUAngle();
 }
 
@@ -62,6 +77,7 @@ void Robot::AutonomousPeriodic() {
   * @return void
   */
  void Robot::TeleopInit() {
+   // Set drive base motor controllers into coast mode.
    driveBase.SetCoastMode();
  }
 
@@ -109,7 +125,8 @@ void Robot::TeleopPeriodic() {
  * @return void
  */ 
 void Robot::DisabledInit() {
-
+  // Put the drive base motor controllers in brake mode.
+  driveBase.SetBrakeMode();
 }
 
 /**

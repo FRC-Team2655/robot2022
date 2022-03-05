@@ -110,6 +110,29 @@ std::string BeltSubsystem::GetDetectedColor() {
     return colorString;
 }
 
+/** @brief Function to put the belts in brake mode.
+ * @return void
+ */ 
+void BeltSubsystem::SetBeltsBrakeMode() {
+    // Setting all the belt motor controllers in brake mode.
+    lowerBelt1.SetIdleMode(rev::CANSparkMax::IdleMode::kBrake);
+    lowerBelt2.SetIdleMode(rev::CANSparkMax::IdleMode::kBrake);
+    upperBelt1.SetIdleMode(rev::CANSparkMax::IdleMode::kBrake);
+    upperBelt2.SetIdleMode(rev::CANSparkMax::IdleMode::kBrake);
+
+}
+
+/** @brief Function to put the belts in coast mode.
+ * @return void
+ */ 
+void BeltSubsystem::SetBeltsCoastMode() {
+    // Setting all the belt motor controllers in coast mode.
+    lowerBelt1.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
+    lowerBelt2.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
+    upperBelt1.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
+    upperBelt2.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
+}
+
 /** @brief Function to run belts using belt logic 
  * @return void
 */

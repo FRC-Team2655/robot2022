@@ -39,3 +39,19 @@ void IntakeSubsystem::IntakeIn() {
     intakeSol1.Set(frc::DoubleSolenoid::kReverse);
     intakeSol2.Set(frc::DoubleSolenoid::kReverse);
 }
+
+/** @brief Function to set the intake rollers into coast mode.
+ * @return void
+ */ 
+void IntakeSubsystem::SetIntakeRollersCoastMode() {
+    // Setting the intake rollers into coast mode.
+    intakeRollers.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
+}
+
+/** @brief Function to set the intake rollers into brake mode.
+ * @return void
+ */ 
+void IntakeSubsystem::SetIntakeRollersBrakeMode() {
+    // Setting the intake rollers into brake mode.
+    intakeRollers.SetIdleMode(rev::CANSparkMax::IdleMode::kBrake);
+}

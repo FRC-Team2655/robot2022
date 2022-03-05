@@ -23,7 +23,9 @@ public:
 
   void ArcadeDrive(double xSpeed, double zRotation);
   void DriveTankPercentage(double leftPercentage, double rightPercentage);
+
   void SetCoastMode();
+  void SetBrakeMode();
 
   double GetIMUAngle();
   void ResetIMUAngle();
