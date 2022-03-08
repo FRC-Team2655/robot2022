@@ -57,8 +57,8 @@ void ClimbSubsystem::MoveClimberUp(double percentage) {
 */
 void ClimbSubsystem::ReleaseClimber() {
     // Setting the position to both climb motor controllers and using the PID to run it.
-    rightClimbPID.SetReference(-160, rev::CANSparkMaxLowLevel::ControlType::kPosition);
-    leftClimbPID.SetReference(160, rev::CANSparkMaxLowLevel::ControlType::kPosition);
+    rightClimbPID.SetReference(-CLIMBERMAXHEIGHT, rev::CANSparkMaxLowLevel::ControlType::kPosition);
+    leftClimbPID.SetReference(CLIMBERMAXHEIGHT, rev::CANSparkMaxLowLevel::ControlType::kPosition);
 }
 
 /** @brief Function to set the climber motor controllers in coast mode.
@@ -86,4 +86,38 @@ void ClimbSubsystem::StopClimber() {
     // Setting the left and right climbers to zero.
     leftClimber.Set(0);
     rightClimber.Set(0);
+}
+
+/** @brief Function to return the left climber position in terms of rotations.
+ * @return The left climber position read by the encoder
+ */ 
+double ClimbSubsystem::GetLeftClimberPosition() {
+    // Return the position of the left climber encoder.
+    return leftClimberEncoder.GetPosition();
+}
+
+/** @brief Function to return the right climber position in terms of rotations.
+ * @return The right climber position read by the encoder
+ */ 
+double ClimbSubsystem::GetRightClimberPosition() {
+    // Return the position of the right climber encoder.
+    return rightClimberEncoder.GetPosition();
+}
+
+/** @brief Function to reset both the left and the right climber motor positions read by the encoders in the down position. Down is zero for both.
+ * @return void
+ */ 
+void ClimbSubsystem::ResetClimberDown() {
+    // Set both the left and right climber encoder positions to zero.
+    leftClimberEncoder.SetPosition(0);
+    rightClimberEncoder.SetPosition(0);
+}
+
+/** @brief Function to reset both the left and the right climber motor positions read by the encoders in the up position. Up is +max height for left and -max height for right.
+ * @return void
+ */ 
+void ClimbSubsystem::ResetClimberUp() {
+    // Set the left climber encoder to +max height and the right climber encoder to -max height.
+    leftClimberEncoder.SetPosition(CLIMBERMAXHEIGHT);
+    rightClimberEncoder.SetPosition(-CLIMBERMAXHEIGHT);
 }

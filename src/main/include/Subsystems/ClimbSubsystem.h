@@ -25,6 +25,12 @@ class ClimbSubsystem : public frc2::SubsystemBase {
 
   void StopClimber();
 
+  double GetLeftClimberPosition();
+  double GetRightClimberPosition();
+
+  void ResetClimberDown();
+  void ResetClimberUp();
+
   void Periodic() override;
 
  private:

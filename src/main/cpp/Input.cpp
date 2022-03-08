@@ -43,4 +43,8 @@ Input::Input() {
   r2Btn->WhenHeld(moveClimberDown);
   /** When the share button is pressed, release the climber and move it up using PID */
   shareBtn->WhenPressed(releaseClimber);
+  /** When the options button is pressed, reset the climber encoders in the up position */
+  optionsBtn->WhenPressed(resetClimberUp);
+  /** When the right stick button is pressed, reset the climber encoders in the down position */
+  rightStickBtn->WhenPressed(resetClimberDown);
 }

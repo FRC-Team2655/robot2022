@@ -25,6 +25,8 @@
 #include "Commands/MoveClimberDownCommand.h"
 #include "Commands/MoveClimberUpCommand.h"
 #include "Commands/ReleaseClimberCommand.h"
+#include "Commands/ResetClimberDownCommand.h"
+#include "Commands/ResetClimberUpCommand.h"
 
 /** This is the input class. It deals with the joystick input. */
 class Input {
@@ -71,4 +73,8 @@ private:
     MoveClimberDownCommand moveClimberDown {CLIMBERTESTINGSPEED};
     /** Instance of the release climber command (moving climber up using PID) */
     ReleaseClimberCommand releaseClimber {};
+    /** Instance of the reset climber up command class */
+    ResetClimberUpCommand resetClimberUp {};
+    /** Instance of the reset climber down command class */
+    ResetClimberDownCommand resetClimberDown {};
 };

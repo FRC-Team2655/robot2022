@@ -38,6 +38,9 @@ void Robot::RobotInit() {
 
   // Put the climber in brake mode
   climber.SetClimberBrakeMode();
+
+  // Reset the climber in the down position (we are assuming the robot starts every match with the climber in the down position.)
+  climber.ResetClimberDown();
 }
 
 /**

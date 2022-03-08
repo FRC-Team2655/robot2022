@@ -156,3 +156,7 @@
 
 /** How close the ball has to be to the color sensor for it to be considered "triggered" */
 #define COLORSENSORPROXIMITYDISTANCE 10
+
+
+/** The maximum height of the climber in terms of encoder rotations. */
+#define CLIMBERMAXHEIGHT 160
