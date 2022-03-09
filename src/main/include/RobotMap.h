@@ -151,6 +151,7 @@
 #define SOLIDRED 0.61
 #define SOLIDBLUE 0.87
 #define DUALCOLOR 0.53
+#define RAINBOW -0.43
 
 
 

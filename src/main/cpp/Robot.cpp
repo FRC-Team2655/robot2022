@@ -90,7 +90,7 @@ void Robot::AutonomousPeriodic() {
   */
 void Robot::TeleopPeriodic() {
   /** Logic to track whether the shooter is running and whether the shooter is at its maximum velocity */
-  if (shooter.GetShooterVelocity() <= 1.0) {
+  if (shooter.GetShooterVelocity() <= 0.0) {
     isShooterAtMax = false;
     isShooterRunning = false;
   }else if ((shooter.GetShooterVelocity() < SHOOTERVELOCITY) && (shooter.GetShooterVelocity() > 0.0)) {
@@ -119,7 +119,7 @@ void Robot::TeleopPeriodic() {
       }
     }
   }else{
-    LEDController.Set(DUALCOLOR);
+    LEDController.Set(RAINBOW);
   }
 }
 
