@@ -52,15 +52,6 @@
 
 /** PID Value Definitions */
 
-/** Left side drivetrain P value */
-#define KPLEFT 0.1
-/** Left side drivetrain I value */
-#define KILEFT 0.1
-/** Right side drivetrain P value */
-#define KPRIGHT 0.0001
-/** Right side drivetrain I value */
-#define KIRIGHT 0.0001
-
 /** P value for the shooter */
 #define KPSHOOTER 0.0001
 /** I value for the shooter */
@@ -90,10 +81,10 @@
 /** Velocities */
 
 /** Right side drivetrain max velocity */
-#define RMAXVELOCITY 5500
+#define RMAXVELOCITY 5700
 
 /** Left side drivetrain max velocity */
-#define LMAXVELOCITY 5500
+#define LMAXVELOCITY 5700
 
 /** Intake rollers percentage speed */
 #define INTAKEROLLERSSPEED 0.8

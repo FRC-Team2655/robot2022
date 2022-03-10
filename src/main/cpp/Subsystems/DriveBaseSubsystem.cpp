@@ -14,31 +14,12 @@ DriveBaseSubsystem::DriveBaseSubsystem() {
     /** Set the DriveJoystickCommand as the default command to be run */
     SetDefaultCommand(driveJoystick);
 
-    /** Make the followers follow the leaders */
-    leftFollower1.Follow(leftLeader);
-    leftFollower2.Follow(leftLeader);
-    rightFollower1.Follow(rightLeader);
-    rightFollower2.Follow(rightLeader);
-
-    /** Assigning the PID loop values for the left side of the drivetrain */
-    leftPID.SetP(KPLEFT);
-    leftPID.SetI(KILEFT);
-    leftPID.SetD(0);
-    leftPID.SetFF(1/LMAXVELOCITY);
-    leftPID.SetIZone(0);
-    leftPID.SetOutputRange(-1, 1);
-
-    /** Assigning the PID loop values for the right side of the drivetrain */
-    rightPID.SetP(KPRIGHT);
-    rightPID.SetI(KIRIGHT);
-    rightPID.SetD(0);
-    rightPID.SetFF(1/RMAXVELOCITY);
-    rightPID.SetIZone(0);
-    rightPID.SetOutputRange(-1, 1);
+    /** Inverting the right side of the drive train so that both sides are in the same direction. */
+    rightSide.SetInverted(true);
 }
 
 /**
- * @brief Function used to drive the robot with the arcade style.
+ * @brief Function used to drive the robot with the arcade style. Takes care of drive base tuning as well.
  * @param xSpeed the speed to drive the robot along the x-axis
  * @param zRotation the rotation to drive the robot about the z-axis
  * @return void
@@ -113,4 +94,18 @@ double DriveBaseSubsystem::GetIMUAngle() {
  */ 
 void DriveBaseSubsystem::ResetIMUAngle() {
     imu.Reset();
+}
+
+/** @brief Function to get the velocity of the left side of the drive train in RPM
+ * @return The velocity of the left side in RPM
+ */ 
+double DriveBaseSubsystem::GetLeftVelocity() {
+    return leftEncoder.GetVelocity();
+}
+
+/** @brief Function to get the velocity of the right side of the drive train in RPM
+ * @return The velocity of the right side in RPM
+ */ 
+double DriveBaseSubsystem::GetRightVelocity() {
+    return rightEncoder.GetVelocity();
 }

@@ -30,10 +30,9 @@ public:
   double GetIMUAngle();
   void ResetIMUAngle();
 
-  /** PID controller for the left side of the drivetrain */
-  rev::SparkMaxPIDController leftPID = leftLeader.GetPIDController();
-  /** PID controller for the right side of the drivetrain */
-  rev::SparkMaxPIDController rightPID = rightLeader.GetPIDController();
+  double GetLeftVelocity();
+  double GetRightVelocity();
+
 private:
   /** Definition for the left leader motor controller on the drivetrain. */
   rev::CANSparkMax leftLeader {LEFTLEADERID, rev::CANSparkMax::MotorType::kBrushless};
@@ -52,6 +51,10 @@ private:
   /** Grouping the left and right motor controllers */
   frc::MotorControllerGroup leftSide {leftLeader, leftFollower1, leftFollower2};
   frc::MotorControllerGroup rightSide {rightLeader, rightFollower1, rightFollower2};
+
+  /** Creating encoders for the left and right sides of the drive train */
+  rev::SparkMaxRelativeEncoder leftEncoder = leftLeader.GetEncoder();
+  rev::SparkMaxRelativeEncoder rightEncoder = rightLeader.GetEncoder();
 
   /** Assigning the motor controllers to the DifferentialDrive */
   frc::DifferentialDrive robotDrive {leftSide, rightSide};
