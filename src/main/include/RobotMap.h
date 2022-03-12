@@ -5,6 +5,10 @@
  * @brief RobotMap is used to define all the variables used throughout the Robot Program 
 **/
 
+
+#include <frc/DoubleSolenoid.h>
+
+
 /** Motor Controller ID Definitions */
 
 /** Motor ID for the left leader motor controller on drivetrain */
@@ -78,6 +82,8 @@
 /** FeedForward value for the left climber */
 #define KFFLEFTCLIMBER 1/150
 
+
+
 /** Velocities */
 
 /** Right side drivetrain max velocity */
@@ -109,16 +115,24 @@
 /** Solenoid Ports */
 
 /** Intake Solenoid 1 Forward Port */
-#define INTAKESOL1FORWARDPORT 0
+#define INTAKELEFTSOLFORWARDPORT 0
 
 /** Intake Solenoid 1 Reverse Port */
-#define INTAKESOL1REVERSEPORT 1
+#define INTAKELEFTSOLREVERSEPORT 1
 
 /** Intake Solenoid 2 Forward Port */
-#define INTAKESOL2FORWARDPORT 14
+#define INTAKERIGHTSOLFORWARDPORT 14
 
 /** Intake Solenoid 2 Reverse Port */
-#define INTAKESOL2REVERSEPORT 15
+#define INTAKERIGHTSOLREVERSEPORT 15
+
+
+
+/** Solenoid directions */
+#define LEFTSOLIN frc::DoubleSolenoid::kReverse
+#define LEFTSOLOUT frc::DoubleSolenoid::kForward
+#define RIGHTSOLIN frc::DoubleSolenoid::kReverse
+#define RIGHTSOLOUT frc::DoubleSolenoid::kForward
 
 
 

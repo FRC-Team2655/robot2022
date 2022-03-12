@@ -28,16 +28,16 @@ void IntakeSubsystem::Periodic() {}
  * @return void
 */
 void IntakeSubsystem::IntakeOut() {
-    intakeSol1.Set(frc::DoubleSolenoid::kForward);
-    intakeSol2.Set(frc::DoubleSolenoid::kForward);
+    intakeLeftSol.Set(frc::DoubleSolenoid::kForward);
+    intakeRightSol.Set(frc::DoubleSolenoid::kForward);
 }
 
 /** @brief Controls the Solenoid to bring the intake in
  * @return void
  */
 void IntakeSubsystem::IntakeIn() {
-    intakeSol1.Set(frc::DoubleSolenoid::kReverse);
-    intakeSol2.Set(frc::DoubleSolenoid::kReverse);
+    intakeLeftSol.Set(frc::DoubleSolenoid::kReverse);
+    intakeRightSol.Set(frc::DoubleSolenoid::kReverse);
 }
 
 /** @brief Function to set the intake rollers into coast mode.

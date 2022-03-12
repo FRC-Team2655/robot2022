@@ -11,7 +11,7 @@
 #include <rev/CANSparkMax.h>
 #include "RobotMap.h"
 
-#include <frc/doublesolenoid.h>
+#include <frc/DoubleSolenoid.h>
 
 /** The intake subsystem has the code that deals with the intake */
 class IntakeSubsystem : public frc2::SubsystemBase {
@@ -36,8 +36,8 @@ class IntakeSubsystem : public frc2::SubsystemBase {
   /** Intake Motor definition */
   rev::CANSparkMax intakeRollers {INTAKEROLLERSID, rev::CANSparkMax::MotorType::kBrushless};
   /** Intake Solenoid definition */
-  frc::DoubleSolenoid intakeSol1 {1, frc::PneumaticsModuleType::REVPH, INTAKESOL1FORWARDPORT, INTAKESOL1REVERSEPORT};
-  frc::DoubleSolenoid intakeSol2 {1, frc::PneumaticsModuleType::REVPH, INTAKESOL2FORWARDPORT, INTAKESOL2REVERSEPORT};
+  frc::DoubleSolenoid intakeLeftSol {1, frc::PneumaticsModuleType::REVPH, INTAKELEFTSOLFORWARDPORT, INTAKELEFTSOLREVERSEPORT};
+  frc::DoubleSolenoid intakeRightSol {1, frc::PneumaticsModuleType::REVPH, INTAKERIGHTSOLFORWARDPORT, INTAKERIGHTSOLREVERSEPORT};
 };
 
 
