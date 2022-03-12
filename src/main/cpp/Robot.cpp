@@ -82,6 +82,9 @@ void Robot::AutonomousPeriodic() {
  void Robot::TeleopInit() {
    // Set drive base motor controllers into coast mode.
    driveBase.SetCoastMode();
+
+   // Setting a default direction for the intake (in) at the start of the match
+   intake.IntakeIn();
  }
 
 /** 

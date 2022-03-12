@@ -9,6 +9,7 @@
 
 /** The intake subsystem constructor */
 IntakeSubsystem::IntakeSubsystem() {
+    intakeRollers.SetInverted(true);
 }
 
 /** @brief Run the intake rollers at a set speed 

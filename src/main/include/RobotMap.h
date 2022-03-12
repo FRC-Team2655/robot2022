@@ -42,11 +42,6 @@
 /** Motor ID for the Intake */
 #define INTAKEROLLERSID 9
 
-/** Solenoid ID for the Intake */
-#define INTAKESOLA 5
-/** Second Solenoid ID for the Intake */
-#define INTAKESOLB 6
-
 /** Climber ID for the left climber  */
 #define LEFTCLIMBERID 5
 /** CLimber ID for the right climber */
@@ -93,7 +88,7 @@
 #define LMAXVELOCITY 5700
 
 /** Intake rollers percentage speed */
-#define INTAKEROLLERSSPEED 0.8
+#define INTAKEROLLERSSPEED 0.6
 
 /** Speed to run the belt */
 #define BELTSPEED 0.7
