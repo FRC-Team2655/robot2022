@@ -10,6 +10,8 @@
 
 /** Constructor for the shooter subsystem */
 ShooterSubsystem::ShooterSubsystem() {
+    shooter2.SetInverted(true);
+
     /** Making shooter 2 follow shooter 1 */
     shooter2.Follow(shooter1);
 

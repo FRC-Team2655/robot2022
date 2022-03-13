@@ -9,6 +9,7 @@
 
 /** The intake subsystem constructor */
 IntakeSubsystem::IntakeSubsystem() {
+    // Inverting the intake rollers so that they move in the correct direction
     intakeRollers.SetInverted(true);
 }
 

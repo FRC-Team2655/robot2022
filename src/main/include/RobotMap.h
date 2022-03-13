@@ -34,9 +34,9 @@
 /** Motor ID for the upper right belt motor controller */
 #define UPPERBELT2ID 13
 
-/** For the first shooter motor controller */
+/** For the first shooter motor controller. Left side shooter motor controller. */
 #define SHOOTER1 12
-/** For the second shooter motor controller */
+/** For the second shooter motor controller. Right side shooter motor controller. */
 #define SHOOTER2 13
 
 /** Motor ID for the Intake */
@@ -110,16 +110,16 @@
 /** Solenoid Ports */
 
 /** Intake Solenoid 1 Forward Port */
-#define INTAKELEFTSOLFORWARDPORT 0
+#define INTAKELEFTSOLFORWARDPORT 6
 
 /** Intake Solenoid 1 Reverse Port */
-#define INTAKELEFTSOLREVERSEPORT 1
+#define INTAKELEFTSOLREVERSEPORT 9
 
 /** Intake Solenoid 2 Forward Port */
-#define INTAKERIGHTSOLFORWARDPORT 14
+#define INTAKERIGHTSOLFORWARDPORT 7
 
 /** Intake Solenoid 2 Reverse Port */
-#define INTAKERIGHTSOLREVERSEPORT 15
+#define INTAKERIGHTSOLREVERSEPORT 8
 
 
 
