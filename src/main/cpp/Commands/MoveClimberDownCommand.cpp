@@ -14,10 +14,14 @@ MoveClimberDownCommand::MoveClimberDownCommand(double percentage) : percentage(p
   AddRequirements(&Robot::climber);
 }
 
-/** Called when the command is initially scheduled. */
+/** @brief Called when the command is initially scheduled. 
+ * @return void
+*/
 void MoveClimberDownCommand::Initialize() {}
 
-/** Called repeatedly when this Command is scheduled to run */
+/** @brief Called repeatedly when this Command is scheduled to run 
+ * @return void
+*/
 void MoveClimberDownCommand::Execute() {
   // Setting the climber in coast before moving
   Robot::climber.SetClimberCoastMode();
@@ -26,7 +30,9 @@ void MoveClimberDownCommand::Execute() {
   Robot::climber.MoveClimberDown(percentage);
 }
 
-/** Called once the command ends or is interrupted. */
+/** @brief Called once the command ends or is interrupted. 
+ * @return void
+*/
 void MoveClimberDownCommand::End(bool interrupted) {
   // Stopping the climber.
   Robot::climber.StopClimber();
@@ -35,7 +41,9 @@ void MoveClimberDownCommand::End(bool interrupted) {
   Robot::climber.SetClimberBrakeMode();
 }
 
-/** Returns true when the command should end. */
+/** @brief Returns true when the command should end. 
+ * @return Whether the command should finish
+*/
 bool MoveClimberDownCommand::IsFinished() {
   return false;
 }

@@ -50,7 +50,7 @@ public:
 private:
 
   /** Declaring the controller for the LED via PWM */
-  frc::Spark LEDController {LEDPWMPORT};
+  //frc::Spark LEDController {LEDPWMPORT};
 
   /** A boolean to track whether the shooter is at maximum velocity. True is at max, false is not. */
   bool isShooterAtMax = false;

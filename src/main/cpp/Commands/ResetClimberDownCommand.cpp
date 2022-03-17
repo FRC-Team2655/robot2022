@@ -14,19 +14,27 @@ ResetClimberDownCommand::ResetClimberDownCommand() {
   AddRequirements(&Robot::climber);
 }
 
-/** Called when the command is initially scheduled. */
+/** @brief Called when the command is initially scheduled. 
+ * @return void
+*/
 void ResetClimberDownCommand::Initialize() {
   // Run the function to reset the climber encoders in the down position.
   Robot::climber.ResetClimberDown();
 }
 
-/** Called repeatedly when this Command is scheduled to run */
+/** @brief Called repeatedly when this Command is scheduled to run 
+ * @return void
+*/
 void ResetClimberDownCommand::Execute() {}
 
-/** Called once the command ends or is interrupted. */
+/** @brief Called once the command ends or is interrupted. 
+ * @return void
+*/
 void ResetClimberDownCommand::End(bool interrupted) {}
 
-/** Returns true when the command should end. */
+/** @brief Returns true when the command should end. 
+ * @return Whether the command should finish
+*/
 bool ResetClimberDownCommand::IsFinished() {
   // Return true so that the command is only run once.
   return true;

@@ -26,14 +26,14 @@ class LimelightSubsystem : public frc2::SubsystemBase {
   void PrintValues();
 
   /** Creating the limelight network table */ 
-  std::shared_ptr<nt::NetworkTable> limelightTable = nt::NetworkTableInstance::GetDefault().GetTable("limelight");
+  //std::shared_ptr<nt::NetworkTable> limelightTable = nt::NetworkTableInstance::GetDefault().GetTable("limelight");
 
   /** getting the data from the network table for the limelight */
-  double targetOffsetAngle_Horizontal = limelightTable->GetNumber("tx",0.0);
+  /*double targetOffsetAngle_Horizontal = limelightTable->GetNumber("tx",0.0);
   double targetOffsetAngle_Vertical = limelightTable->GetNumber("ty",0.0);
   double targetArea = limelightTable->GetNumber("ta",0.0);
   double targetSkew = limelightTable->GetNumber("ts",0.0);
-  int identifyTarget = limelightTable->GetNumber("tv", 0);
+  int identifyTarget = limelightTable->GetNumber("tv", 0);*/
 
  private:
 };

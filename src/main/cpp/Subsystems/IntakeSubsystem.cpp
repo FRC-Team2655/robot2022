@@ -11,6 +11,9 @@
 IntakeSubsystem::IntakeSubsystem() {
     // Inverting the intake rollers so that they move in the correct direction
     intakeRollers.SetInverted(true);
+
+    // Burning the settings to the intake rollers motor controller to ensure that the settings are maintained.
+    intakeRollers.BurnFlash();
 }
 
 /** @brief Run the intake rollers at a set speed 
@@ -30,16 +33,22 @@ void IntakeSubsystem::Periodic() {}
  * @return void
 */
 void IntakeSubsystem::IntakeOut() {
-    intakeLeftSol.Set(frc::DoubleSolenoid::kForward);
-    intakeRightSol.Set(frc::DoubleSolenoid::kForward);
+    intakeLeftSol.Set(LEFTSOLOUT);
+    intakeRightSol.Set(RIGHTSOLOUT);
+
+    // Set the variable to track whether the intake is in to false
+    isIntakeIn = false;
 }
 
 /** @brief Controls the Solenoid to bring the intake in
  * @return void
  */
 void IntakeSubsystem::IntakeIn() {
-    intakeLeftSol.Set(frc::DoubleSolenoid::kReverse);
-    intakeRightSol.Set(frc::DoubleSolenoid::kReverse);
+    intakeLeftSol.Set(LEFTSOLIN);
+    intakeRightSol.Set(RIGHTSOLIN);
+
+    // Set the variable to track whether the intake is in to true
+    isIntakeIn = true;
 }
 
 /** @brief Function to set the intake rollers into coast mode.

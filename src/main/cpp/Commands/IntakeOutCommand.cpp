@@ -20,14 +20,13 @@ IntakeOutCommand::IntakeOutCommand() {
 void IntakeOutCommand::Initialize() {
   // Move the intake out
   Robot::intake.IntakeOut();
-  // Set the variable to track whether the intake is in to false
-  Robot::intake.isIntakeIn = false;
 }
 
 /** @brief Called repeatedly when this Command is scheduled to run 
  * @return void
 */
-void IntakeOutCommand::Execute() {}
+void IntakeOutCommand::Execute() {
+}
 
 /** @brief Called once the command ends or is interrupted. 
  * @return void

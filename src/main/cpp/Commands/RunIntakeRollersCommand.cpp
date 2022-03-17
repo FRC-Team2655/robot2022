@@ -11,8 +11,6 @@
 
 /** Constructor for the RunIntakeRollersCommand. */
 RunIntakeRollersCommand::RunIntakeRollersCommand() {
-  // Requiring the intake subsystem for this command.
-  AddRequirements(&Robot::intake);
 }
 
 /** @brief Called when the command is initially scheduled. 
@@ -24,8 +22,12 @@ void RunIntakeRollersCommand::Initialize() {}
  * @return void
 */
 void RunIntakeRollersCommand::Execute() {
-  // Running the intake at a fixed percentage.
-  Robot::intake.RunIntakeRollers(INTAKEROLLERSSPEED);
+  // Running the intake rollers at a fixed percentage if the intake is out
+  if (Robot::intake.isIntakeIn == false) {
+    Robot::intake.RunIntakeRollers(INTAKEROLLERSSPEED);
+  }else{
+    Robot::intake.RunIntakeRollers(0);
+  }
 }
 
 /** @brief Called once the command ends or is interrupted. 

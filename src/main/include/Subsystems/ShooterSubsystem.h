@@ -28,7 +28,8 @@ class ShooterSubsystem : public frc2::SubsystemBase {
   void SetShooterCoastMode();
 
   /** PID Controller for the shooter */
-  rev::SparkMaxPIDController shooterPID = shooter1.GetPIDController();
+  rev::SparkMaxPIDController shooter1PID = shooter1.GetPIDController();
+  rev::SparkMaxPIDController shooter2PID = shooter2.GetPIDController();
 
  private:
  /** First shooter motor controller definition */

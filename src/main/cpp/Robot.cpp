@@ -31,6 +31,8 @@ void Robot::RobotInit() {
   // Putting the IMU Angle onto smartdashboard.
   frc::SmartDashboard::PutNumber("IMU Angle", 0);
 
+  frc::SmartDashboard::PutNumber("Shooter Velocity", 0);
+
   // Setting (most) of the motor controllers into coast mode.
   belts.SetBeltsCoastMode();
   intake.SetIntakeRollersCoastMode();
@@ -50,12 +52,18 @@ void Robot::RobotInit() {
 void Robot::RobotPeriodic() {
   // Updating the IMU Angle on smartdashboard
   frc::SmartDashboard::PutNumber("IMU Angle", driveBase.GetIMUAngle());
+  // Updatin the Shooter Velocity on smartdashboard
+  frc::SmartDashboard::PutNumber("Shooter Velocity", shooter.GetShooterVelocity());
+
+
 
   // Update the limelight values
-  limelight.UpdateValues();
+  //limelight.UpdateValues();
 
   // Update the command scheduler periodically, VERY IMPORTANT! Commands will not run otherwise.
   frc2::CommandScheduler::GetInstance().Run();
+
+  std::cout << "Is the intake in: " << intake.isIntakeIn << std::endl;
 }
 
 /**
@@ -107,7 +115,7 @@ void Robot::TeleopPeriodic() {
   /** Logic to control the LED colors when shooting. Red and blue corresponding to the detected ball by the color sensor. 
    * Strobe = shooter ramping up. Solid = up to speed. Dual color = shooter not running.
    */ 
-  if (isShooterRunning) {
+  /*if (isShooterRunning) {
     if (!isShooterAtMax) {
       if (belts.GetDetectedColor() == "Blue") {
         LEDController.Set(STROBEBLUE);
@@ -123,7 +131,7 @@ void Robot::TeleopPeriodic() {
     }
   }else{
     LEDController.Set(RAINBOW);
-  }
+  }*/
 }
 
 /**

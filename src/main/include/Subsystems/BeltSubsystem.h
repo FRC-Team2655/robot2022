@@ -26,51 +26,43 @@ class BeltSubsystem : public frc2::SubsystemBase {
 
   void Periodic() override;
 
-  void RunAllBelts();
-  void RunLowerBelts();
-  void RunUpperBelts();
-
-  void StopAllBelts();
-  void StopLowerBelts();
-  void StopUpperBelts();
-
   void RunBelts();
 
-  bool GetColorSensorProximity();
+  void StopBelts();
+
+  void RunAllBelts();
+
+  //bool GetColorSensorProximity();
 
   void SetBeltsBrakeMode();
   void SetBeltsCoastMode();
 
-  std::string GetDetectedColor();
-
- private:
- /** Lower belt on the left side motor controller definition */
-  rev::CANSparkMax lowerBelt1 {LOWERBELT1ID, rev::CANSparkMax::MotorType::kBrushless};
-  /** Lower belt on the right side motor controller definition */
-  rev::CANSparkMax lowerBelt2 {LOWERBELT2ID, rev::CANSparkMax::MotorType::kBrushless};
-  /** Upper belt on the left side motor controller definition */
-  rev::CANSparkMax upperBelt1 {UPPERBELT1ID, rev::CANSparkMax::MotorType::kBrushless};
-  /** Upper belt on the right side motor controller definition */
-  rev::CANSparkMax upperBelt2 {UPPERBELT2ID, rev::CANSparkMax::MotorType::kBrushless};
+  //std::string GetDetectedColor();
 
   /** Proximity Sensor Definition */
   frc::DigitalInput proximSensor {PROXIMITYSENSORPORT};
 
+ private:
+ /** Belt on the left side motor controller definition */
+  rev::CANSparkMax leftBelt {LEFTBELTID, rev::CANSparkMax::MotorType::kBrushless};
+  /** Belt on the right side motor controller definition */
+  rev::CANSparkMax rightBelt {RIGHTBELTID, rev::CANSparkMax::MotorType::kBrushless};
+
   /** I2C Port Definition */
-  static constexpr auto i2cPort = frc::I2C::Port::kOnboard;
+  //static constexpr auto i2cPort = frc::I2C::Port::kOnboard;
   /** Color Sensor Definition */
-  rev::ColorSensorV3 colorSensor{i2cPort};
+  //rev::ColorSensorV3 colorSensor{i2cPort};
   /** Used to determine which color is being matched */
-  rev::ColorMatch colorMatcher;
+  //rev::ColorMatch colorMatcher;
   /** Definition of the blue target color */
-  static constexpr frc::Color blueTarget = frc::Color(0.143, 0.427, 0.429);
+  //static constexpr frc::Color blueTarget = frc::Color(0.143, 0.427, 0.429);
   /** Definition of the red target color */
-  static constexpr frc::Color redTarget = frc::Color(0.561, 0.232, 0.114);
+  //static constexpr frc::Color redTarget = frc::Color(0.561, 0.232, 0.114);
   /** Definition of the color string. Will hold the detected color */
-  std::string colorString = "Unknown";
+  //std::string colorString = "Unknown";
   /** The confidence for the color sensor */
-  double confidence = 0.0;
+  //double confidence = 0.0;
 
   /** Whether the proximity sensor on the color sensor is "triggered" */
-  bool isColorSensorProximityTriggered = false;
+  //bool isColorSensorProximityTriggered = false;
 };

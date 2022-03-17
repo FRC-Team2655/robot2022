@@ -24,6 +24,10 @@ ClimbSubsystem::ClimbSubsystem() {
     leftClimbPID.SetFF(KFFLEFTCLIMBER);
     leftClimbPID.SetIZone(0);
     leftClimbPID.SetOutputRange(-1, 1);
+
+    // Burning the settings on the left and right climber motor controllers to ensure that the settings are kept.
+    leftClimber.BurnFlash();
+    rightClimber.BurnFlash();
 }
 
 /** This method will be called once per scheduler run */

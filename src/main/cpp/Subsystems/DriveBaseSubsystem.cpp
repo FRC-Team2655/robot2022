@@ -10,12 +10,11 @@
 
 /** The constructor of the drivetrain. */
 DriveBaseSubsystem::DriveBaseSubsystem() {
-
     /** Set the DriveJoystickCommand as the default command to be run */
     SetDefaultCommand(driveJoystick);
 
     /** Inverting the right side of the drive train so that both sides are in the same direction. */
-    rightSide.SetInverted(true);
+    leftSide.SetInverted(true);
 }
 
 /**
@@ -108,4 +107,34 @@ double DriveBaseSubsystem::GetLeftVelocity() {
  */ 
 double DriveBaseSubsystem::GetRightVelocity() {
     return rightEncoder.GetVelocity();
+}
+
+/** @brief Driving the left and right sides given a certain velocity for each side.
+ * @return void
+ */ 
+void DriveBaseSubsystem::DriveTank(double lVel, double rVel) {
+    robotDrive.TankDrive(lVel, rVel);
+}
+
+/** @brief Function to get the left side of the drive train's encoder rotations.
+ * @return The left side of the drive train's encoder rotations
+ */ 
+double DriveBaseSubsystem::GetLeftEncoderRotations() {
+    return leftEncoder.GetPosition();
+}
+
+/** @brief Function to get the right side of the drive train's encoder rotations
+ * @return The right side of the drive train's encoder rotations
+ */ 
+double DriveBaseSubsystem::GetRightEncoderRotations() {
+    return rightEncoder.GetPosition();
+}
+
+/** @brief Function to reset the encoders on the left and right side of the drive train.
+ * @return void
+ */ 
+void DriveBaseSubsystem::ResetEncoders() {
+    // Setting the positions of the encoders on the left and right side of the drive train to zero.
+    leftEncoder.SetPosition(0);
+    rightEncoder.SetPosition(0);
 }

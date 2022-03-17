@@ -32,7 +32,7 @@ void RunBeltsCommand::Execute() {
 */
 void RunBeltsCommand::End(bool interrupted) {
   // Stop all the belts.
-  Robot::belts.StopAllBelts();
+  Robot::belts.StopBelts();
 }
 
 /** @brief Returns true when the command should end. 

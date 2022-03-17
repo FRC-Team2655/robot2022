@@ -30,7 +30,7 @@ class IntakeSubsystem : public frc2::SubsystemBase {
   void SetIntakeRollersBrakeMode();
 
   /** Boolean variable to track whether the intake is out or in */
-  bool isIntakeIn = false;
+  bool isIntakeIn = true;
 
  private:
   /** Intake Motor definition */

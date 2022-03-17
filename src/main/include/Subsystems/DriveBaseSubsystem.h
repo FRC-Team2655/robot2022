@@ -33,6 +33,13 @@ public:
   double GetLeftVelocity();
   double GetRightVelocity();
 
+  double GetLeftEncoderRotations();
+  double GetRightEncoderRotations();
+
+  void ResetEncoders();
+
+  void DriveTank(double lVel, double rVel);
+
 private:
   /** Definition for the left leader motor controller on the drivetrain. */
   rev::CANSparkMax leftLeader {LEFTLEADERID, rev::CANSparkMax::MotorType::kBrushless};

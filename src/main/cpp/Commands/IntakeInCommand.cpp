@@ -20,8 +20,6 @@ IntakeInCommand::IntakeInCommand() {
 void IntakeInCommand::Initialize() {
   // Run the command to move the intake in
   Robot::intake.IntakeIn();
-  // Set the variable to track whether the intake is in to true
-  Robot::intake.isIntakeIn = true;
 }
 
 /** @brief Called repeatedly when this Command is scheduled to run 

@@ -10,6 +10,8 @@
 #include <frc/Joystick.h>
 #include <frc2/command/button/JoystickButton.h>
 #include <frc2/command/SequentialCommandGroup.h>
+#include <frc2/command/ParallelCommandGroup.h>
+#include "frc2/command/InstantCommand.h"
 
 #include "team2655/joystick.hpp"
 
@@ -27,6 +29,7 @@
 #include "Commands/ReleaseClimberCommand.h"
 #include "Commands/ResetClimberDownCommand.h"
 #include "Commands/ResetClimberUpCommand.h"
+#include "Commands/DriveJoystickCommand.h"
 
 /** This is the input class. It deals with the joystick input. */
 class Input {
@@ -48,6 +51,8 @@ public:
     frc2::JoystickButton *shareBtn;
     frc2::JoystickButton *optionsBtn;
     frc2::JoystickButton *rightStickBtn;
+    frc2::JoystickButton *leftStickBtn;
+    frc2::JoystickButton *psBtn;
 
     /** Configurations for the joystick deadband and cubic function. */
     team2655::jshelper::AxisConfig driveAxisConfig = team2655::jshelper::createAxisConfig(.1, 0, 0.5);
@@ -70,7 +75,7 @@ private:
     /** Instance of the move climber up command */
     MoveClimberUpCommand moveClimberUp {CLIMBERTESTINGSPEED};
     /** Instance of the move climber down command */
-    MoveClimberDownCommand moveClimberDown {CLIMBERTESTINGSPEED};
+    MoveClimberDownCommand moveClimberDown {CLIMBINGSPEED};
     /** Instance of the release climber command (moving climber up using PID) */
     ReleaseClimberCommand releaseClimber {};
     /** Instance of the reset climber up command class */

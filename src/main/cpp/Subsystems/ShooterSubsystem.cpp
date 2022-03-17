@@ -10,18 +10,27 @@
 
 /** Constructor for the shooter subsystem */
 ShooterSubsystem::ShooterSubsystem() {
-    shooter2.SetInverted(true);
-
-    /** Making shooter 2 follow shooter 1 */
-    shooter2.Follow(shooter1);
+    /** Making shooter 2 follow shooter 1 and inverted*/
+    shooter2.Follow(shooter1, true);
 
     /** Applying the PID value to the shooter */
-    shooterPID.SetP(KPSHOOTER);
-    shooterPID.SetI(KISHOOTER);
-    shooterPID.SetD(KDSHOOTER);
-    shooterPID.SetFF(KFFSHOOTER);
-    shooterPID.SetIZone(0);
-    shooterPID.SetOutputRange(-1, 1);
+    shooter1PID.SetP(KPSHOOTER);
+    shooter1PID.SetI(KISHOOTER);
+    shooter1PID.SetD(KDSHOOTER);
+    shooter1PID.SetFF(KFFSHOOTER);
+    shooter1PID.SetIZone(0);
+    shooter1PID.SetOutputRange(-1, 1);
+
+    shooter2PID.SetP(KPSHOOTER);
+    shooter2PID.SetI(KISHOOTER);
+    shooter2PID.SetD(KDSHOOTER);
+    shooter2PID.SetFF(KFFSHOOTER);
+    shooter2PID.SetIZone(0);
+    shooter2PID.SetOutputRange(-1, 1);
+
+    // Burn the flash to ensure that the settings are maintained on the shooter motor controllers
+    shooter1.BurnFlash();
+    shooter2.BurnFlash();
 }
 
 
@@ -44,7 +53,8 @@ void ShooterSubsystem::RunShooterPercentage(double percentage) {
  * @return void
 */
 void ShooterSubsystem::RunShooterVelocity(double velocity) {
-    shooterPID.SetReference(velocity, rev::ControlType::kVelocity);
+    shooter1PID.SetReference(velocity, rev::ControlType::kVelocity);
+    shooter2PID.SetReference(-velocity, rev::ControlType::kVelocity);
 }
 
 /** @brief Get the current shooter velocity in RPM.

@@ -12,54 +12,49 @@
 /** Motor Controller ID Definitions */
 
 /** Motor ID for the left leader motor controller on drivetrain */
-#define LEFTLEADERID 6
+#define LEFTLEADERID 1
 /** Motor ID for the first left follower motor controller on drivetrain */
-#define LEFTFOLLOWER1ID 5
+#define LEFTFOLLOWER1ID 2
 /** Motor ID for the second left follower motor controller on drivetrain */
-#define LEFTFOLLOWER2ID 4
+#define LEFTFOLLOWER2ID 3
 
 /** Motor ID for the right leader motor controller on drivetrain */
-#define RIGHTLEADERID 1
+#define RIGHTLEADERID 4
 /** Motor ID for the first right follower motor controller on drivetrain */
-#define RIGHTFOLLOWER1ID 2
+#define RIGHTFOLLOWER1ID 6
 /** Motor ID for the second right follower motor controller on drivetrain */
-#define RIGHTFOLLOWER2ID 3
+#define RIGHTFOLLOWER2ID 11
 
-/** Motor ID for the lower left belt motor controller */
-#define LOWERBELT1ID 10
-/** Motor ID for the lower right belt motor controller */
-#define LOWERBELT2ID 11
-/** Motor ID for the upper left belt motor controller */
-#define UPPERBELT1ID 12
-/** Motor ID for the upper right belt motor controller */
-#define UPPERBELT2ID 13
+/** Motor ID for the right belt motor controller */
+#define RIGHTBELTID 9
+/** Motor ID for the left belt motor controller */
+#define LEFTBELTID 8
 
 /** For the first shooter motor controller. Left side shooter motor controller. */
-#define SHOOTER1 12
+#define SHOOTER1 15
 /** For the second shooter motor controller. Right side shooter motor controller. */
-#define SHOOTER2 13
+#define SHOOTER2 16
 
 /** Motor ID for the Intake */
-#define INTAKEROLLERSID 9
+#define INTAKEROLLERSID 10
 
 /** Climber ID for the left climber  */
-#define LEFTCLIMBERID 5
+#define LEFTCLIMBERID 12
 /** CLimber ID for the right climber */
-#define RIGHTCLIMBERID 6
+#define RIGHTCLIMBERID 5
 
 
 
 /** PID Value Definitions */
 
 /** P value for the shooter */
-#define KPSHOOTER 0.0001
+#define KPSHOOTER 0.00001
 /** I value for the shooter */
-#define KISHOOTER 0
+#define KISHOOTER 0.0
 /** D value for the shooter */
 #define KDSHOOTER 0
 /** FeedForward value for the shooter */
-#define KFFSHOOTER 0
-
+#define KFFSHOOTER 0.000192
 /** P value for the right climber */
 #define KPRIGHTCLIMBER 0.015
 /** I value for the right climber */
@@ -91,7 +86,7 @@
 #define INTAKEROLLERSSPEED 0.6
 
 /** Speed to run the belt */
-#define BELTSPEED 0.7
+#define BELTSPEED 0.2
 
 /** Speed to run shootor motor controllers */
 #define SHOOTERPERCENTAGE 0.8
@@ -103,31 +98,34 @@
 #define SHOOTERDRIPOUTSPEED 500
 
 /** The speed to test the climber at (moving up and down) */
-#define CLIMBERTESTINGSPEED 0.1
+#define CLIMBERTESTINGSPEED 0.10
+
+/** The speed to climb with */
+#define CLIMBINGSPEED 0.25
 
 
 
 /** Solenoid Ports */
 
-/** Intake Solenoid 1 Forward Port */
+/** Intake Left Solenoid Forward Port */
 #define INTAKELEFTSOLFORWARDPORT 6
 
-/** Intake Solenoid 1 Reverse Port */
+/** Intake Left Solenoid Reverse Port */
 #define INTAKELEFTSOLREVERSEPORT 9
 
-/** Intake Solenoid 2 Forward Port */
+/** Intake Right Solenoid Forward Port */
 #define INTAKERIGHTSOLFORWARDPORT 7
 
-/** Intake Solenoid 2 Reverse Port */
+/** Intake Right Solenoid Reverse Port */
 #define INTAKERIGHTSOLREVERSEPORT 8
 
 
 
 /** Solenoid directions */
-#define LEFTSOLIN frc::DoubleSolenoid::kReverse
-#define LEFTSOLOUT frc::DoubleSolenoid::kForward
-#define RIGHTSOLIN frc::DoubleSolenoid::kReverse
-#define RIGHTSOLOUT frc::DoubleSolenoid::kForward
+#define LEFTSOLIN frc::DoubleSolenoid::kForward
+#define LEFTSOLOUT frc::DoubleSolenoid::kReverse
+#define RIGHTSOLIN frc::DoubleSolenoid::kForward
+#define RIGHTSOLOUT frc::DoubleSolenoid::kReverse
 
 
 
@@ -160,4 +158,4 @@
 
 
 /** The maximum height of the climber in terms of encoder rotations. */
-#define CLIMBERMAXHEIGHT 160
+#define CLIMBERMAXHEIGHT 153
