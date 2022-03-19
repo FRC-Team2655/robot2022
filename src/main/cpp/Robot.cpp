@@ -35,6 +35,8 @@ void Robot::RobotInit() {
 
   frc::SmartDashboard::PutNumber("Shooter Velocity", 0);
 
+  frc::SmartDashboard::PutBoolean("Shooter up to speed", 0);
+
   // Setting (most) of the motor controllers into coast mode.
   belts.SetBeltsCoastMode();
   intake.SetIntakeRollersCoastMode();
@@ -57,15 +59,11 @@ void Robot::RobotPeriodic() {
   // Updatin the Shooter Velocity on smartdashboard
   frc::SmartDashboard::PutNumber("Shooter Velocity", shooter.GetShooterVelocity());
 
-
-
   // Update the limelight values
   //limelight.UpdateValues();
 
   // Update the command scheduler periodically, VERY IMPORTANT! Commands will not run otherwise.
   frc2::CommandScheduler::GetInstance().Run();
-
-  std::cout << "Is the intake in: " << intake.isIntakeIn << std::endl;
 }
 
 /**
@@ -116,6 +114,8 @@ void Robot::TeleopPeriodic() {
     isShooterAtMax = true;
     isShooterRunning = true;
   }
+
+  frc::SmartDashboard::PutBoolean("Shooter up to speed", isShooterAtMax);
 
   /** Logic to control the LED colors when shooting. Red and blue corresponding to the detected ball by the color sensor. 
    * Strobe = shooter ramping up. Solid = up to speed. Dual color = shooter not running.

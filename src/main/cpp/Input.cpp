@@ -43,11 +43,11 @@ Input::Input() {
   /** When the R1 button is held, run the intake rollers. */
   r1Btn->WhenHeld(runIntakeRollers);
   /** When the options button is held, move the climber up without PID */
-  shareBtn->WhenHeld(moveClimberUp);
+  //psBtn->WhenHeld(moveClimberUp);
   /** When the playstation button is held, move the climber down without PID */
-  psBtn->WhenHeld(moveClimberDown);
+  shareBtn->WhenHeld(moveClimberDown);
   /** When the share button is pressed, release the climber and move it up using PID */
-  optionsBtn->WhenPressed(releaseClimber);
+  optionsBtn->WhileHeld(moveClimberUp);
   /** When the right stick button is pressed, reset the climber encoders in the down position */
   dPadDown->WhenPressed(resetClimberDown);
   /** When the left stick button is pressed, reset the climber encoders in the up position. */

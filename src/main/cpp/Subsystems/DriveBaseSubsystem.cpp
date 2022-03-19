@@ -120,14 +120,20 @@ void DriveBaseSubsystem::DriveTank(double lVel, double rVel) {
  * @return The left side of the drive train's encoder rotations
  */ 
 double DriveBaseSubsystem::GetLeftEncoderRotations() {
-    return leftEncoder.GetPosition();
+    double motorRotations = leftEncoder.GetPosition();
+        /* Scale by gear ratio to give wheel rotations */
+    return (motorRotations / 10.0);
 }
 
 /** @brief Function to get the right side of the drive train's encoder rotations
  * @return The right side of the drive train's encoder rotations
+ * 
+ * Note, this encoder is inverted such that driving backwards gives a negative value
  */ 
 double DriveBaseSubsystem::GetRightEncoderRotations() {
-    return rightEncoder.GetPosition();
+    double motorRotations = -rightEncoder.GetPosition();
+    /* Scale by gear ratio to give wheel rotations */
+    return (motorRotations / 10.0);
 }
 
 /** @brief Function to reset the encoders on the left and right side of the drive train.

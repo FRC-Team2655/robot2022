@@ -54,7 +54,7 @@
 /** D value for the shooter */
 #define KDSHOOTER 0
 /** FeedForward value for the shooter */
-#define KFFSHOOTER 0.000192
+#define KFFSHOOTER 0.000190
 /** P value for the right climber */
 #define KPRIGHTCLIMBER 0.015
 /** I value for the right climber */
@@ -92,7 +92,7 @@
 #define SHOOTERPERCENTAGE 0.8
  
 /** Shooter max velocity */
-#define SHOOTERVELOCITY 3400
+#define SHOOTERVELOCITY 3300
 
 /** Speed for the shooter to run at a very slow speed such that the ball "drips" out. */
 #define SHOOTERDRIPOUTSPEED 1000
@@ -101,7 +101,7 @@
 #define CLIMBERTESTINGSPEED 0.10
 
 /** The speed to climb with */
-#define CLIMBINGSPEED 0.40
+#define CLIMBINGSPEED 0.50
 
 
 

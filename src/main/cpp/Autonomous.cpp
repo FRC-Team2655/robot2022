@@ -10,6 +10,14 @@
 /** The constructor for the Autonomous class */
 Autonomous::Autonomous() {}
 
+frc2::Command* Autonomous::DriveBackwards() {
+    /* Test auto to drive backwards */
+    frc2::SequentialCommandGroup* routine = new frc2::SequentialCommandGroup();
+    /* Drive backwards 5 feet (60 inches) with 5 sec timeout */
+    routine->AddCommands(frc2::ParallelRaceGroup(DriveDistanceCommand(-60), DelayMillisecondsCommand(5000)));
+    return routine;
+}
+
 frc2::Command* Autonomous::ShootPreload() {
     frc2::SequentialCommandGroup* routine = new frc2::SequentialCommandGroup();
 
