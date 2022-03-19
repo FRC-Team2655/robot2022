@@ -100,7 +100,7 @@ void Robot::AutonomousInit() {
   // Reset the IMU Angle at the beginning of auto
   driveBase.ResetIMUAngle();
 
-  autonomousCommand = auton.TwoBallAuto();
+  //autonomousCommand = auton.TwoBallAuto();
 
   //autonomousCommand->Schedule();
 }
@@ -130,9 +130,6 @@ void Robot::AutonomousPeriodic() {
   * @return void
   */
 void Robot::TeleopPeriodic() {
-  input.joystick->SetRumble(frc::GenericHID::RumbleType::kLeftRumble, 1.0);
-  input.joystick->SetRumble(frc::GenericHID::RumbleType::kRightRumble, 1.0);
-
   /** Logic to track whether the shooter is running and whether the shooter is at its maximum velocity */
   if (shooter.GetShooterVelocity() <= 0.0) {
     isShooterAtMax = false;

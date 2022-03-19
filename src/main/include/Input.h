@@ -41,7 +41,7 @@ public:
 
     /** Defining the Joystick */
     frc::Joystick *joystick;
-    frc::Joystick *buttonBox;
+    //frc::Joystick *buttonBox;
 
     /** Defining all the joystick buttons */
     frc2::JoystickButton *xBtn;
@@ -66,7 +66,7 @@ public:
 
 
     /** Defining all the button box buttons */
-    frc2::JoystickButton *boxButton1;
+    //frc2::JoystickButton *boxButton1;
 
     /** Configurations for the joystick deadband and cubic function. */
     team2655::jshelper::AxisConfig driveAxisConfig = team2655::jshelper::createAxisConfig(.1, 0, 0.5);

@@ -53,7 +53,7 @@ public:
   void TeleopInit() override;
   void TeleopPeriodic() override;
 
-  frc2::Command* autonomousCommand = nullptr;
+  //frc2::Command* autonomousCommand = nullptr;
 private:
 
   /** Declaring the controller for the LED via PWM */

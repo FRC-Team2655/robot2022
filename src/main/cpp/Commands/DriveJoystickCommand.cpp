@@ -9,6 +9,8 @@
 
 #include "Robot.h"
 
+#include "RobotMap.h"
+
 
 
 /** The constructor of the DriveJoystickCommand */
@@ -38,6 +40,9 @@ void DriveJoystickCommand::Execute() {
 
   /** Defining the deadband */
   double deadband = 0.1;
+
+  /** State variable for tracking previous power */
+  static double lastPower = -10.0;
 
   /** The direction the robot will be driving in: forward or backward */
   double driveDirection;
@@ -69,7 +74,25 @@ void DriveJoystickCommand::Execute() {
   }
   #endif
 
-	Robot::driveBase.ArcadeDrive(power, rotate);
+  /* Apply filter to the power. Want to limit acceleration */
+
+  /* Init case? */
+  if(lastPower < -1.0)
+  {
+    lastPower = power;
+  }
+
+  /* Check for accel clamp (forward only) */
+  if ((power - lastPower) > accelLimit)
+  {
+    lastPower += accelLimit;
+  }
+  else
+  {
+    lastPower = power;
+  }
+
+	Robot::driveBase.ArcadeDrive(lastPower, rotate);
 }
 
 /** @brief Called once the command ends or is interrupted. 

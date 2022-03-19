@@ -14,7 +14,7 @@
 #define ISDRIVINGCUBIC false
 
 /** ALSO VERY IMPORTANT!!! Determines whether using rumble, which changes whether we are seeing the controller as playstation or xbox, which changes the button IDs */
-#define USINGRUMBLE false
+#define USINGRUMBLE true
 
 
 

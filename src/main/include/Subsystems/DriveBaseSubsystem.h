@@ -74,9 +74,8 @@ private:
   frc::DifferentialDrive robotDrive {leftSide, rightSide};
 
   /** The DriveJoystickCommand instance */
-  DriveJoystickCommand driveJoystick {};
+  DriveJoystickCommand driveJoystick;
 
   /** Creating the IMU instance */
-  //frc::ADIS16470_IMU imu {frc::ADIS16470_IMU::IMUAxis::kY, frc::SPI::Port::kOnboardCS0, frc::ADIS16470_IMU::CalibrationTime::_2s};
-  frc::ADIS16470_IMU imu {};
+  frc::ADIS16470_IMU imu {frc::ADIS16470_IMU::IMUAxis::kY, frc::SPI::Port::kOnboardCS0, frc::ADIS16470_IMU::CalibrationTime::_2s};
 };

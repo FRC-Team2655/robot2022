@@ -11,7 +11,7 @@
 /** The constructor for the input class */
 Input::Input() {
   /** Assigning the button box instance to its port */
-  buttonBox = new frc::Joystick(2);
+  //buttonBox = new frc::Joystick(2);
   
   #if USINGRUMBLE
   /** Assigning all the joystick buttons their values */
@@ -28,7 +28,8 @@ Input::Input() {
   dPadDown = new frc2::POVButton(joystick, 180);
   dPadUp = new frc2::POVButton(joystick, 0);
   /** Assigning the joystick instance to its port number */
-  joystick = new frc::Joystick(1);
+  //joystick = new frc::Joystick(1);
+  joystick = new frc::Joystick(0);
 
   /** When the D-Pad up button is held, move the climber up without PID */
   dPadUp->WhenHeld(moveClimberUp);
@@ -56,7 +57,7 @@ Input::Input() {
   #endif
 
   /** Assigning all the button box buttons to their values */
-  boxButton1 = new frc2::JoystickButton(buttonBox, 1);
+  //boxButton1 = new frc2::JoystickButton(buttonBox, 1);
 
   /** When the circle button is pressed, move the intake in */
   circleBtn->WhenPressed(intakeIn);

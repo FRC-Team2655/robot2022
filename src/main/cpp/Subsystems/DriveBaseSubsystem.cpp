@@ -7,7 +7,7 @@
 
 #include "Subsystems/DriveBaseSubsystem.h"
 
-#include <iostream>
+
 
 
 /** The constructor of the drivetrain. */
@@ -28,8 +28,6 @@ DriveBaseSubsystem::DriveBaseSubsystem() {
 void DriveBaseSubsystem::ArcadeDrive(double xSpeed, double zRotation) {
     // Drive with arcade style
     robotDrive.ArcadeDrive(xSpeed, zRotation);
-
-    std::cout << xSpeed << std::endl;
 }
 
 /**

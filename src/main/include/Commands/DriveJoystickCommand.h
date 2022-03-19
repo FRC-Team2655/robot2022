@@ -25,4 +25,7 @@ class DriveJoystickCommand
 
   bool IsFinished() override;
 private:
+  /* Want robot to be able to accelerate to max in 250ms. 
+     Update interval of 20ms -> 250ms/20ms = 12.5 */
+  double accelLimit = (1.0/12.5);
 };
