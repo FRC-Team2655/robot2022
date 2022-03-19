@@ -8,8 +8,6 @@
 #include "Subsystems/DriveBaseSubsystem.h"
 
 
-
-
 /** The constructor of the drivetrain. */
 DriveBaseSubsystem::DriveBaseSubsystem() {
     /** Set the DriveJoystickCommand as the default command to be run */
@@ -139,31 +137,4 @@ void DriveBaseSubsystem::ResetEncoders() {
     // Setting the positions of the encoders on the left and right side of the drive train to zero.
     leftEncoder.SetPosition(0);
     rightEncoder.SetPosition(0);
-}
-
-/**
- * @brief Get the Y-axis (forward direction of the robot) acceleration read by the IMU in Gs.
- * @return the Y Acceleration in Gs
- */ 
-double DriveBaseSubsystem::GetYAcceleration() {
-    double accel = imu.GetAccelX().value() / 9.80665;
-    return accel;
-}
-
-/**
- * @brief Get the X-axis (lateral direction of the robot) acceleration read by the IMU in Gs.
- * @return the X Acceleration in Gs
- */ 
-double DriveBaseSubsystem::GetXAcceleration() {
-    double accel = imu.GetAccelZ().value() / 9.80665;
-    return accel;
-}
-
-/**
- * @brief Get the Z-axis (vertical direction of the robot) acceleration read by the IMU in Gs.
- * @return the Z Acceleration in Gs
- */ 
-double DriveBaseSubsystem::GetZAcceleration() {
-    double accel = imu.GetAccelY().value() / 9.80665;
-    return accel;
 }

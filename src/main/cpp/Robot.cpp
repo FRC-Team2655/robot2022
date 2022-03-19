@@ -33,18 +33,7 @@ void Robot::RobotInit() {
   // Putting the IMU Angle onto smartdashboard.
   frc::SmartDashboard::PutNumber("IMU Angle", 0);
 
-  frc::SmartDashboard::PutNumber("Y Accel", 0);
-  frc::SmartDashboard::PutNumber("X Accel", 0);
-  frc::SmartDashboard::PutNumber("Z Accel", 0);
-
-  frc::SmartDashboard::PutNumber("Climber Left Height", 0);
-  frc::SmartDashboard::PutNumber("Climber Right Height", 0);
-
   frc::SmartDashboard::PutNumber("Shooter Velocity", 0);
-
-  frc::SmartDashboard::PutBoolean("Shooter Ready to Shoot", 0);
-
-  frc::SmartDashboard::PutBoolean("Omnis Setup", 0);
 
   // Setting (most) of the motor controllers into coast mode.
   belts.SetBeltsCoastMode();
@@ -63,21 +52,12 @@ void Robot::RobotInit() {
  * @return void
  */ 
 void Robot::RobotPeriodic() {
-
   // Updating the IMU Angle on smartdashboard
   frc::SmartDashboard::PutNumber("IMU Angle", driveBase.GetIMUAngle());
   // Updatin the Shooter Velocity on smartdashboard
   frc::SmartDashboard::PutNumber("Shooter Velocity", shooter.GetShooterVelocity());
 
-  frc::SmartDashboard::PutNumber("Climber Left Height", climber.GetLeftClimberPosition());
-  frc::SmartDashboard::PutNumber("Climber Right Height", climber.GetRightClimberPosition());
 
-  // Put on smartdash whether the shooter is at max to let driver know if he can shoot.
-  frc::SmartDashboard::PutBoolean("Shooter Ready to Shoot", isShooterAtMax);
-
-  frc::SmartDashboard::PutNumber("Y Accel", driveBase.GetYAcceleration());
-  frc::SmartDashboard::PutNumber("X Accel", driveBase.GetXAcceleration());
-  frc::SmartDashboard::PutNumber("Z Accel", driveBase.GetZAcceleration());
 
   // Update the limelight values
   //limelight.UpdateValues();
@@ -85,11 +65,7 @@ void Robot::RobotPeriodic() {
   // Update the command scheduler periodically, VERY IMPORTANT! Commands will not run otherwise.
   frc2::CommandScheduler::GetInstance().Run();
 
-  if (frc::SmartDashboard::GetBoolean("Omnis Setup", 0) == true) {
-    driveBase.turningSpeed = 0.7;
-  }else{
-    driveBase.turningSpeed = 0.9;
-  }
+  std::cout << "Is the intake in: " << intake.isIntakeIn << std::endl;
 }
 
 /**
@@ -100,9 +76,8 @@ void Robot::AutonomousInit() {
   // Reset the IMU Angle at the beginning of auto
   driveBase.ResetIMUAngle();
 
-  //autonomousCommand = auton.TwoBallAuto();
-
-  //autonomousCommand->Schedule();
+  autonomousCommand = auton.ShootPreload();
+  autonomousCommand->Schedule();
 }
 
 /**

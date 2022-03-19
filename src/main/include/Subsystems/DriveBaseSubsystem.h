@@ -40,13 +40,6 @@ public:
 
   void DriveTank(double lVel, double rVel);
 
-  double GetYAcceleration();
-  double GetXAcceleration();
-  double GetZAcceleration();
-
-  // The turning speed of the robot
-  double turningSpeed = 0.7;
-
 private:
   /** Definition for the left leader motor controller on the drivetrain. */
   rev::CANSparkMax leftLeader {LEFTLEADERID, rev::CANSparkMax::MotorType::kBrushless};
@@ -77,5 +70,5 @@ private:
   DriveJoystickCommand driveJoystick;
 
   /** Creating the IMU instance */
-  frc::ADIS16470_IMU imu {frc::ADIS16470_IMU::IMUAxis::kY, frc::SPI::Port::kOnboardCS0, frc::ADIS16470_IMU::CalibrationTime::_2s};
+  frc::ADIS16470_IMU imu {};
 };

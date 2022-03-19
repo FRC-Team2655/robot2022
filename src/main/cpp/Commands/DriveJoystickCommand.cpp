@@ -9,8 +9,9 @@
 
 #include "Robot.h"
 
-#include "RobotMap.h"
 
+/** VERY IMPORTANT!!! Determines whether the drive style is cubic (smoothing "flat" point at 50% velocity) or linear. */
+#define ISDRIVINGCUBIC false
 
 
 /** The constructor of the DriveJoystickCommand */
@@ -28,21 +29,12 @@ void DriveJoystickCommand::Initialize() {}
  * @return void
 */
 void DriveJoystickCommand::Execute() {
-  #if USINGRUMBLE
-  /** Scaling the raw joystick trigger inputs */
-  double rawForward = (Robot::input.joystick->GetRawAxis(2) + 1) / 2;
-  double rawBackward = (Robot::input.joystick->GetRawAxis(3) + 1) / 2;
-  #else
   /** Scaling the raw joystick trigger inputs */
   double rawForward = (Robot::input.joystick->GetRawAxis(3) + 1) / 2;
   double rawBackward = (Robot::input.joystick->GetRawAxis(4) + 1) / 2;
-  #endif
 
   /** Defining the deadband */
   double deadband = 0.1;
-
-  /** State variable for tracking previous power */
-  static double lastPower = -10.0;
 
   /** The direction the robot will be driving in: forward or backward */
   double driveDirection;
@@ -56,43 +48,16 @@ void DriveJoystickCommand::Execute() {
 
   /** If the driving style is cubic, use the team2655 library to drive cubic (smooth "flat" part at 50% velocity). */
   #if ISDRIVINGCUBIC
-  double rotate = -Robot::driveBase.turningSpeed * team2655::jshelper::getAxisValue(Robot::input.rotateAxisConfig, Robot::input.joystick->GetRawAxis(0));
+  double rotate = 0.5 * team2655::jshelper::getAxisValue(Robot::input.rotateAxisConfig, Robot::input.joystick->GetRawAxis(0));
   double power = team2655::jshelper::getAxisValue(Robot::input.driveAxisConfig, driveDirection);
   #else
   /** If the driving style is linear, drive linearly */
-  double rotate = -Robot::driveBase.turningSpeed * Robot::input.joystick->GetRawAxis(0);
+  double rotate = -0.70 * Robot::input.joystick->GetRawAxis(0);
   double power = driveDirection;
   #endif
 
-  #if USINGRUMBLE
-  if (driveDirection >= 0.5) {
-    Robot::input.joystick->SetRumble(frc::GenericHID::RumbleType::kLeftRumble, std::abs(driveDirection));
-    Robot::input.joystick->SetRumble(frc::GenericHID::RumbleType::kRightRumble, std::abs(driveDirection));
-  }else{
-    Robot::input.joystick->SetRumble(frc::GenericHID::RumbleType::kLeftRumble, 0);
-    Robot::input.joystick->SetRumble(frc::GenericHID::RumbleType::kRightRumble, 0);
-  }
-  #endif
 
-  /* Apply filter to the power. Want to limit acceleration */
-
-  /* Init case? */
-  if(lastPower < -1.0)
-  {
-    lastPower = power;
-  }
-
-  /* Check for accel clamp (forward only) */
-  if ((power - lastPower) > accelLimit)
-  {
-    lastPower += accelLimit;
-  }
-  else
-  {
-    lastPower = power;
-  }
-
-	Robot::driveBase.ArcadeDrive(lastPower, rotate);
+	Robot::driveBase.ArcadeDrive(power, rotate);
 }
 
 /** @brief Called once the command ends or is interrupted. 

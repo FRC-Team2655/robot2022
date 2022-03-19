@@ -121,12 +121,3 @@ void BeltSubsystem::RunBelts() {
         StopBelts();
     }
 }
-
-/** @brief Function to run the belts in the reverse direction
- * @return void
- */ 
-void BeltSubsystem::RunBeltsReverse() {
-  // Setting the belts to negative of the belt speed
-  leftBelt.Set(-BELTSPEED);
-  rightBelt.Set(-BELTSPEED);
-}

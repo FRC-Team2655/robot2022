@@ -14,10 +14,10 @@
  * directly; this is crucially important, or else the decorator functions in
  * Command will *not* work!
  */
-class StopShooterCommand
-    : public frc2::CommandHelper<frc2::CommandBase, StopShooterCommand> {
+class RunShooterAutoCommand
+    : public frc2::CommandHelper<frc2::CommandBase, RunShooterAutoCommand> {
  public:
-  StopShooterCommand();
+  RunShooterAutoCommand();
 
   void Initialize() override;
 

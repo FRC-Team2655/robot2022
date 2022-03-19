@@ -9,16 +9,6 @@
 #include <frc/DoubleSolenoid.h>
 
 
-
-/** VERY IMPORTANT!!! Determines whether the drive style is cubic (smoothing "flat" point at 50% velocity) or linear. */
-#define ISDRIVINGCUBIC false
-
-/** ALSO VERY IMPORTANT!!! Determines whether using rumble, which changes whether we are seeing the controller as playstation or xbox, which changes the button IDs */
-#define USINGRUMBLE true
-
-
-
-
 /** Motor Controller ID Definitions */
 
 /** Motor ID for the left leader motor controller on drivetrain */
@@ -111,7 +101,7 @@
 #define CLIMBERTESTINGSPEED 0.10
 
 /** The speed to climb with */
-#define CLIMBINGSPEED 0.35
+#define CLIMBINGSPEED 0.40
 
 
 
@@ -168,4 +158,4 @@
 
 
 /** The maximum height of the climber in terms of encoder rotations. */
-#define CLIMBERMAXHEIGHT 155
+#define CLIMBERMAXHEIGHT 153

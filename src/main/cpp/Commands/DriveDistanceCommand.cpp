@@ -2,7 +2,7 @@
  * @file DriveDistanceCommand.cpp
  * @date 3/17/2022
  * @author Jonah Boan, Aidan Cobb, Alex Nolan
- * @brief Source code dealing with driving the robot a given amount of distance in inches
+ * @brief Source code dealing with driving the robot a given amount of distance
 **/
 
 #include "commands/DriveDistanceCommand.h"
@@ -135,6 +135,10 @@ bool DriveDistanceCommand::IsFinished() {
    double averageRotations;
    averageRotations = Robot::driveBase.GetRightEncoderRotations() + Robot::driveBase.GetLeftEncoderRotations();
    averageRotations *= 0.5;
-   //scale to inches. Wheels are 6" diameter
-   return averageRotations * 3.141592 * 6;
+   //scale to meters. Wheels are 6" (15cm) diameter
+   return averageRotations * 3.141592 * 0.1524;
  }
+
+double DriveDistanceCommand::inchesToMeters(double inches) {
+  return inches / 39.37;
+}

@@ -28,8 +28,6 @@
 
 #include <frc/motorcontrol/Spark.h>
 
-#include <frc2/command/Command.h>
-
 #include "Autonomous.h"
 
 /** The Robot class is the central class in the project. */
@@ -52,12 +50,12 @@ public:
   void AutonomousPeriodic() override;
   void TeleopInit() override;
   void TeleopPeriodic() override;
-
-  //frc2::Command* autonomousCommand = nullptr;
 private:
 
   /** Declaring the controller for the LED via PWM */
   //frc::Spark LEDController {LEDPWMPORT};
+
+  frc2::Command* autonomousCommand = nullptr;
 
   /** A boolean to track whether the shooter is at maximum velocity. True is at max, false is not. */
   bool isShooterAtMax = false;

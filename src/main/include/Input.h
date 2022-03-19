@@ -30,9 +30,8 @@
 #include "Commands/ResetClimberDownCommand.h"
 #include "Commands/ResetClimberUpCommand.h"
 #include "Commands/DriveJoystickCommand.h"
-#include "Commands/ReverseBeltsCommand.h"
-
 #include "frc2/command/button/POVButton.h"
+
 
 /** This is the input class. It deals with the joystick input. */
 class Input {
@@ -41,7 +40,6 @@ public:
 
     /** Defining the Joystick */
     frc::Joystick *joystick;
-    //frc::Joystick *buttonBox;
 
     /** Defining all the joystick buttons */
     frc2::JoystickButton *xBtn;
@@ -56,17 +54,9 @@ public:
     frc2::JoystickButton *optionsBtn;
     frc2::JoystickButton *rightStickBtn;
     frc2::JoystickButton *leftStickBtn;
-    frc2::POVButton *dPadDown;
-    frc2::POVButton *dPadUp;
-    #if !USINGRUMBLE
-        frc2::JoystickButton *psBtn;
-        frc2::JoystickButton *muteMicBtn;
-    #endif
+    frc2::JoystickButton *psBtn;
+        frc2::POVButton *dPadDown;
 
-
-
-    /** Defining all the button box buttons */
-    //frc2::JoystickButton *boxButton1;
 
     /** Configurations for the joystick deadband and cubic function. */
     team2655::jshelper::AxisConfig driveAxisConfig = team2655::jshelper::createAxisConfig(.1, 0, 0.5);
@@ -96,6 +86,4 @@ private:
     ResetClimberUpCommand resetClimberUp {};
     /** Instance of the reset climber down command class */
     ResetClimberDownCommand resetClimberDown {};
-    /** Instance of the run belts reverse command class */
-    ReverseBeltsCommand runBeltsReverse {};
 };
