@@ -10,23 +10,53 @@
 
 /** The constructor for the input class */
 Input::Input() {
-  /** Assigning the joystick instance to its port number */
-  joystick = new frc::Joystick(0);
+  /** Assigning the button box instance to its port */
+  buttonBox = new frc::Joystick(2);
   
-  /** Assigning all the buttons their values */
+  #if USINGRUMBLE
+  /** Assigning all the joystick buttons their values */
+  squareBtn = new frc2::JoystickButton(joystick, 3);
+  xBtn = new frc2::JoystickButton(joystick, 1);
+  circleBtn = new frc2::JoystickButton(joystick, 2);
+  triangleBtn = new frc2::JoystickButton(joystick, 4);
+  l1Btn = new frc2::JoystickButton(joystick, 5);
+  r1Btn = new frc2::JoystickButton(joystick, 6);
+  shareBtn = new frc2::JoystickButton(joystick, 7);
+  optionsBtn = new frc2::JoystickButton(joystick, 8);
+  rightStickBtn = new frc2::JoystickButton(joystick, 10);
+  leftStickBtn = new frc2::JoystickButton(joystick, 9);
+  dPadDown = new frc2::POVButton(joystick, 180);
+  dPadUp = new frc2::POVButton(joystick, 0);
+  /** Assigning the joystick instance to its port number */
+  joystick = new frc::Joystick(1);
+
+  /** When the D-Pad up button is held, move the climber up without PID */
+  dPadUp->WhenHeld(moveClimberUp);
+  #else
+  /** Assigning all the joystick buttons their values */
   squareBtn = new frc2::JoystickButton(joystick, 1);
   xBtn = new frc2::JoystickButton(joystick, 2);
   circleBtn = new frc2::JoystickButton(joystick, 3);
   triangleBtn = new frc2::JoystickButton(joystick, 4);
   l1Btn = new frc2::JoystickButton(joystick, 5);
   r1Btn = new frc2::JoystickButton(joystick, 6);
-  l2Btn = new frc2::JoystickButton(joystick, 7);
-  r2Btn = new frc2::JoystickButton(joystick, 8);
   shareBtn = new frc2::JoystickButton(joystick, 9);
   optionsBtn = new frc2::JoystickButton(joystick, 10);
   rightStickBtn = new frc2::JoystickButton(joystick, 12);
   leftStickBtn = new frc2::JoystickButton(joystick, 11);
   psBtn = new frc2::JoystickButton(joystick, 13);
+  muteMicBtn = new frc2::JoystickButton(joystick, 15);
+  dPadDown = new frc2::POVButton(joystick, 180);
+  dPadUp = new frc2::POVButton(joystick, 0);
+  /** Assigning the joystick instance to its port number */
+  joystick = new frc::Joystick(0);
+
+  /** When the mute microphone button is held, move the climber up without PID */
+  muteMicBtn->WhenHeld(moveClimberUp);
+  #endif
+
+  /** Assigning all the button box buttons to their values */
+  boxButton1 = new frc2::JoystickButton(buttonBox, 1);
 
   /** When the circle button is pressed, move the intake in */
   circleBtn->WhenPressed(intakeIn);
@@ -34,20 +64,18 @@ Input::Input() {
   xBtn->WhenPressed(frc2::SequentialCommandGroup(intakeOut, runBelts), true);
   /** When the square button is pressed, run the shooter at the "dripout" speed. */
   squareBtn->WhenHeld(runShooterDripoutSpeed);
-  /** When the triangle button is pressed, run the shooter at the shooter velocity */
-  triangleBtn->WhenHeld(runShooterVelocity);
-  /** When the L1 button is held, run all the belts without belt logic */
-  l1Btn->WhenHeld(runAllBelts);
+  /** When the L1 button is pressed, run the shooter at the shooter velocity */
+  l1Btn->WhenHeld(runShooterVelocity);
+  /** When the right stick button is held, run all the belts without belt logic */
+  rightStickBtn->WhenHeld(runAllBelts);
   /** When the R1 button is held, run the intake rollers. */
   r1Btn->WhenHeld(runIntakeRollers);
-  /** When the options button is held, move the climber up without PID */
-  optionsBtn->WhenHeld(moveClimberUp);
-  /** When the playstation button is held, move the climber down without PID */
-  psBtn->WhenHeld(moveClimberDown);
-  /** When the share button is pressed, release the climber and move it up using PID */
-  shareBtn->WhenPressed(releaseClimber);
-  /** When the right stick button is pressed, reset the climber encoders in the down position */
-  rightStickBtn->WhenPressed(resetClimberDown);
-  /** When the left stick button is pressed, reset the climber encoders in the up position. */
-  leftStickBtn->WhenPressed(resetClimberUp);
+  /** When the share button is held, move the climber down without PID */
+  shareBtn->WhenHeld(moveClimberDown);
+  /** When the options button is pressed, reset the climber in the000 down position and srelease the climber and move it up using PID */
+  optionsBtn->WhenPressed(frc2::SequentialCommandGroup(resetClimberDown, releaseClimber));
+  /** When the D-Pad down button is pressed, reset the climber encoders in the down position */
+  dPadDown->WhenPressed(resetClimberDown);
+  /** When the triangle button is held, run the belts in the reverse direction */
+  triangleBtn->WhenHeld(runBeltsReverse);
 }

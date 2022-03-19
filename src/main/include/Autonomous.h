@@ -7,11 +7,24 @@
 
 #pragma once
 
+#include <frc2/command/SequentialCommandGroup.h>
+#include <frc2/command/ParallelRaceGroup.h>
+
+#include "Commands/RunShooterVelocityCommand.h"
+#include "Commands/DelayMillisecondsCommand.h"
+#include "Commands/StopShooterCommand.h"
+#include "Commands/DriveDistanceCommand.h"
+#include "Commands/RotateDegreesCommand.h"
+#include "Commands/RotateToGyroAngleCommand.h"
+#include "Commands/RunAllBeltsCommand.h"
+
 /** Class for all the Autonomous routines */
 class Autonomous {
 public:
     Autonomous();
 
-    void ShootPreload();
-    void TwoBallAuto();
+    frc2::Command* ShootPreload();
+    frc2::Command* TwoBallAuto();
+
+private:
 };

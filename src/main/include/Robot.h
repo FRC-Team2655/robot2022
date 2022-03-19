@@ -28,6 +28,10 @@
 
 #include <frc/motorcontrol/Spark.h>
 
+#include <frc2/command/Command.h>
+
+#include "Autonomous.h"
+
 /** The Robot class is the central class in the project. */
 class Robot : public frc::TimedRobot {
 public:
@@ -38,6 +42,7 @@ public:
   static IntakeSubsystem intake;
   static ShooterSubsystem shooter;
   static ClimbSubsystem climber;
+  static Autonomous auton;
 
   void RobotInit() override;
   void RobotPeriodic() override;
@@ -47,6 +52,8 @@ public:
   void AutonomousPeriodic() override;
   void TeleopInit() override;
   void TeleopPeriodic() override;
+
+  frc2::Command* autonomousCommand = nullptr;
 private:
 
   /** Declaring the controller for the LED via PWM */

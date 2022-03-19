@@ -7,6 +7,8 @@
 
 #include "Subsystems/DriveBaseSubsystem.h"
 
+#include <iostream>
+
 
 /** The constructor of the drivetrain. */
 DriveBaseSubsystem::DriveBaseSubsystem() {
@@ -26,6 +28,8 @@ DriveBaseSubsystem::DriveBaseSubsystem() {
 void DriveBaseSubsystem::ArcadeDrive(double xSpeed, double zRotation) {
     // Drive with arcade style
     robotDrive.ArcadeDrive(xSpeed, zRotation);
+
+    std::cout << xSpeed << std::endl;
 }
 
 /**
@@ -137,4 +141,31 @@ void DriveBaseSubsystem::ResetEncoders() {
     // Setting the positions of the encoders on the left and right side of the drive train to zero.
     leftEncoder.SetPosition(0);
     rightEncoder.SetPosition(0);
+}
+
+/**
+ * @brief Get the Y-axis (forward direction of the robot) acceleration read by the IMU in Gs.
+ * @return the Y Acceleration in Gs
+ */ 
+double DriveBaseSubsystem::GetYAcceleration() {
+    double accel = imu.GetAccelX().value() / 9.80665;
+    return accel;
+}
+
+/**
+ * @brief Get the X-axis (lateral direction of the robot) acceleration read by the IMU in Gs.
+ * @return the X Acceleration in Gs
+ */ 
+double DriveBaseSubsystem::GetXAcceleration() {
+    double accel = imu.GetAccelZ().value() / 9.80665;
+    return accel;
+}
+
+/**
+ * @brief Get the Z-axis (vertical direction of the robot) acceleration read by the IMU in Gs.
+ * @return the Z Acceleration in Gs
+ */ 
+double DriveBaseSubsystem::GetZAcceleration() {
+    double accel = imu.GetAccelY().value() / 9.80665;
+    return accel;
 }

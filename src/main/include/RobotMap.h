@@ -9,6 +9,16 @@
 #include <frc/DoubleSolenoid.h>
 
 
+
+/** VERY IMPORTANT!!! Determines whether the drive style is cubic (smoothing "flat" point at 50% velocity) or linear. */
+#define ISDRIVINGCUBIC false
+
+/** ALSO VERY IMPORTANT!!! Determines whether using rumble, which changes whether we are seeing the controller as playstation or xbox, which changes the button IDs */
+#define USINGRUMBLE false
+
+
+
+
 /** Motor Controller ID Definitions */
 
 /** Motor ID for the left leader motor controller on drivetrain */
@@ -92,16 +102,16 @@
 #define SHOOTERPERCENTAGE 0.8
  
 /** Shooter max velocity */
-#define SHOOTERVELOCITY 5000
+#define SHOOTERVELOCITY 3400
 
 /** Speed for the shooter to run at a very slow speed such that the ball "drips" out. */
-#define SHOOTERDRIPOUTSPEED 500
+#define SHOOTERDRIPOUTSPEED 1000
 
 /** The speed to test the climber at (moving up and down) */
 #define CLIMBERTESTINGSPEED 0.10
 
 /** The speed to climb with */
-#define CLIMBINGSPEED 0.25
+#define CLIMBINGSPEED 0.35
 
 
 
@@ -158,4 +168,4 @@
 
 
 /** The maximum height of the climber in terms of encoder rotations. */
-#define CLIMBERMAXHEIGHT 153
+#define CLIMBERMAXHEIGHT 155

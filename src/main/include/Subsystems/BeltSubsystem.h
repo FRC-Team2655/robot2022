@@ -31,6 +31,7 @@ class BeltSubsystem : public frc2::SubsystemBase {
   void StopBelts();
 
   void RunAllBelts();
+  void RunBeltsReverse();
 
   //bool GetColorSensorProximity();
 
