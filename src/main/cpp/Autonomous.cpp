@@ -21,11 +21,12 @@ frc2::Command* Autonomous::DriveBackwards() {
 frc2::Command* Autonomous::ShootPreload() {
     frc2::SequentialCommandGroup* routine = new frc2::SequentialCommandGroup();
 
-    // Run shooter to shoot preload.
-    routine->AddCommands(frc2::ParallelRaceGroup(RunShooterAutoCommand(), DelayMillisecondsCommand(3000)));
-
-    routine->AddCommands(frc2::ParallelCommandGroup(RunAllBeltsCommand(), RunShooterVelocityCommand()));
-
+    /* Ramp up shooter for 1 second */
+    routine->AddCommands(frc2::ParallelRaceGroup(RunShooterAutoCommand(), DelayMillisecondsCommand(2000)));
+    /* Run belts and shooter (3 seconds timeout) */
+    routine->AddCommands(frc2::ParallelRaceGroup(RunAllBeltsCommand(), RunShooterVelocityCommand(), DelayMillisecondsCommand(3000)));
+    /* Drive backwards 10 feet (120 inches) with 5 sec timeout */
+    routine->AddCommands(frc2::ParallelRaceGroup(DriveDistanceCommand(-140)));
     return routine;
 }
 

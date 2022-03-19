@@ -109,7 +109,7 @@ double DriveBaseSubsystem::GetRightVelocity() {
     return rightEncoder.GetVelocity();
 }
 
-/** @brief Driving the left and right sides given a certain velocity for each side.
+/** @brief Driving the left and right sides given a certain speed (-1 to 1) for each side.
  * @return void
  */ 
 void DriveBaseSubsystem::DriveTank(double lVel, double rVel) {

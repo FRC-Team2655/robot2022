@@ -11,7 +11,6 @@
 /** The constructor of the DriveDistanceCommand class */
 DriveDistanceCommand::DriveDistanceCommand(double distance) : distance(distance) {
   AddRequirements(&Robot::driveBase);
-  maxSpeed = 1500;
 }
 
 /** @brief Called when the command is initially scheduled.
