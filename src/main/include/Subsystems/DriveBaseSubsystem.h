@@ -40,6 +40,13 @@ public:
 
   void DriveTank(double lVel, double rVel);
 
+  double lastPower = 0.0;
+  double deltaPower = 0.0;
+
+  double deltaFilteredPower = 0.0;
+
+  double useFilteredPower = true;
+
 private:
   /** Definition for the left leader motor controller on the drivetrain. */
   rev::CANSparkMax leftLeader {LEFTLEADERID, rev::CANSparkMax::MotorType::kBrushless};

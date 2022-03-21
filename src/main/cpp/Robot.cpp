@@ -32,10 +32,20 @@ void Robot::RobotInit() {
 
   // Putting the IMU Angle onto smartdashboard.
   frc::SmartDashboard::PutNumber("IMU Angle", 0);
-
+  // Putting the shooter velocity on smartdash
   frc::SmartDashboard::PutNumber("Shooter Velocity", 0);
-
+  // Put whether the shooter is up to speed on smartdash
   frc::SmartDashboard::PutBoolean("Shooter up to speed", 0);
+
+  frc::SmartDashboard::PutNumber("Shooter P", 0);
+  frc::SmartDashboard::PutNumber("Shooter I", 0);
+  frc::SmartDashboard::PutNumber("Shooter D", 0);
+  frc::SmartDashboard::PutNumber("Shooter FF", 0);
+  frc::SmartDashboard::PutNumber("Shooter Max Velocity", 0);
+
+  frc::SmartDashboard::PutNumber("Acceleration", 0);
+
+  frc::SmartDashboard::PutBoolean("Use filtered power?", 1);
 
   // Setting (most) of the motor controllers into coast mode.
   belts.SetBeltsCoastMode();
@@ -58,6 +68,10 @@ void Robot::RobotPeriodic() {
   frc::SmartDashboard::PutNumber("IMU Angle", driveBase.GetIMUAngle());
   // Updatin the Shooter Velocity on smartdashboard
   frc::SmartDashboard::PutNumber("Shooter Velocity", shooter.GetShooterVelocity());
+
+  frc::SmartDashboard::PutNumber("Acceleration", driveBase.deltaFilteredPower);
+
+  driveBase.useFilteredPower = frc::SmartDashboard::GetBoolean("Use filtered power?", 1);
 
   // Update the limelight values
   //limelight.UpdateValues();

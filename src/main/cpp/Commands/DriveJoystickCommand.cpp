@@ -56,8 +56,41 @@ void DriveJoystickCommand::Execute() {
   double power = driveDirection;
   #endif
 
+  /* Filtered power */
+  double filteredPower;
 
-	Robot::driveBase.ArcadeDrive(power, rotate);
+  /* Calculate the derivative of change in input power */
+  Robot::driveBase.deltaPower = (power - Robot::driveBase.lastPower);
+
+  /* Want to clamp large accel spikes */
+
+  /* Are we accelerating too fast? */
+  if (Robot::driveBase.deltaPower > 0.10)
+  {
+    filteredPower = Robot::driveBase.lastPower + 0.10;
+  }
+  /* Are we decelerating too fast? */
+  else if (Robot::driveBase.deltaPower < -0.10)
+  {
+    filteredPower = Robot::driveBase.lastPower - 0.10;
+  }
+  /* No comp needed */
+  else
+  {
+    filteredPower = power;
+  }
+
+  Robot::driveBase.deltaFilteredPower = (filteredPower - Robot::driveBase.lastPower);
+
+  /* Update state variable */
+  Robot::driveBase.lastPower = filteredPower;
+
+  if (Robot::driveBase.useFilteredPower == true) {
+    /* Apply to drive base */
+    Robot::driveBase.ArcadeDrive(filteredPower, rotate);
+  }else{
+    Robot::driveBase.ArcadeDrive(power, rotate);
+  }
 }
 
 /** @brief Called once the command ends or is interrupted. 

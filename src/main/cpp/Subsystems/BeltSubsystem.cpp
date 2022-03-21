@@ -24,8 +24,8 @@ void BeltSubsystem::Periodic() {}
 */
 void BeltSubsystem::RunAllBelts() {
     /** Set the lower belts to the belt speed */
-    leftBelt.Set(BELTSPEED);
-    rightBelt.Set(BELTSPEED);
+    leftBelt.Set(0.25);
+    rightBelt.Set(0.20);
 }
 
 /** @brief Function to stop the belts from running 

@@ -30,25 +30,12 @@ frc2::Command* Autonomous::ShootPreload() {
     return routine;
 }
 
-/** @brief Autonomous routine to shoot the preload and drive away from the goal. Start lined up with the goal. 
- * @return void
-*/
-void Autonomous::ShootPreloadAndDrive() {
-    // Run shooter to shoot preload.
-
-    // Stop shooter
-
-    // Drive backwards away from the goal.
-
-    // Stop driving
-
-    // Do a 180
-}
-
 /** @brief Autonmous routine to pick up a second ball and shoot the preloads. Start facing the second ball. 
  * @return void
 */
-void Autonomous::TwoBallAuto() {
+frc2::Command* Autonomous::TwoBallAuto() {
+    frc2::SequentialCommandGroup* routine = new frc2::SequentialCommandGroup();
+
     // Put the intake out
 
     // Drive toward the second ball to pick it up
@@ -72,4 +59,6 @@ void Autonomous::TwoBallAuto() {
     // Stop driving
 
     // Do a 180
+
+    return routine;
 }

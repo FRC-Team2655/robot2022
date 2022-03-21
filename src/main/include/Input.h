@@ -55,7 +55,7 @@ public:
     frc2::JoystickButton *rightStickBtn;
     frc2::JoystickButton *leftStickBtn;
     frc2::JoystickButton *psBtn;
-        frc2::POVButton *dPadDown;
+    frc2::POVButton *dPadDown;
 
 
     /** Configurations for the joystick deadband and cubic function. */

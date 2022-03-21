@@ -61,4 +61,5 @@ private:
   bool isShooterAtMax = false;
   /** A boolean to track whether the shooter is running. True is running, false is not. */
   bool isShooterRunning = false;
+
 };

@@ -21,13 +21,6 @@ ShooterSubsystem::ShooterSubsystem() {
     shooter1PID.SetIZone(0);
     shooter1PID.SetOutputRange(-1, 1);
 
-    shooter2PID.SetP(KPSHOOTER);
-    shooter2PID.SetI(KISHOOTER);
-    shooter2PID.SetD(KDSHOOTER);
-    shooter2PID.SetFF(KFFSHOOTER);
-    shooter2PID.SetIZone(0);
-    shooter2PID.SetOutputRange(-1, 1);
-
     // Burn the flash to ensure that the settings are maintained on the shooter motor controllers
     shooter1.BurnFlash();
     shooter2.BurnFlash();
@@ -54,7 +47,6 @@ void ShooterSubsystem::RunShooterPercentage(double percentage) {
 */
 void ShooterSubsystem::RunShooterVelocity(double velocity) {
     shooter1PID.SetReference(velocity, rev::ControlType::kVelocity);
-    shooter2PID.SetReference(-velocity, rev::ControlType::kVelocity);
 }
 
 /** @brief Get the current shooter velocity in RPM.

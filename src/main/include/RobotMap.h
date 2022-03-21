@@ -48,13 +48,13 @@
 /** PID Value Definitions */
 
 /** P value for the shooter */
-#define KPSHOOTER 0.00001
+#define KPSHOOTER 0.00005
 /** I value for the shooter */
 #define KISHOOTER 0.0
 /** D value for the shooter */
-#define KDSHOOTER 0
+#define KDSHOOTER 0.0
 /** FeedForward value for the shooter */
-#define KFFSHOOTER 0.000190
+#define KFFSHOOTER 0.0001805
 /** P value for the right climber */
 #define KPRIGHTCLIMBER 0.015
 /** I value for the right climber */
@@ -92,7 +92,7 @@
 #define SHOOTERPERCENTAGE 0.8
  
 /** Shooter max velocity */
-#define SHOOTERVELOCITY 3300
+#define SHOOTERVELOCITY 3600
 
 /** Speed for the shooter to run at a very slow speed such that the ball "drips" out. */
 #define SHOOTERDRIPOUTSPEED 1000

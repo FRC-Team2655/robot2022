@@ -25,6 +25,5 @@ public:
 
     frc2::Command* ShootPreload();
     frc2::Command* DriveBackwards();
-    void ShootPreloadAndDrive();
-    void TwoBallAuto();
+    frc2::Command* TwoBallAuto();
 };

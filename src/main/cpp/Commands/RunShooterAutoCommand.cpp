@@ -6,22 +6,31 @@
 
 #include "Robot.h"
 
+/** Constructor of the RunShooterAutoCommand class */
 RunShooterAutoCommand::RunShooterAutoCommand() {
   AddRequirements(&Robot::shooter);
 }
 
-// Called when the command is initially scheduled.
+/** @brief Called when the command is initially scheduled.
+ * @return void
+ */ 
 void RunShooterAutoCommand::Initialize() {}
 
-// Called repeatedly when this Command is scheduled to run
+/** @brief Called repeatedly when this Command is scheduled to run
+ * @return void
+ */ 
 void RunShooterAutoCommand::Execute() {
   Robot::shooter.RunShooterVelocity(SHOOTERVELOCITY);
 }
 
-// Called once the command ends or is interrupted.
+/** @brief Called once the command ends or is interrupted.
+ * @return void
+ */ 
 void RunShooterAutoCommand::End(bool interrupted) {}
 
-// Returns true when the command should end.
+/** @brief Returns true when the command should end.
+ * @return Whether the command should finish
+ */ 
 bool RunShooterAutoCommand::IsFinished() {
   return false;
 }
