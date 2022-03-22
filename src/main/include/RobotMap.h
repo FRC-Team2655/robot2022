@@ -9,6 +9,10 @@
 #include <frc/DoubleSolenoid.h>
 
 
+
+
+
+
 /** Motor Controller ID Definitions */
 
 /** Motor ID for the left leader motor controller on drivetrain */
@@ -42,6 +46,9 @@
 #define LEFTCLIMBERID 12
 /** CLimber ID for the right climber */
 #define RIGHTCLIMBERID 5
+
+/** ID for the shooter kicker */
+#define SHOOTERKICKERID 7
 
 
 
@@ -102,6 +109,9 @@
 
 /** The speed to climb with */
 #define CLIMBINGSPEED 0.50
+
+/** Speed for the shooter kicker */
+#define SHOOTERKICKERSPEED -0.4
 
 
 

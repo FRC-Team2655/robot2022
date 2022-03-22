@@ -73,3 +73,27 @@ void ShooterSubsystem::SetShooterCoastMode() {
     shooter1.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
     shooter2.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
 }
+
+/** @brief Function to set the shooter kicker motor in coast mode
+ * @return void
+ */ 
+void ShooterSubsystem::SetKickerCoastMode() {
+    // Setting the kicker in coast mode
+    shooterKicker.SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
+}
+
+/** @brief Function to run the shooter kicker
+ * @return void
+ */
+void ShooterSubsystem::RunShooterKicker() {
+    // Running the shooter kicker at a set percentage
+    shooterKicker.Set(SHOOTERKICKERSPEED);
+} 
+
+/** @brief Function to stop the shooter kicker
+ * @return void
+ */
+void ShooterSubsystem::StopShooterKicker() {
+    // Setting the shooter kicker to 0
+    shooterKicker.Set(0);
+}

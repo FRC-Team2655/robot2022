@@ -29,6 +29,7 @@ void DriveJoystickCommand::Initialize() {}
  * @return void
 */
 void DriveJoystickCommand::Execute() {
+
   /** Scaling the raw joystick trigger inputs */
   double rawForward = (Robot::input.joystick->GetRawAxis(3) + 1) / 2;
   double rawBackward = (Robot::input.joystick->GetRawAxis(4) + 1) / 2;
@@ -59,6 +60,7 @@ void DriveJoystickCommand::Execute() {
   /* Filtered power */
   double filteredPower;
 
+
   /* Calculate the derivative of change in input power */
   Robot::driveBase.deltaPower = (power - Robot::driveBase.lastPower);
 
@@ -88,8 +90,24 @@ void DriveJoystickCommand::Execute() {
   if (Robot::driveBase.useFilteredPower == true) {
     /* Apply to drive base */
     Robot::driveBase.ArcadeDrive(filteredPower, rotate);
+
+    if (filteredPower >= 0.5) {
+      Robot::input.joystick->SetRumble(frc::GenericHID::RumbleType::kLeftRumble, filteredPower);
+      Robot::input.joystick->SetRumble(frc::GenericHID::RumbleType::kRightRumble, filteredPower);
+    }else{
+      Robot::input.joystick->SetRumble(frc::GenericHID::RumbleType::kLeftRumble, 0.0);
+      Robot::input.joystick->SetRumble(frc::GenericHID::RumbleType::kRightRumble, 0.0);
+    }
   }else{
     Robot::driveBase.ArcadeDrive(power, rotate);
+
+    if (power >= 0.5) {
+      Robot::input.joystick->SetRumble(frc::GenericHID::RumbleType::kLeftRumble, power);
+      Robot::input.joystick->SetRumble(frc::GenericHID::RumbleType::kRightRumble, power);
+    }else{
+      Robot::input.joystick->SetRumble(frc::GenericHID::RumbleType::kLeftRumble, 0.0);
+      Robot::input.joystick->SetRumble(frc::GenericHID::RumbleType::kRightRumble, 0.0);
+    }
   }
 }
 

@@ -12,7 +12,7 @@
 /** Constructor for the RunShooterDripoutSpeed class */
 RunShooterDripoutSpeedCommand::RunShooterDripoutSpeedCommand() {
   // Require the shooter for the command
-  AddRequirements(&Robot::shooter);
+  //AddRequirements(&Robot::shooter);
 }
 
 /** @brief Called when the command is initially scheduled. 
@@ -26,6 +26,8 @@ void RunShooterDripoutSpeedCommand::Initialize() {}
 void RunShooterDripoutSpeedCommand::Execute() {
   // Running the shooter at the "dripout" speed.
   Robot::shooter.RunShooterVelocity(SHOOTERDRIPOUTSPEED);
+  // Run the shooter kicker wheel
+  Robot::shooter.RunShooterKicker();
 }
 
 /** @brief Called once the command ends or is interrupted. 
@@ -34,6 +36,8 @@ void RunShooterDripoutSpeedCommand::Execute() {
 void RunShooterDripoutSpeedCommand::End(bool interrupted) {
   // Stopping the shooter.
   Robot::shooter.RunShooterPercentage(0);
+  // Stop the shooter kicker
+  Robot::shooter.StopShooterKicker();
 }
 
 /** @brief Returns true when the command should end. 

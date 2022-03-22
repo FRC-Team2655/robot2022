@@ -54,7 +54,6 @@ public:
     frc2::JoystickButton *optionsBtn;
     frc2::JoystickButton *rightStickBtn;
     frc2::JoystickButton *leftStickBtn;
-    frc2::JoystickButton *psBtn;
     frc2::POVButton *dPadDown;
 
 

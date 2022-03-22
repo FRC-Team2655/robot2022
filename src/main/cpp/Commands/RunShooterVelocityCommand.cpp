@@ -11,7 +11,7 @@
 
 /** Constructor for the RunShooterVelocityCommand. */
 RunShooterVelocityCommand::RunShooterVelocityCommand() {
-  AddRequirements(&Robot::shooter);
+  //AddRequirements(&Robot::shooter);
 }
 
 /** @brief Called when the command is initially scheduled. 
@@ -25,6 +25,8 @@ void RunShooterVelocityCommand::Initialize() {}
 void RunShooterVelocityCommand::Execute() {
   // Run the shooter at the shooter velocity.
   Robot::shooter.RunShooterVelocity(SHOOTERVELOCITY);
+  // Run the shooter kicker
+  Robot::shooter.RunShooterKicker();
 }
 
 /** @brief Called once the command ends or is interrupted. 
@@ -33,6 +35,8 @@ void RunShooterVelocityCommand::Execute() {
 void RunShooterVelocityCommand::End(bool interrupted) {
   // Stop the shooter.
   Robot::shooter.RunShooterPercentage(0);
+  // Stop the shooter kicker
+  Robot::shooter.StopShooterKicker();
 }
 
 /** @brief Returns true when the command should end. 

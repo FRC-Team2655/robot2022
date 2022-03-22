@@ -57,6 +57,9 @@ void Robot::RobotInit() {
 
   // Reset the climber in the down position (we are assuming the robot starts every match with the climber in the down position.)
   climber.ResetClimberDown();
+
+  // Setting the shooter kicker motor in coast mode
+  shooter.SetKickerCoastMode();
 }
 
 /**

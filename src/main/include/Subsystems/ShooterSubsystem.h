@@ -27,6 +27,11 @@ class ShooterSubsystem : public frc2::SubsystemBase {
   void SetShooterBrakeMode();
   void SetShooterCoastMode();
 
+  void SetKickerCoastMode();
+
+  void RunShooterKicker();
+  void StopShooterKicker();
+
   /** PID Controller for the shooter */
   rev::SparkMaxPIDController shooter1PID = shooter1.GetPIDController();
   rev::SparkMaxPIDController shooter2PID = shooter2.GetPIDController();
@@ -36,6 +41,9 @@ class ShooterSubsystem : public frc2::SubsystemBase {
   rev::CANSparkMax shooter1 {SHOOTER1, rev::CANSparkMax::MotorType::kBrushless};
   /** Second shooter motor controller definition */
   rev::CANSparkMax shooter2 {SHOOTER2, rev::CANSparkMax::MotorType::kBrushless};
+
+  /** Motor controller for the shooter kicker */
+  rev::CANSparkMax shooterKicker {SHOOTERKICKERID, rev::CANSparkMax::MotorType::kBrushless};
 
   /** Shooter motor controller 1 encoder definition */
   rev::SparkMaxRelativeEncoder shooterEncoder = shooter1.GetEncoder();
