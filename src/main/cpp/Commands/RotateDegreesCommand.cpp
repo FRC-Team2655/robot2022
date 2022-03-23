@@ -1,9 +1,9 @@
-/*----------------------------------------------------------------------------*/
-/* Copyright (c) 2019 FIRST. All Rights Reserved.                             */
-/* Open Source Software - may be modified and shared by FRC teams. The code   */
-/* must be accompanied by the FIRST BSD license file in the root directory of */
-/* the project.                                                               */
-/*----------------------------------------------------------------------------*/
+/**
+ * @file RotateDegreesCommand.cpp
+ * @date 3/17/2022
+ * @author Jonah Boan, Aidan Cobb, Alex Nolan
+ * @brief Source code dealing with rotating a robot a given amount of degrees.
+**/
 
 #include "commands/RotateDegreesCommand.h"
 #include "Robot.h"

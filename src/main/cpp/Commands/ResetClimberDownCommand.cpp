@@ -1,5 +1,5 @@
 /**
- * @file ResetClimberUpCommand.cpp
+ * @file ResetClimberDownCommand.cpp
  * @date 3/7/2022
  * @author Jonah Boan, Aidan Cobb, Alex Nolan
  * @brief Source code dealing with resetting the climber encoders in the down position.

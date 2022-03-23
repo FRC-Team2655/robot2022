@@ -1,5 +1,5 @@
 /**
- * @file Input.h
+ * @file Input.cpp
  * @date 1/15/2022
  * @author Jonah Boan, Aidan Cobb, Alex Nolan
  * @brief Handles the source code for the input class.
