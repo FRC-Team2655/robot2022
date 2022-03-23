@@ -144,3 +144,30 @@ void DriveBaseSubsystem::ResetEncoders() {
     leftEncoder.SetPosition(0);
     rightEncoder.SetPosition(0);
 }
+
+/**
+ * @brief Get the Y-axis (forward direction of the robot) acceleration read by the IMU in Gs.
+ * @return the Y Acceleration in Gs
+ */ 
+double DriveBaseSubsystem::GetYAcceleration() {
+    double accel = imu.GetAccelX().value();
+    return accel;
+}
+
+/**
+ * @brief Get the X-axis (lateral direction of the robot) acceleration read by the IMU in Gs.
+ * @return the X Acceleration in Gs
+ */ 
+double DriveBaseSubsystem::GetXAcceleration() {
+    double accel = imu.GetAccelZ().value();
+    return accel;
+}
+
+/**
+ * @brief Get the Z-axis (vertical direction of the robot) acceleration read by the IMU in Gs.
+ * @return the Z Acceleration in Gs
+ */ 
+double DriveBaseSubsystem::GetZAcceleration() {
+    double accel = imu.GetAccelY().value();
+    return accel;
+}

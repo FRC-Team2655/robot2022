@@ -47,6 +47,16 @@ void Robot::RobotInit() {
 
   frc::SmartDashboard::PutBoolean("Use filtered power?", 1);
 
+  frc::SmartDashboard::PutNumber("Shooter Kicker Speed", 0);
+  frc::SmartDashboard::PutNumber("Shooter Speed", 0);
+  frc::SmartDashboard::PutNumber("Acceleration Clamp", 0);
+
+  frc::SmartDashboard::PutNumber("Kicker Velocity", 0);
+
+  frc::SmartDashboard::PutNumber("Accel X", 0);
+  frc::SmartDashboard::PutNumber("Accel Y", 0);
+  frc::SmartDashboard::PutNumber("Accel Z", 0);
+
   // Setting (most) of the motor controllers into coast mode.
   belts.SetBeltsCoastMode();
   intake.SetIntakeRollersCoastMode();
@@ -73,8 +83,17 @@ void Robot::RobotPeriodic() {
   frc::SmartDashboard::PutNumber("Shooter Velocity", shooter.GetShooterVelocity());
 
   frc::SmartDashboard::PutNumber("Acceleration", driveBase.deltaFilteredPower);
+  frc::SmartDashboard::PutNumber("Kicker Velocity", shooter.GetKickerVelocity());
+
+  frc::SmartDashboard::PutNumber("Accel X", driveBase.GetXAcceleration());
+  frc::SmartDashboard::PutNumber("Accel Y", driveBase.GetYAcceleration());
+  frc::SmartDashboard::PutNumber("Accel Z", driveBase.GetZAcceleration());
 
   driveBase.useFilteredPower = frc::SmartDashboard::GetBoolean("Use filtered power?", 1);
+
+  shooter.shooterKickerSpeed = frc::SmartDashboard::GetNumber("Shooter Kicker Speed", 0);
+  shooter.shooterSpeed = frc::SmartDashboard::GetNumber("Shooter Speesd", 0);
+  driveBase.accelerationClamp = frc::SmartDashboard::GetNumber("Acceleration Clamp", 0);
 
   // Update the limelight values
   //limelight.UpdateValues();

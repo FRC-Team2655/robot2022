@@ -97,3 +97,7 @@ void ShooterSubsystem::StopShooterKicker() {
     // Setting the shooter kicker to 0
     shooterKicker.Set(0);
 }
+
+double ShooterSubsystem::GetKickerVelocity() {
+    return kickerEncoder.GetVelocity();
+}

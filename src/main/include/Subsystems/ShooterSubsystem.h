@@ -32,9 +32,14 @@ class ShooterSubsystem : public frc2::SubsystemBase {
   void RunShooterKicker();
   void StopShooterKicker();
 
+  double GetKickerVelocity();
+
   /** PID Controller for the shooter */
   rev::SparkMaxPIDController shooter1PID = shooter1.GetPIDController();
   rev::SparkMaxPIDController shooter2PID = shooter2.GetPIDController();
+
+  double shooterKickerSpeed = 0.4;
+  double shooterSpeed = 3600;
 
  private:
  /** First shooter motor controller definition */
@@ -47,4 +52,6 @@ class ShooterSubsystem : public frc2::SubsystemBase {
 
   /** Shooter motor controller 1 encoder definition */
   rev::SparkMaxRelativeEncoder shooterEncoder = shooter1.GetEncoder();
+
+  rev::SparkMaxRelativeEncoder kickerEncoder = shooterKicker.GetEncoder();
 };

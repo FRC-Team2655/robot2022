@@ -64,19 +64,31 @@ void DriveJoystickCommand::Execute() {
   /* Calculate the derivative of change in input power */
   Robot::driveBase.deltaPower = (power - Robot::driveBase.lastPower);
 
-  /* Want to clamp large accel spikes */
+  static int cnt = 10;
 
-  /* Are we accelerating too fast? */
-  if (Robot::driveBase.deltaPower > 0.10)
+  /* If we're going backwards, and power is positive limit acceleration? */
+  if(Robot::driveBase.GetLeftVelocity() < 0.0)
   {
-    filteredPower = Robot::driveBase.lastPower + 0.10;
+    if(power < 0.0)
+    {
+      cnt = 0;
+      std::cout << "Clamp Applied! :D ACTIVATED! ;) BBBBBBBBBBBB" << std::endl;
+    }
   }
-  /* Are we decelerating too fast? */
-  else if (Robot::driveBase.deltaPower < -0.10)
+
+  /* Are we ramping accel? */
+  if(cnt < 10)
   {
-    filteredPower = Robot::driveBase.lastPower - 0.10;
+    cnt++;
+    if (Robot::driveBase.deltaPower > Robot::driveBase.accelerationClamp)
+    {
+      filteredPower = Robot::driveBase.lastPower + Robot::driveBase.accelerationClamp;
+    }
+    else
+    {
+      filteredPower = power;
+    }
   }
-  /* No comp needed */
   else
   {
     filteredPower = power;
@@ -87,28 +99,12 @@ void DriveJoystickCommand::Execute() {
   /* Update state variable */
   Robot::driveBase.lastPower = filteredPower;
 
-  if (Robot::driveBase.useFilteredPower == true) {
-    /* Apply to drive base */
-    Robot::driveBase.ArcadeDrive(filteredPower, rotate);
-
-    if (filteredPower >= 0.5) {
-      Robot::input.joystick->SetRumble(frc::GenericHID::RumbleType::kLeftRumble, filteredPower);
-      Robot::input.joystick->SetRumble(frc::GenericHID::RumbleType::kRightRumble, filteredPower);
-    }else{
-      Robot::input.joystick->SetRumble(frc::GenericHID::RumbleType::kLeftRumble, 0.0);
-      Robot::input.joystick->SetRumble(frc::GenericHID::RumbleType::kRightRumble, 0.0);
-    }
-  }else{
+  /* Apply to drive base */
+  //if (Robot::driveBase.useFilteredPower) {
+    //Robot::driveBase.ArcadeDrive(filteredPower, rotate);
+  //}else{
     Robot::driveBase.ArcadeDrive(power, rotate);
-
-    if (power >= 0.5) {
-      Robot::input.joystick->SetRumble(frc::GenericHID::RumbleType::kLeftRumble, power);
-      Robot::input.joystick->SetRumble(frc::GenericHID::RumbleType::kRightRumble, power);
-    }else{
-      Robot::input.joystick->SetRumble(frc::GenericHID::RumbleType::kLeftRumble, 0.0);
-      Robot::input.joystick->SetRumble(frc::GenericHID::RumbleType::kRightRumble, 0.0);
-    }
-  }
+  //}
 }
 
 /** @brief Called once the command ends or is interrupted. 

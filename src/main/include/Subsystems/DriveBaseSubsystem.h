@@ -36,6 +36,10 @@ public:
   double GetLeftEncoderRotations();
   double GetRightEncoderRotations();
 
+  double GetXAcceleration();
+  double GetYAcceleration();
+  double GetZAcceleration();
+
   void ResetEncoders();
 
   void DriveTank(double lVel, double rVel);
@@ -46,6 +50,8 @@ public:
   double deltaFilteredPower = 0.0;
 
   double useFilteredPower = true;
+
+  double accelerationClamp = 0.05;
 
 private:
   /** Definition for the left leader motor controller on the drivetrain. */

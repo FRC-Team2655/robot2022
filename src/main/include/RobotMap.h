@@ -111,7 +111,7 @@
 #define CLIMBINGSPEED 0.50
 
 /** Speed for the shooter kicker */
-#define SHOOTERKICKERSPEED -0.4
+#define SHOOTERKICKERSPEED -0.25
 
 
 
