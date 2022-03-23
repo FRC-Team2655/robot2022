@@ -1,4 +1,29 @@
 var searchData=
 [
-  ['joystick_0',['joystick',['../class_input.html#a216a4d2fd7289ab8141922825dfc41e2',1,'Input']]]
+  ['degrees_0',['degrees',['../class_rotate_degrees_command.html#ae0559f6280ed620f003103a52f01a6dd',1,'RotateDegreesCommand']]],
+  ['delaymillisecondscommand_1',['DelayMillisecondsCommand',['../class_delay_milliseconds_command.html',1,'DelayMillisecondsCommand'],['../class_delay_milliseconds_command.html#aec541709bc268fb42dcd2fd65f5d73a7',1,'DelayMillisecondsCommand::DelayMillisecondsCommand()']]],
+  ['delaymillisecondscommand_2ecpp_2',['DelayMillisecondsCommand.cpp',['../_delay_milliseconds_command_8cpp.html',1,'']]],
+  ['delaymillisecondscommand_2eh_3',['DelayMillisecondsCommand.h',['../_delay_milliseconds_command_8h.html',1,'']]],
+  ['deltafilteredpower_4',['deltaFilteredPower',['../class_drive_base_subsystem.html#aac662382386f1504a73d022d6b73ae0d',1,'DriveBaseSubsystem']]],
+  ['deltapower_5',['deltaPower',['../class_drive_base_subsystem.html#a0cd9f4e6cb0ce8e5d125e75dbbf9fd14',1,'DriveBaseSubsystem']]],
+  ['disabledinit_6',['DisabledInit',['../class_robot.html#a810e6143a208a6314491366e3c714357',1,'Robot']]],
+  ['disabledperiodic_7',['DisabledPeriodic',['../class_robot.html#a8c7309f5f1cb242ea8c74f1abf03b540',1,'Robot']]],
+  ['distance_8',['distance',['../class_drive_distance_command.html#ae32626a38bd64444aa0ae5e5bc50dc89',1,'DriveDistanceCommand']]],
+  ['dpaddown_9',['dPadDown',['../class_input.html#ab08d986e4e458a50986a2ba29d116a54',1,'Input']]],
+  ['driveaxisconfig_10',['driveAxisConfig',['../class_input.html#aca1135e8a32e0e3c5d9bf7ec93ff5034',1,'Input']]],
+  ['drivebackwards_11',['DriveBackwards',['../class_autonomous.html#a5d4e1c583bdcb6cd2e6764c42fe3c188',1,'Autonomous']]],
+  ['drivebase_12',['driveBase',['../class_robot.html#a02904913f9e0af17a44060bd1c4e36b1',1,'Robot']]],
+  ['drivebasesubsystem_13',['DriveBaseSubsystem',['../class_drive_base_subsystem.html',1,'DriveBaseSubsystem'],['../class_drive_base_subsystem.html#a1d476199d935fca803bb2033b30f3b97',1,'DriveBaseSubsystem::DriveBaseSubsystem()']]],
+  ['drivebasesubsystem_2ecpp_14',['DriveBaseSubsystem.cpp',['../_drive_base_subsystem_8cpp.html',1,'']]],
+  ['drivebasesubsystem_2eh_15',['DriveBaseSubsystem.h',['../_drive_base_subsystem_8h.html',1,'']]],
+  ['drivedistancecommand_16',['DriveDistanceCommand',['../class_drive_distance_command.html',1,'DriveDistanceCommand'],['../class_drive_distance_command.html#a81f2cd4b2a60cf613199b52fc71f95c7',1,'DriveDistanceCommand::DriveDistanceCommand()']]],
+  ['drivedistancecommand_2ecpp_17',['DriveDistanceCommand.cpp',['../_drive_distance_command_8cpp.html',1,'']]],
+  ['drivedistancecommand_2eh_18',['DriveDistanceCommand.h',['../_drive_distance_command_8h.html',1,'']]],
+  ['drivejoystick_19',['driveJoystick',['../class_drive_base_subsystem.html#a9c43cba35b23a47d9375fba6c8eafd0a',1,'DriveBaseSubsystem']]],
+  ['drivejoystickcommand_20',['DriveJoystickCommand',['../class_drive_joystick_command.html',1,'DriveJoystickCommand'],['../class_drive_joystick_command.html#adabbc78c8505d67e753fd5c61a2423d2',1,'DriveJoystickCommand::DriveJoystickCommand()']]],
+  ['drivejoystickcommand_2ecpp_21',['DriveJoystickCommand.cpp',['../_drive_joystick_command_8cpp.html',1,'']]],
+  ['drivejoystickcommand_2eh_22',['DriveJoystickCommand.h',['../_drive_joystick_command_8h.html',1,'']]],
+  ['drivetank_23',['DriveTank',['../class_drive_base_subsystem.html#a7c1716beb1cf2cae07d1e78aaac522de',1,'DriveBaseSubsystem']]],
+  ['drivetankpercentage_24',['DriveTankPercentage',['../class_drive_base_subsystem.html#a657a27894e1f0072cfaa9f758287848e',1,'DriveBaseSubsystem']]],
+  ['dualcolor_25',['DUALCOLOR',['../_robot_map_8h.html#a6834c272197b20be866a09c5f52dace4',1,'RobotMap.h']]]
 ];

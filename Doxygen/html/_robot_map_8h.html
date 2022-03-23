@@ -73,117 +73,587 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>RobotMap is used to define all the variables used throughout the <a class="el" href="class_robot.html">Robot</a> Program.  
+<p>RobotMap is used to define all the variables used throughout the <a class="el" href="class_robot.html" title="The Robot class is the central class in the project.">Robot</a> Program.  
 <a href="#details">More...</a></p>
-
+<div class="textblock"><code>#include &lt;frc/DoubleSolenoid.h&gt;</code><br />
+</div>
 <p><a href="_robot_map_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:aa66198cd33267349bbea3059bc486fa4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#aa66198cd33267349bbea3059bc486fa4">LEFTLEADERID</a>&#160;&#160;&#160;6</td></tr>
+<tr class="memitem:aa66198cd33267349bbea3059bc486fa4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#aa66198cd33267349bbea3059bc486fa4">LEFTLEADERID</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:aa66198cd33267349bbea3059bc486fa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Motor Controller ID Definitions.  <a href="_robot_map_8h.html#aa66198cd33267349bbea3059bc486fa4">More...</a><br /></td></tr>
 <tr class="separator:aa66198cd33267349bbea3059bc486fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc47bcdd63752d43f994fe3544418a0d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#afc47bcdd63752d43f994fe3544418a0d">LEFTFOLLOWER1ID</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memitem:afc47bcdd63752d43f994fe3544418a0d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#afc47bcdd63752d43f994fe3544418a0d">LEFTFOLLOWER1ID</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:afc47bcdd63752d43f994fe3544418a0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Motor ID for the first left follower motor controller on drivetrain.  <a href="_robot_map_8h.html#afc47bcdd63752d43f994fe3544418a0d">More...</a><br /></td></tr>
 <tr class="separator:afc47bcdd63752d43f994fe3544418a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21d433ff353596a38bc0b13691c5bebb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a21d433ff353596a38bc0b13691c5bebb">LEFTFOLLOWER2ID</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memitem:a21d433ff353596a38bc0b13691c5bebb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a21d433ff353596a38bc0b13691c5bebb">LEFTFOLLOWER2ID</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memdesc:a21d433ff353596a38bc0b13691c5bebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Motor ID for the second left follower motor controller on drivetrain.  <a href="_robot_map_8h.html#a21d433ff353596a38bc0b13691c5bebb">More...</a><br /></td></tr>
 <tr class="separator:a21d433ff353596a38bc0b13691c5bebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac195d4d65e1d3e7f660798fe58022b2d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#ac195d4d65e1d3e7f660798fe58022b2d">RIGHTLEADERID</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:ac195d4d65e1d3e7f660798fe58022b2d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#ac195d4d65e1d3e7f660798fe58022b2d">RIGHTLEADERID</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memdesc:ac195d4d65e1d3e7f660798fe58022b2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Motor ID for the right leader motor controller on drivetrain.  <a href="_robot_map_8h.html#ac195d4d65e1d3e7f660798fe58022b2d">More...</a><br /></td></tr>
 <tr class="separator:ac195d4d65e1d3e7f660798fe58022b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f63a7b648c204a13efbf0fe5529ee1a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a0f63a7b648c204a13efbf0fe5529ee1a">RIGHTFOLLOWER1ID</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memitem:a0f63a7b648c204a13efbf0fe5529ee1a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a0f63a7b648c204a13efbf0fe5529ee1a">RIGHTFOLLOWER1ID</a>&#160;&#160;&#160;6</td></tr>
+<tr class="memdesc:a0f63a7b648c204a13efbf0fe5529ee1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Motor ID for the first right follower motor controller on drivetrain.  <a href="_robot_map_8h.html#a0f63a7b648c204a13efbf0fe5529ee1a">More...</a><br /></td></tr>
 <tr class="separator:a0f63a7b648c204a13efbf0fe5529ee1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a7630a94ab88143f6c4995f41e3d521"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a1a7630a94ab88143f6c4995f41e3d521">RIGHTFOLLOWER2ID</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memitem:a1a7630a94ab88143f6c4995f41e3d521"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a1a7630a94ab88143f6c4995f41e3d521">RIGHTFOLLOWER2ID</a>&#160;&#160;&#160;11</td></tr>
+<tr class="memdesc:a1a7630a94ab88143f6c4995f41e3d521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Motor ID for the second right follower motor controller on drivetrain.  <a href="_robot_map_8h.html#a1a7630a94ab88143f6c4995f41e3d521">More...</a><br /></td></tr>
 <tr class="separator:a1a7630a94ab88143f6c4995f41e3d521"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf0d3e2e2d5ef4c8f7fce90fd0d50e67"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#aaf0d3e2e2d5ef4c8f7fce90fd0d50e67">INTAKEID</a>&#160;&#160;&#160;9</td></tr>
-<tr class="separator:aaf0d3e2e2d5ef4c8f7fce90fd0d50e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56032c0b5703590305a4e7315c44b6f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a56032c0b5703590305a4e7315c44b6f8">KPLEFT</a>&#160;&#160;&#160;0.1</td></tr>
-<tr class="separator:a56032c0b5703590305a4e7315c44b6f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa91531fe8ca82943c4c34507a20e307d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#aa91531fe8ca82943c4c34507a20e307d">KILEFT</a>&#160;&#160;&#160;0.1</td></tr>
-<tr class="separator:aa91531fe8ca82943c4c34507a20e307d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ff65677bd27f87a93939298e0069d37"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a1ff65677bd27f87a93939298e0069d37">KPRIGHT</a>&#160;&#160;&#160;0.0001</td></tr>
-<tr class="separator:a1ff65677bd27f87a93939298e0069d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad28142ddece898e22069e6b98e6738df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#ad28142ddece898e22069e6b98e6738df">KIRIGHT</a>&#160;&#160;&#160;0.0001</td></tr>
-<tr class="separator:ad28142ddece898e22069e6b98e6738df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a44e94b79522b076f9ad30d4a39f1e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a1a44e94b79522b076f9ad30d4a39f1e9">RMAXVELOCITY</a>&#160;&#160;&#160;5500</td></tr>
+<tr class="memitem:a93cf23b6cc44384d6f65aa599253979b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a93cf23b6cc44384d6f65aa599253979b">RIGHTBELTID</a>&#160;&#160;&#160;9</td></tr>
+<tr class="memdesc:a93cf23b6cc44384d6f65aa599253979b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Motor ID for the right belt motor controller.  <a href="_robot_map_8h.html#a93cf23b6cc44384d6f65aa599253979b">More...</a><br /></td></tr>
+<tr class="separator:a93cf23b6cc44384d6f65aa599253979b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aa167de86b204918c4396a4ff8369b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a3aa167de86b204918c4396a4ff8369b6">LEFTBELTID</a>&#160;&#160;&#160;8</td></tr>
+<tr class="memdesc:a3aa167de86b204918c4396a4ff8369b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Motor ID for the left belt motor controller.  <a href="_robot_map_8h.html#a3aa167de86b204918c4396a4ff8369b6">More...</a><br /></td></tr>
+<tr class="separator:a3aa167de86b204918c4396a4ff8369b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73021f318f8d5035f4c5176cec5272fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a73021f318f8d5035f4c5176cec5272fe">SHOOTER1</a>&#160;&#160;&#160;15</td></tr>
+<tr class="memdesc:a73021f318f8d5035f4c5176cec5272fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">For the first shooter motor controller.  <a href="_robot_map_8h.html#a73021f318f8d5035f4c5176cec5272fe">More...</a><br /></td></tr>
+<tr class="separator:a73021f318f8d5035f4c5176cec5272fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a219877fe6e1ed2f3b106e5cc4e0e02b7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a219877fe6e1ed2f3b106e5cc4e0e02b7">SHOOTER2</a>&#160;&#160;&#160;16</td></tr>
+<tr class="memdesc:a219877fe6e1ed2f3b106e5cc4e0e02b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">For the second shooter motor controller.  <a href="_robot_map_8h.html#a219877fe6e1ed2f3b106e5cc4e0e02b7">More...</a><br /></td></tr>
+<tr class="separator:a219877fe6e1ed2f3b106e5cc4e0e02b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40b0704ccbe345921d1c2f47542182cb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a40b0704ccbe345921d1c2f47542182cb">INTAKEROLLERSID</a>&#160;&#160;&#160;10</td></tr>
+<tr class="memdesc:a40b0704ccbe345921d1c2f47542182cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Motor ID for the Intake.  <a href="_robot_map_8h.html#a40b0704ccbe345921d1c2f47542182cb">More...</a><br /></td></tr>
+<tr class="separator:a40b0704ccbe345921d1c2f47542182cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90f784938d160d6651147c21adf05b50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a90f784938d160d6651147c21adf05b50">LEFTCLIMBERID</a>&#160;&#160;&#160;12</td></tr>
+<tr class="memdesc:a90f784938d160d6651147c21adf05b50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Climber ID for the left climber <br  />
+  <a href="_robot_map_8h.html#a90f784938d160d6651147c21adf05b50">More...</a><br /></td></tr>
+<tr class="separator:a90f784938d160d6651147c21adf05b50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6a634e9b60c06c45e92d3149f7ea533"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#ac6a634e9b60c06c45e92d3149f7ea533">RIGHTCLIMBERID</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:ac6a634e9b60c06c45e92d3149f7ea533"><td class="mdescLeft">&#160;</td><td class="mdescRight">CLimber ID for the right climber.  <a href="_robot_map_8h.html#ac6a634e9b60c06c45e92d3149f7ea533">More...</a><br /></td></tr>
+<tr class="separator:ac6a634e9b60c06c45e92d3149f7ea533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac33970bc02634d46e05c4a4d363fd41d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#ac33970bc02634d46e05c4a4d363fd41d">SHOOTERKICKERID</a>&#160;&#160;&#160;7</td></tr>
+<tr class="memdesc:ac33970bc02634d46e05c4a4d363fd41d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID for the shooter kicker.  <a href="_robot_map_8h.html#ac33970bc02634d46e05c4a4d363fd41d">More...</a><br /></td></tr>
+<tr class="separator:ac33970bc02634d46e05c4a4d363fd41d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35441c33720ad441d24db810f20e7af6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a35441c33720ad441d24db810f20e7af6">KPSHOOTER</a>&#160;&#160;&#160;0.00005</td></tr>
+<tr class="memdesc:a35441c33720ad441d24db810f20e7af6"><td class="mdescLeft">&#160;</td><td class="mdescRight">PID Value Definitions.  <a href="_robot_map_8h.html#a35441c33720ad441d24db810f20e7af6">More...</a><br /></td></tr>
+<tr class="separator:a35441c33720ad441d24db810f20e7af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af00efdc9ef33c790061dfd6b7fe04a5f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#af00efdc9ef33c790061dfd6b7fe04a5f">KISHOOTER</a>&#160;&#160;&#160;0.0</td></tr>
+<tr class="memdesc:af00efdc9ef33c790061dfd6b7fe04a5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">I value for the shooter.  <a href="_robot_map_8h.html#af00efdc9ef33c790061dfd6b7fe04a5f">More...</a><br /></td></tr>
+<tr class="separator:af00efdc9ef33c790061dfd6b7fe04a5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b83c251ca49bd5d69ac522dcb07db48"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a6b83c251ca49bd5d69ac522dcb07db48">KDSHOOTER</a>&#160;&#160;&#160;0.0</td></tr>
+<tr class="memdesc:a6b83c251ca49bd5d69ac522dcb07db48"><td class="mdescLeft">&#160;</td><td class="mdescRight">D value for the shooter.  <a href="_robot_map_8h.html#a6b83c251ca49bd5d69ac522dcb07db48">More...</a><br /></td></tr>
+<tr class="separator:a6b83c251ca49bd5d69ac522dcb07db48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ab19f553bbf7f5a251100287784c5e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a0ab19f553bbf7f5a251100287784c5e0">KFFSHOOTER</a>&#160;&#160;&#160;0.0001805</td></tr>
+<tr class="memdesc:a0ab19f553bbf7f5a251100287784c5e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">FeedForward value for the shooter.  <a href="_robot_map_8h.html#a0ab19f553bbf7f5a251100287784c5e0">More...</a><br /></td></tr>
+<tr class="separator:a0ab19f553bbf7f5a251100287784c5e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c9c80568fe2220200805170f3f2195e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a8c9c80568fe2220200805170f3f2195e">KPRIGHTCLIMBER</a>&#160;&#160;&#160;0.015</td></tr>
+<tr class="memdesc:a8c9c80568fe2220200805170f3f2195e"><td class="mdescLeft">&#160;</td><td class="mdescRight">P value for the right climber.  <a href="_robot_map_8h.html#a8c9c80568fe2220200805170f3f2195e">More...</a><br /></td></tr>
+<tr class="separator:a8c9c80568fe2220200805170f3f2195e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c70caafd0579eb3b8e116d18106178e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a9c70caafd0579eb3b8e116d18106178e">KIRIGHTCLIMBER</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:a9c70caafd0579eb3b8e116d18106178e"><td class="mdescLeft">&#160;</td><td class="mdescRight">I value for the right climber.  <a href="_robot_map_8h.html#a9c70caafd0579eb3b8e116d18106178e">More...</a><br /></td></tr>
+<tr class="separator:a9c70caafd0579eb3b8e116d18106178e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab81e039dba8ac0fed415d9eeb74d3c6a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#ab81e039dba8ac0fed415d9eeb74d3c6a">KDRIGHTCLIMBER</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:ab81e039dba8ac0fed415d9eeb74d3c6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">D value for the right climber.  <a href="_robot_map_8h.html#ab81e039dba8ac0fed415d9eeb74d3c6a">More...</a><br /></td></tr>
+<tr class="separator:ab81e039dba8ac0fed415d9eeb74d3c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aace0d8de2a14956838ad53d91c5d98c5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#aace0d8de2a14956838ad53d91c5d98c5">KFFRIGHTCLIMBER</a>&#160;&#160;&#160;1/150</td></tr>
+<tr class="memdesc:aace0d8de2a14956838ad53d91c5d98c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">FeedForward value for the right climber.  <a href="_robot_map_8h.html#aace0d8de2a14956838ad53d91c5d98c5">More...</a><br /></td></tr>
+<tr class="separator:aace0d8de2a14956838ad53d91c5d98c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf09c07b0cd80dccd24b86e795bbf281"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#acf09c07b0cd80dccd24b86e795bbf281">KPLEFTCLIMBER</a>&#160;&#160;&#160;0.015</td></tr>
+<tr class="memdesc:acf09c07b0cd80dccd24b86e795bbf281"><td class="mdescLeft">&#160;</td><td class="mdescRight">P value for the left climber.  <a href="_robot_map_8h.html#acf09c07b0cd80dccd24b86e795bbf281">More...</a><br /></td></tr>
+<tr class="separator:acf09c07b0cd80dccd24b86e795bbf281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d3e460cb76d9ab8857aaab351132368"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a4d3e460cb76d9ab8857aaab351132368">KILEFTCLIMBER</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:a4d3e460cb76d9ab8857aaab351132368"><td class="mdescLeft">&#160;</td><td class="mdescRight">I value for the left climber.  <a href="_robot_map_8h.html#a4d3e460cb76d9ab8857aaab351132368">More...</a><br /></td></tr>
+<tr class="separator:a4d3e460cb76d9ab8857aaab351132368"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f786274b3f8c29a5fcf03c38dcad99"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a99f786274b3f8c29a5fcf03c38dcad99">KDLEFTCLIMBER</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:a99f786274b3f8c29a5fcf03c38dcad99"><td class="mdescLeft">&#160;</td><td class="mdescRight">D value for the left climber.  <a href="_robot_map_8h.html#a99f786274b3f8c29a5fcf03c38dcad99">More...</a><br /></td></tr>
+<tr class="separator:a99f786274b3f8c29a5fcf03c38dcad99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2ef352e62335b706a0defc19411129"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a6d2ef352e62335b706a0defc19411129">KFFLEFTCLIMBER</a>&#160;&#160;&#160;1/150</td></tr>
+<tr class="memdesc:a6d2ef352e62335b706a0defc19411129"><td class="mdescLeft">&#160;</td><td class="mdescRight">FeedForward value for the left climber.  <a href="_robot_map_8h.html#a6d2ef352e62335b706a0defc19411129">More...</a><br /></td></tr>
+<tr class="separator:a6d2ef352e62335b706a0defc19411129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a44e94b79522b076f9ad30d4a39f1e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a1a44e94b79522b076f9ad30d4a39f1e9">RMAXVELOCITY</a>&#160;&#160;&#160;5700</td></tr>
+<tr class="memdesc:a1a44e94b79522b076f9ad30d4a39f1e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocities.  <a href="_robot_map_8h.html#a1a44e94b79522b076f9ad30d4a39f1e9">More...</a><br /></td></tr>
 <tr class="separator:a1a44e94b79522b076f9ad30d4a39f1e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa09a4fdff4a8ad1548cccca5d2cdc24"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#afa09a4fdff4a8ad1548cccca5d2cdc24">LMAXVELOCITY</a>&#160;&#160;&#160;5500</td></tr>
+<tr class="memitem:afa09a4fdff4a8ad1548cccca5d2cdc24"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#afa09a4fdff4a8ad1548cccca5d2cdc24">LMAXVELOCITY</a>&#160;&#160;&#160;5700</td></tr>
+<tr class="memdesc:afa09a4fdff4a8ad1548cccca5d2cdc24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Left side drivetrain max velocity.  <a href="_robot_map_8h.html#afa09a4fdff4a8ad1548cccca5d2cdc24">More...</a><br /></td></tr>
 <tr class="separator:afa09a4fdff4a8ad1548cccca5d2cdc24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a452803423be302af37aaf7bd3862d865"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a452803423be302af37aaf7bd3862d865">INTAKEROLLERSSPEED</a>&#160;&#160;&#160;0.6</td></tr>
+<tr class="memdesc:a452803423be302af37aaf7bd3862d865"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intake rollers percentage speed.  <a href="_robot_map_8h.html#a452803423be302af37aaf7bd3862d865">More...</a><br /></td></tr>
+<tr class="separator:a452803423be302af37aaf7bd3862d865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99b6282c96c855916ee6615093738dbf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a99b6282c96c855916ee6615093738dbf">BELTSPEED</a>&#160;&#160;&#160;0.2</td></tr>
+<tr class="memdesc:a99b6282c96c855916ee6615093738dbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speed to run the belt.  <a href="_robot_map_8h.html#a99b6282c96c855916ee6615093738dbf">More...</a><br /></td></tr>
+<tr class="separator:a99b6282c96c855916ee6615093738dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d4cd592235d78a98b0ce2dfa43105d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a9d4cd592235d78a98b0ce2dfa43105d2">SHOOTERPERCENTAGE</a>&#160;&#160;&#160;0.8</td></tr>
+<tr class="memdesc:a9d4cd592235d78a98b0ce2dfa43105d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speed to run shootor motor controllers.  <a href="_robot_map_8h.html#a9d4cd592235d78a98b0ce2dfa43105d2">More...</a><br /></td></tr>
+<tr class="separator:a9d4cd592235d78a98b0ce2dfa43105d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09a630febc839760af6fc40447163b94"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a09a630febc839760af6fc40447163b94">SHOOTERVELOCITY</a>&#160;&#160;&#160;3600</td></tr>
+<tr class="memdesc:a09a630febc839760af6fc40447163b94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shooter max velocity.  <a href="_robot_map_8h.html#a09a630febc839760af6fc40447163b94">More...</a><br /></td></tr>
+<tr class="separator:a09a630febc839760af6fc40447163b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3c512c152166fcd83f663fe152c46a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#ac3c512c152166fcd83f663fe152c46a6">SHOOTERDRIPOUTSPEED</a>&#160;&#160;&#160;1000</td></tr>
+<tr class="memdesc:ac3c512c152166fcd83f663fe152c46a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speed for the shooter to run at a very slow speed such that the ball "drips" out.  <a href="_robot_map_8h.html#ac3c512c152166fcd83f663fe152c46a6">More...</a><br /></td></tr>
+<tr class="separator:ac3c512c152166fcd83f663fe152c46a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a320d0d0fa46ace1493f884717594a3d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a320d0d0fa46ace1493f884717594a3d3">CLIMBERTESTINGSPEED</a>&#160;&#160;&#160;0.10</td></tr>
+<tr class="memdesc:a320d0d0fa46ace1493f884717594a3d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The speed to test the climber at (moving up and down)  <a href="_robot_map_8h.html#a320d0d0fa46ace1493f884717594a3d3">More...</a><br /></td></tr>
+<tr class="separator:a320d0d0fa46ace1493f884717594a3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70edb56e32c23ae36db98ea621dd31c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a70edb56e32c23ae36db98ea621dd31c9">CLIMBINGSPEED</a>&#160;&#160;&#160;0.50</td></tr>
+<tr class="memdesc:a70edb56e32c23ae36db98ea621dd31c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The speed to climb with.  <a href="_robot_map_8h.html#a70edb56e32c23ae36db98ea621dd31c9">More...</a><br /></td></tr>
+<tr class="separator:a70edb56e32c23ae36db98ea621dd31c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91202900e616990b3c257f9b3137b78b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a91202900e616990b3c257f9b3137b78b">SHOOTERKICKERSPEED</a>&#160;&#160;&#160;-0.25</td></tr>
+<tr class="memdesc:a91202900e616990b3c257f9b3137b78b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speed for the shooter kicker.  <a href="_robot_map_8h.html#a91202900e616990b3c257f9b3137b78b">More...</a><br /></td></tr>
+<tr class="separator:a91202900e616990b3c257f9b3137b78b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d1256818d17ec88a8d24b0deaa25c14"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a1d1256818d17ec88a8d24b0deaa25c14">INTAKELEFTSOLFORWARDPORT</a>&#160;&#160;&#160;6</td></tr>
+<tr class="memdesc:a1d1256818d17ec88a8d24b0deaa25c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solenoid Ports.  <a href="_robot_map_8h.html#a1d1256818d17ec88a8d24b0deaa25c14">More...</a><br /></td></tr>
+<tr class="separator:a1d1256818d17ec88a8d24b0deaa25c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a594bc45072819a0cfc69f28bef495976"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a594bc45072819a0cfc69f28bef495976">INTAKELEFTSOLREVERSEPORT</a>&#160;&#160;&#160;9</td></tr>
+<tr class="memdesc:a594bc45072819a0cfc69f28bef495976"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intake Left Solenoid Reverse Port.  <a href="_robot_map_8h.html#a594bc45072819a0cfc69f28bef495976">More...</a><br /></td></tr>
+<tr class="separator:a594bc45072819a0cfc69f28bef495976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a87e25bfb71f0877153a899ff9ce839"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a9a87e25bfb71f0877153a899ff9ce839">INTAKERIGHTSOLFORWARDPORT</a>&#160;&#160;&#160;7</td></tr>
+<tr class="memdesc:a9a87e25bfb71f0877153a899ff9ce839"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intake Right Solenoid Forward Port.  <a href="_robot_map_8h.html#a9a87e25bfb71f0877153a899ff9ce839">More...</a><br /></td></tr>
+<tr class="separator:a9a87e25bfb71f0877153a899ff9ce839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a141ad1cb29ef2d7ed086d1c30147dd69"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a141ad1cb29ef2d7ed086d1c30147dd69">INTAKERIGHTSOLREVERSEPORT</a>&#160;&#160;&#160;8</td></tr>
+<tr class="memdesc:a141ad1cb29ef2d7ed086d1c30147dd69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intake Right Solenoid Reverse Port.  <a href="_robot_map_8h.html#a141ad1cb29ef2d7ed086d1c30147dd69">More...</a><br /></td></tr>
+<tr class="separator:a141ad1cb29ef2d7ed086d1c30147dd69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e15051c16c3eb46957b7a288d7d8a53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a2e15051c16c3eb46957b7a288d7d8a53">LEFTSOLIN</a>&#160;&#160;&#160;frc::DoubleSolenoid::kForward</td></tr>
+<tr class="memdesc:a2e15051c16c3eb46957b7a288d7d8a53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solenoid directions.  <a href="_robot_map_8h.html#a2e15051c16c3eb46957b7a288d7d8a53">More...</a><br /></td></tr>
+<tr class="separator:a2e15051c16c3eb46957b7a288d7d8a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2842aae8882dde4aa36c4d5927eb8832"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a2842aae8882dde4aa36c4d5927eb8832">LEFTSOLOUT</a>&#160;&#160;&#160;frc::DoubleSolenoid::kReverse</td></tr>
+<tr class="separator:a2842aae8882dde4aa36c4d5927eb8832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60b279990fd59a9b57b0357fce692c5a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a60b279990fd59a9b57b0357fce692c5a">RIGHTSOLIN</a>&#160;&#160;&#160;frc::DoubleSolenoid::kForward</td></tr>
+<tr class="separator:a60b279990fd59a9b57b0357fce692c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47f48a141ede8fbc6953193851572690"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a47f48a141ede8fbc6953193851572690">RIGHTSOLOUT</a>&#160;&#160;&#160;frc::DoubleSolenoid::kReverse</td></tr>
+<tr class="separator:a47f48a141ede8fbc6953193851572690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0e496e3698b7238b33e0d3577178d10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#ac0e496e3698b7238b33e0d3577178d10">LEDPWMPORT</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:ac0e496e3698b7238b33e0d3577178d10"><td class="mdescLeft">&#160;</td><td class="mdescRight">PWM Ports.  <a href="_robot_map_8h.html#ac0e496e3698b7238b33e0d3577178d10">More...</a><br /></td></tr>
+<tr class="separator:ac0e496e3698b7238b33e0d3577178d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52a4d82d8387878847fc9fa5849eb237"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a52a4d82d8387878847fc9fa5849eb237">PROXIMITYSENSORPORT</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:a52a4d82d8387878847fc9fa5849eb237"><td class="mdescLeft">&#160;</td><td class="mdescRight">DIO Ports.  <a href="_robot_map_8h.html#a52a4d82d8387878847fc9fa5849eb237">More...</a><br /></td></tr>
+<tr class="separator:a52a4d82d8387878847fc9fa5849eb237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcd6229a3af4ac0e05e353ec7095c4bb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#adcd6229a3af4ac0e05e353ec7095c4bb">STROBERED</a>&#160;&#160;&#160;-0.11</td></tr>
+<tr class="memdesc:adcd6229a3af4ac0e05e353ec7095c4bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">LED Color codes (Referencing Blinkin manual pg.  <a href="_robot_map_8h.html#adcd6229a3af4ac0e05e353ec7095c4bb">More...</a><br /></td></tr>
+<tr class="separator:adcd6229a3af4ac0e05e353ec7095c4bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a5bf7efbca998810bc0721291aff07f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a7a5bf7efbca998810bc0721291aff07f">STROBEBLUE</a>&#160;&#160;&#160;-0.09</td></tr>
+<tr class="separator:a7a5bf7efbca998810bc0721291aff07f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a36495835f56a6e51e85af45c3182d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a9a36495835f56a6e51e85af45c3182d0">SOLIDRED</a>&#160;&#160;&#160;0.61</td></tr>
+<tr class="separator:a9a36495835f56a6e51e85af45c3182d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad175d1cac8545bae65a96b83723406cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#ad175d1cac8545bae65a96b83723406cf">SOLIDBLUE</a>&#160;&#160;&#160;0.87</td></tr>
+<tr class="separator:ad175d1cac8545bae65a96b83723406cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6834c272197b20be866a09c5f52dace4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a6834c272197b20be866a09c5f52dace4">DUALCOLOR</a>&#160;&#160;&#160;0.53</td></tr>
+<tr class="separator:a6834c272197b20be866a09c5f52dace4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a276d9d52ec6d1ecd30ab19204398ac21"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#a276d9d52ec6d1ecd30ab19204398ac21">RAINBOW</a>&#160;&#160;&#160;-0.43</td></tr>
+<tr class="separator:a276d9d52ec6d1ecd30ab19204398ac21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb6985e796476a41f3be6cb0eb6c3350"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_map_8h.html#afb6985e796476a41f3be6cb0eb6c3350">COLORSENSORPROXIMITYDISTANCE</a>&#160;&#160;&#160;10</td></tr>
+<tr class="memdesc:afb6985e796476a41f3be6cb0eb6c3350"><td class="mdescLeft">&#160;</td><td class="mdescRight">How close the ball has to be to the color sensor for it to be considered "triggered".  <a href="_robot_map_8h.html#afb6985e796476a41f3be6cb0eb6c3350">More...</a><br /></td></tr>
+<tr class="separator:afb6985e796476a41f3be6cb0eb6c3350"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >RobotMap is used to define all the variables used throughout the <a class="el" href="class_robot.html">Robot</a> Program. </p>
+<div class="textblock"><p >RobotMap is used to define all the variables used throughout the <a class="el" href="class_robot.html" title="The Robot class is the central class in the project.">Robot</a> Program. </p>
 <dl class="section date"><dt>Date</dt><dd>1/13/2022 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jonah Boan, Aidan Cobb, Alex Nolan </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="aaf0d3e2e2d5ef4c8f7fce90fd0d50e67" name="aaf0d3e2e2d5ef4c8f7fce90fd0d50e67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf0d3e2e2d5ef4c8f7fce90fd0d50e67">&#9670;&nbsp;</a></span>INTAKEID</h2>
+<a id="a99b6282c96c855916ee6615093738dbf" name="a99b6282c96c855916ee6615093738dbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99b6282c96c855916ee6615093738dbf">&#9670;&nbsp;</a></span>BELTSPEED</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define INTAKEID&#160;&#160;&#160;9</td>
+          <td class="memname">#define BELTSPEED&#160;&#160;&#160;0.2</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Motor ID for the Intake </p>
+
+<p>Speed to run the belt. </p>
 
 </div>
 </div>
-<a id="aa91531fe8ca82943c4c34507a20e307d" name="aa91531fe8ca82943c4c34507a20e307d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa91531fe8ca82943c4c34507a20e307d">&#9670;&nbsp;</a></span>KILEFT</h2>
+<a id="a320d0d0fa46ace1493f884717594a3d3" name="a320d0d0fa46ace1493f884717594a3d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a320d0d0fa46ace1493f884717594a3d3">&#9670;&nbsp;</a></span>CLIMBERTESTINGSPEED</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KILEFT&#160;&#160;&#160;0.1</td>
+          <td class="memname">#define CLIMBERTESTINGSPEED&#160;&#160;&#160;0.10</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Left side drivetrain I value </p>
+
+<p>The speed to test the climber at (moving up and down) </p>
 
 </div>
 </div>
-<a id="ad28142ddece898e22069e6b98e6738df" name="ad28142ddece898e22069e6b98e6738df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad28142ddece898e22069e6b98e6738df">&#9670;&nbsp;</a></span>KIRIGHT</h2>
+<a id="a70edb56e32c23ae36db98ea621dd31c9" name="a70edb56e32c23ae36db98ea621dd31c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70edb56e32c23ae36db98ea621dd31c9">&#9670;&nbsp;</a></span>CLIMBINGSPEED</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KIRIGHT&#160;&#160;&#160;0.0001</td>
+          <td class="memname">#define CLIMBINGSPEED&#160;&#160;&#160;0.50</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Right side drivetrain I value </p>
+
+<p>The speed to climb with. </p>
 
 </div>
 </div>
-<a id="a56032c0b5703590305a4e7315c44b6f8" name="a56032c0b5703590305a4e7315c44b6f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56032c0b5703590305a4e7315c44b6f8">&#9670;&nbsp;</a></span>KPLEFT</h2>
+<a id="afb6985e796476a41f3be6cb0eb6c3350" name="afb6985e796476a41f3be6cb0eb6c3350"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb6985e796476a41f3be6cb0eb6c3350">&#9670;&nbsp;</a></span>COLORSENSORPROXIMITYDISTANCE</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KPLEFT&#160;&#160;&#160;0.1</td>
+          <td class="memname">#define COLORSENSORPROXIMITYDISTANCE&#160;&#160;&#160;10</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >PID Value Definitions Left side drivetrain P value </p>
+
+<p>How close the ball has to be to the color sensor for it to be considered "triggered". </p>
 
 </div>
 </div>
-<a id="a1ff65677bd27f87a93939298e0069d37" name="a1ff65677bd27f87a93939298e0069d37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ff65677bd27f87a93939298e0069d37">&#9670;&nbsp;</a></span>KPRIGHT</h2>
+<a id="a6834c272197b20be866a09c5f52dace4" name="a6834c272197b20be866a09c5f52dace4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6834c272197b20be866a09c5f52dace4">&#9670;&nbsp;</a></span>DUALCOLOR</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KPRIGHT&#160;&#160;&#160;0.0001</td>
+          <td class="memname">#define DUALCOLOR&#160;&#160;&#160;0.53</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Right side drivetrain P value </p>
+
+</div>
+</div>
+<a id="a1d1256818d17ec88a8d24b0deaa25c14" name="a1d1256818d17ec88a8d24b0deaa25c14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d1256818d17ec88a8d24b0deaa25c14">&#9670;&nbsp;</a></span>INTAKELEFTSOLFORWARDPORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INTAKELEFTSOLFORWARDPORT&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Solenoid Ports. </p>
+<p >Intake Left Solenoid Forward Port </p>
+
+</div>
+</div>
+<a id="a594bc45072819a0cfc69f28bef495976" name="a594bc45072819a0cfc69f28bef495976"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a594bc45072819a0cfc69f28bef495976">&#9670;&nbsp;</a></span>INTAKELEFTSOLREVERSEPORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INTAKELEFTSOLREVERSEPORT&#160;&#160;&#160;9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Intake Left Solenoid Reverse Port. </p>
+
+</div>
+</div>
+<a id="a9a87e25bfb71f0877153a899ff9ce839" name="a9a87e25bfb71f0877153a899ff9ce839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a87e25bfb71f0877153a899ff9ce839">&#9670;&nbsp;</a></span>INTAKERIGHTSOLFORWARDPORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INTAKERIGHTSOLFORWARDPORT&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Intake Right Solenoid Forward Port. </p>
+
+</div>
+</div>
+<a id="a141ad1cb29ef2d7ed086d1c30147dd69" name="a141ad1cb29ef2d7ed086d1c30147dd69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a141ad1cb29ef2d7ed086d1c30147dd69">&#9670;&nbsp;</a></span>INTAKERIGHTSOLREVERSEPORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INTAKERIGHTSOLREVERSEPORT&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Intake Right Solenoid Reverse Port. </p>
+
+</div>
+</div>
+<a id="a40b0704ccbe345921d1c2f47542182cb" name="a40b0704ccbe345921d1c2f47542182cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40b0704ccbe345921d1c2f47542182cb">&#9670;&nbsp;</a></span>INTAKEROLLERSID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INTAKEROLLERSID&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Motor ID for the Intake. </p>
+
+</div>
+</div>
+<a id="a452803423be302af37aaf7bd3862d865" name="a452803423be302af37aaf7bd3862d865"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a452803423be302af37aaf7bd3862d865">&#9670;&nbsp;</a></span>INTAKEROLLERSSPEED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INTAKEROLLERSSPEED&#160;&#160;&#160;0.6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Intake rollers percentage speed. </p>
+
+</div>
+</div>
+<a id="a99f786274b3f8c29a5fcf03c38dcad99" name="a99f786274b3f8c29a5fcf03c38dcad99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99f786274b3f8c29a5fcf03c38dcad99">&#9670;&nbsp;</a></span>KDLEFTCLIMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KDLEFTCLIMBER&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>D value for the left climber. </p>
+
+</div>
+</div>
+<a id="ab81e039dba8ac0fed415d9eeb74d3c6a" name="ab81e039dba8ac0fed415d9eeb74d3c6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab81e039dba8ac0fed415d9eeb74d3c6a">&#9670;&nbsp;</a></span>KDRIGHTCLIMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KDRIGHTCLIMBER&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>D value for the right climber. </p>
+
+</div>
+</div>
+<a id="a6b83c251ca49bd5d69ac522dcb07db48" name="a6b83c251ca49bd5d69ac522dcb07db48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b83c251ca49bd5d69ac522dcb07db48">&#9670;&nbsp;</a></span>KDSHOOTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KDSHOOTER&#160;&#160;&#160;0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>D value for the shooter. </p>
+
+</div>
+</div>
+<a id="a6d2ef352e62335b706a0defc19411129" name="a6d2ef352e62335b706a0defc19411129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d2ef352e62335b706a0defc19411129">&#9670;&nbsp;</a></span>KFFLEFTCLIMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KFFLEFTCLIMBER&#160;&#160;&#160;1/150</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>FeedForward value for the left climber. </p>
+
+</div>
+</div>
+<a id="aace0d8de2a14956838ad53d91c5d98c5" name="aace0d8de2a14956838ad53d91c5d98c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aace0d8de2a14956838ad53d91c5d98c5">&#9670;&nbsp;</a></span>KFFRIGHTCLIMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KFFRIGHTCLIMBER&#160;&#160;&#160;1/150</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>FeedForward value for the right climber. </p>
+
+</div>
+</div>
+<a id="a0ab19f553bbf7f5a251100287784c5e0" name="a0ab19f553bbf7f5a251100287784c5e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ab19f553bbf7f5a251100287784c5e0">&#9670;&nbsp;</a></span>KFFSHOOTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KFFSHOOTER&#160;&#160;&#160;0.0001805</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>FeedForward value for the shooter. </p>
+
+</div>
+</div>
+<a id="a4d3e460cb76d9ab8857aaab351132368" name="a4d3e460cb76d9ab8857aaab351132368"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d3e460cb76d9ab8857aaab351132368">&#9670;&nbsp;</a></span>KILEFTCLIMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KILEFTCLIMBER&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I value for the left climber. </p>
+
+</div>
+</div>
+<a id="a9c70caafd0579eb3b8e116d18106178e" name="a9c70caafd0579eb3b8e116d18106178e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c70caafd0579eb3b8e116d18106178e">&#9670;&nbsp;</a></span>KIRIGHTCLIMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KIRIGHTCLIMBER&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I value for the right climber. </p>
+
+</div>
+</div>
+<a id="af00efdc9ef33c790061dfd6b7fe04a5f" name="af00efdc9ef33c790061dfd6b7fe04a5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af00efdc9ef33c790061dfd6b7fe04a5f">&#9670;&nbsp;</a></span>KISHOOTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KISHOOTER&#160;&#160;&#160;0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I value for the shooter. </p>
+
+</div>
+</div>
+<a id="acf09c07b0cd80dccd24b86e795bbf281" name="acf09c07b0cd80dccd24b86e795bbf281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf09c07b0cd80dccd24b86e795bbf281">&#9670;&nbsp;</a></span>KPLEFTCLIMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KPLEFTCLIMBER&#160;&#160;&#160;0.015</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>P value for the left climber. </p>
+
+</div>
+</div>
+<a id="a8c9c80568fe2220200805170f3f2195e" name="a8c9c80568fe2220200805170f3f2195e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c9c80568fe2220200805170f3f2195e">&#9670;&nbsp;</a></span>KPRIGHTCLIMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KPRIGHTCLIMBER&#160;&#160;&#160;0.015</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>P value for the right climber. </p>
+
+</div>
+</div>
+<a id="a35441c33720ad441d24db810f20e7af6" name="a35441c33720ad441d24db810f20e7af6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35441c33720ad441d24db810f20e7af6">&#9670;&nbsp;</a></span>KPSHOOTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KPSHOOTER&#160;&#160;&#160;0.00005</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PID Value Definitions. </p>
+<p >P value for the shooter </p>
+
+</div>
+</div>
+<a id="ac0e496e3698b7238b33e0d3577178d10" name="ac0e496e3698b7238b33e0d3577178d10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0e496e3698b7238b33e0d3577178d10">&#9670;&nbsp;</a></span>LEDPWMPORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LEDPWMPORT&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PWM Ports. </p>
+<p >The LED PWM Port </p>
+
+</div>
+</div>
+<a id="a3aa167de86b204918c4396a4ff8369b6" name="a3aa167de86b204918c4396a4ff8369b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aa167de86b204918c4396a4ff8369b6">&#9670;&nbsp;</a></span>LEFTBELTID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LEFTBELTID&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Motor ID for the left belt motor controller. </p>
+
+</div>
+</div>
+<a id="a90f784938d160d6651147c21adf05b50" name="a90f784938d160d6651147c21adf05b50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90f784938d160d6651147c21adf05b50">&#9670;&nbsp;</a></span>LEFTCLIMBERID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LEFTCLIMBERID&#160;&#160;&#160;12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Climber ID for the left climber <br  />
+ </p>
 
 </div>
 </div>
@@ -194,11 +664,12 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define LEFTFOLLOWER1ID&#160;&#160;&#160;5</td>
+          <td class="memname">#define LEFTFOLLOWER1ID&#160;&#160;&#160;2</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Motor ID for the first left follower motor controller on drivetrain </p>
+
+<p>Motor ID for the first left follower motor controller on drivetrain. </p>
 
 </div>
 </div>
@@ -209,11 +680,12 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define LEFTFOLLOWER2ID&#160;&#160;&#160;4</td>
+          <td class="memname">#define LEFTFOLLOWER2ID&#160;&#160;&#160;3</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Motor ID for the second left follower motor controller on drivetrain </p>
+
+<p>Motor ID for the second left follower motor controller on drivetrain. </p>
 
 </div>
 </div>
@@ -224,11 +696,43 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define LEFTLEADERID&#160;&#160;&#160;6</td>
+          <td class="memname">#define LEFTLEADERID&#160;&#160;&#160;1</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Motor Controller ID Definitions Motor ID for the left leader motor controller on drivetrain </p>
+
+<p>Motor Controller ID Definitions. </p>
+<p >Motor ID for the left leader motor controller on drivetrain </p>
+
+</div>
+</div>
+<a id="a2e15051c16c3eb46957b7a288d7d8a53" name="a2e15051c16c3eb46957b7a288d7d8a53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e15051c16c3eb46957b7a288d7d8a53">&#9670;&nbsp;</a></span>LEFTSOLIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LEFTSOLIN&#160;&#160;&#160;frc::DoubleSolenoid::kForward</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Solenoid directions. </p>
+
+</div>
+</div>
+<a id="a2842aae8882dde4aa36c4d5927eb8832" name="a2842aae8882dde4aa36c4d5927eb8832"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2842aae8882dde4aa36c4d5927eb8832">&#9670;&nbsp;</a></span>LEFTSOLOUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LEFTSOLOUT&#160;&#160;&#160;frc::DoubleSolenoid::kReverse</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -239,11 +743,75 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define LMAXVELOCITY&#160;&#160;&#160;5500</td>
+          <td class="memname">#define LMAXVELOCITY&#160;&#160;&#160;5700</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Left side drivetrain max velocity </p>
+
+<p>Left side drivetrain max velocity. </p>
+
+</div>
+</div>
+<a id="a52a4d82d8387878847fc9fa5849eb237" name="a52a4d82d8387878847fc9fa5849eb237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52a4d82d8387878847fc9fa5849eb237">&#9670;&nbsp;</a></span>PROXIMITYSENSORPORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PROXIMITYSENSORPORT&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DIO Ports. </p>
+<p >The Proximity Sensor DIO Port </p>
+
+</div>
+</div>
+<a id="a276d9d52ec6d1ecd30ab19204398ac21" name="a276d9d52ec6d1ecd30ab19204398ac21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a276d9d52ec6d1ecd30ab19204398ac21">&#9670;&nbsp;</a></span>RAINBOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RAINBOW&#160;&#160;&#160;-0.43</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93cf23b6cc44384d6f65aa599253979b" name="a93cf23b6cc44384d6f65aa599253979b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93cf23b6cc44384d6f65aa599253979b">&#9670;&nbsp;</a></span>RIGHTBELTID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RIGHTBELTID&#160;&#160;&#160;9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Motor ID for the right belt motor controller. </p>
+
+</div>
+</div>
+<a id="ac6a634e9b60c06c45e92d3149f7ea533" name="ac6a634e9b60c06c45e92d3149f7ea533"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6a634e9b60c06c45e92d3149f7ea533">&#9670;&nbsp;</a></span>RIGHTCLIMBERID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RIGHTCLIMBERID&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CLimber ID for the right climber. </p>
 
 </div>
 </div>
@@ -254,11 +822,12 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RIGHTFOLLOWER1ID&#160;&#160;&#160;2</td>
+          <td class="memname">#define RIGHTFOLLOWER1ID&#160;&#160;&#160;6</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Motor ID for the first right follower motor controller on drivetrain </p>
+
+<p>Motor ID for the first right follower motor controller on drivetrain. </p>
 
 </div>
 </div>
@@ -269,11 +838,12 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RIGHTFOLLOWER2ID&#160;&#160;&#160;3</td>
+          <td class="memname">#define RIGHTFOLLOWER2ID&#160;&#160;&#160;11</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Motor ID for the second right follower motor controller on drivetrain </p>
+
+<p>Motor ID for the second right follower motor controller on drivetrain. </p>
 
 </div>
 </div>
@@ -284,11 +854,40 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RIGHTLEADERID&#160;&#160;&#160;1</td>
+          <td class="memname">#define RIGHTLEADERID&#160;&#160;&#160;4</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Motor ID for the right leader motor controller on drivetrain </p>
+
+<p>Motor ID for the right leader motor controller on drivetrain. </p>
+
+</div>
+</div>
+<a id="a60b279990fd59a9b57b0357fce692c5a" name="a60b279990fd59a9b57b0357fce692c5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60b279990fd59a9b57b0357fce692c5a">&#9670;&nbsp;</a></span>RIGHTSOLIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RIGHTSOLIN&#160;&#160;&#160;frc::DoubleSolenoid::kForward</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47f48a141ede8fbc6953193851572690" name="a47f48a141ede8fbc6953193851572690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47f48a141ede8fbc6953193851572690">&#9670;&nbsp;</a></span>RIGHTSOLOUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RIGHTSOLOUT&#160;&#160;&#160;frc::DoubleSolenoid::kReverse</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -299,11 +898,186 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RMAXVELOCITY&#160;&#160;&#160;5500</td>
+          <td class="memname">#define RMAXVELOCITY&#160;&#160;&#160;5700</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Max Velocities Right side drivetrain max velocity </p>
+
+<p>Velocities. </p>
+<p >Right side drivetrain max velocity </p>
+
+</div>
+</div>
+<a id="a73021f318f8d5035f4c5176cec5272fe" name="a73021f318f8d5035f4c5176cec5272fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73021f318f8d5035f4c5176cec5272fe">&#9670;&nbsp;</a></span>SHOOTER1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHOOTER1&#160;&#160;&#160;15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For the first shooter motor controller. </p>
+<p >Left side shooter motor controller. </p>
+
+</div>
+</div>
+<a id="a219877fe6e1ed2f3b106e5cc4e0e02b7" name="a219877fe6e1ed2f3b106e5cc4e0e02b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a219877fe6e1ed2f3b106e5cc4e0e02b7">&#9670;&nbsp;</a></span>SHOOTER2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHOOTER2&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For the second shooter motor controller. </p>
+<p >Right side shooter motor controller. </p>
+
+</div>
+</div>
+<a id="ac3c512c152166fcd83f663fe152c46a6" name="ac3c512c152166fcd83f663fe152c46a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3c512c152166fcd83f663fe152c46a6">&#9670;&nbsp;</a></span>SHOOTERDRIPOUTSPEED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHOOTERDRIPOUTSPEED&#160;&#160;&#160;1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Speed for the shooter to run at a very slow speed such that the ball "drips" out. </p>
+
+</div>
+</div>
+<a id="ac33970bc02634d46e05c4a4d363fd41d" name="ac33970bc02634d46e05c4a4d363fd41d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac33970bc02634d46e05c4a4d363fd41d">&#9670;&nbsp;</a></span>SHOOTERKICKERID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHOOTERKICKERID&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID for the shooter kicker. </p>
+
+</div>
+</div>
+<a id="a91202900e616990b3c257f9b3137b78b" name="a91202900e616990b3c257f9b3137b78b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91202900e616990b3c257f9b3137b78b">&#9670;&nbsp;</a></span>SHOOTERKICKERSPEED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHOOTERKICKERSPEED&#160;&#160;&#160;-0.25</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Speed for the shooter kicker. </p>
+
+</div>
+</div>
+<a id="a9d4cd592235d78a98b0ce2dfa43105d2" name="a9d4cd592235d78a98b0ce2dfa43105d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d4cd592235d78a98b0ce2dfa43105d2">&#9670;&nbsp;</a></span>SHOOTERPERCENTAGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHOOTERPERCENTAGE&#160;&#160;&#160;0.8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Speed to run shootor motor controllers. </p>
+
+</div>
+</div>
+<a id="a09a630febc839760af6fc40447163b94" name="a09a630febc839760af6fc40447163b94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09a630febc839760af6fc40447163b94">&#9670;&nbsp;</a></span>SHOOTERVELOCITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHOOTERVELOCITY&#160;&#160;&#160;3600</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Shooter max velocity. </p>
+
+</div>
+</div>
+<a id="ad175d1cac8545bae65a96b83723406cf" name="ad175d1cac8545bae65a96b83723406cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad175d1cac8545bae65a96b83723406cf">&#9670;&nbsp;</a></span>SOLIDBLUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SOLIDBLUE&#160;&#160;&#160;0.87</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9a36495835f56a6e51e85af45c3182d0" name="a9a36495835f56a6e51e85af45c3182d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a36495835f56a6e51e85af45c3182d0">&#9670;&nbsp;</a></span>SOLIDRED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SOLIDRED&#160;&#160;&#160;0.61</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a5bf7efbca998810bc0721291aff07f" name="a7a5bf7efbca998810bc0721291aff07f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a5bf7efbca998810bc0721291aff07f">&#9670;&nbsp;</a></span>STROBEBLUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STROBEBLUE&#160;&#160;&#160;-0.09</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adcd6229a3af4ac0e05e353ec7095c4bb" name="adcd6229a3af4ac0e05e353ec7095c4bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcd6229a3af4ac0e05e353ec7095c4bb">&#9670;&nbsp;</a></span>STROBERED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STROBERED&#160;&#160;&#160;-0.11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LED Color codes (Referencing Blinkin manual pg. </p>
+<p >14) </p>
 
 </div>
 </div>

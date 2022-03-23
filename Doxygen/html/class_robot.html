@@ -66,10 +66,14 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_robot-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Robot Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="class_robot.html" title="The Robot class is the central class in the project.">Robot</a> class is the central class in the project.  
+ <a href="class_robot.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_robot_8h_source.html">Robot.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -82,13 +86,13 @@ Inheritance diagram for Robot:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a66f23dae271748d525cf3ab046375f79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot.html#a66f23dae271748d525cf3ab046375f79">RobotInit</a> () override</td></tr>
-<tr class="memdesc:a66f23dae271748d525cf3ab046375f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is run when the <a class="el" href="class_robot.html">Robot</a> is Initialized.  <a href="class_robot.html#a66f23dae271748d525cf3ab046375f79">More...</a><br /></td></tr>
+<tr class="memdesc:a66f23dae271748d525cf3ab046375f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is run when the <a class="el" href="class_robot.html" title="The Robot class is the central class in the project.">Robot</a> is Initialized.  <a href="class_robot.html#a66f23dae271748d525cf3ab046375f79">More...</a><br /></td></tr>
 <tr class="separator:a66f23dae271748d525cf3ab046375f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fad82c2250bcfb83b743b5c0dd6ed27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot.html#a8fad82c2250bcfb83b743b5c0dd6ed27">RobotPeriodic</a> () override</td></tr>
-<tr class="memdesc:a8fad82c2250bcfb83b743b5c0dd6ed27"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is run periodically while the <a class="el" href="class_robot.html">Robot</a> is initialized.  <a href="class_robot.html#a8fad82c2250bcfb83b743b5c0dd6ed27">More...</a><br /></td></tr>
+<tr class="memdesc:a8fad82c2250bcfb83b743b5c0dd6ed27"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is run periodically while the <a class="el" href="class_robot.html" title="The Robot class is the central class in the project.">Robot</a> is initialized.  <a href="class_robot.html#a8fad82c2250bcfb83b743b5c0dd6ed27">More...</a><br /></td></tr>
 <tr class="separator:a8fad82c2250bcfb83b743b5c0dd6ed27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a810e6143a208a6314491366e3c714357"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot.html#a810e6143a208a6314491366e3c714357">DisabledInit</a> () override</td></tr>
-<tr class="memdesc:a810e6143a208a6314491366e3c714357"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is run when the <a class="el" href="class_robot.html">Robot</a> is initially disabled.  <a href="class_robot.html#a810e6143a208a6314491366e3c714357">More...</a><br /></td></tr>
+<tr class="memdesc:a810e6143a208a6314491366e3c714357"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is run when the <a class="el" href="class_robot.html" title="The Robot class is the central class in the project.">Robot</a> is initially disabled.  <a href="class_robot.html#a810e6143a208a6314491366e3c714357">More...</a><br /></td></tr>
 <tr class="separator:a810e6143a208a6314491366e3c714357"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c7309f5f1cb242ea8c74f1abf03b540"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot.html#a8c7309f5f1cb242ea8c74f1abf03b540">DisabledPeriodic</a> () override</td></tr>
 <tr class="memdesc:a8c7309f5f1cb242ea8c74f1abf03b540"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is run periodically while the robot is disabled.  <a href="class_robot.html#a8c7309f5f1cb242ea8c74f1abf03b540">More...</a><br /></td></tr>
@@ -109,12 +113,43 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a02904913f9e0af17a44060bd1c4e36b1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_drive_base_subsystem.html">DriveBaseSubsystem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot.html#a02904913f9e0af17a44060bd1c4e36b1">driveBase</a></td></tr>
+<tr class="memdesc:a02904913f9e0af17a44060bd1c4e36b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declaring the <a class="el" href="class_drive_base_subsystem.html" title="The DriveBaseSubsystem class controls the drivebase.">DriveBaseSubsystem</a> instance.  <a href="class_robot.html#a02904913f9e0af17a44060bd1c4e36b1">More...</a><br /></td></tr>
 <tr class="separator:a02904913f9e0af17a44060bd1c4e36b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab90a93cb4c3a7f574bfeb594ab7f5f47"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_input.html">Input</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot.html#ab90a93cb4c3a7f574bfeb594ab7f5f47">input</a></td></tr>
+<tr class="memdesc:ab90a93cb4c3a7f574bfeb594ab7f5f47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declaring the <a class="el" href="class_input.html" title="This is the input class.">Input</a> instance.  <a href="class_robot.html#ab90a93cb4c3a7f574bfeb594ab7f5f47">More...</a><br /></td></tr>
 <tr class="separator:ab90a93cb4c3a7f574bfeb594ab7f5f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03f978b2599095b3630b0e5b2ca8b67f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_limelight_subsystem.html">LimelightSubsystem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot.html#a03f978b2599095b3630b0e5b2ca8b67f">limelight</a></td></tr>
+<tr class="memdesc:a03f978b2599095b3630b0e5b2ca8b67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declaring the Limelight instance.  <a href="class_robot.html#a03f978b2599095b3630b0e5b2ca8b67f">More...</a><br /></td></tr>
+<tr class="separator:a03f978b2599095b3630b0e5b2ca8b67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa197263e11094372a42d3ac04b3e2e34"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_belt_subsystem.html">BeltSubsystem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot.html#aa197263e11094372a42d3ac04b3e2e34">belts</a></td></tr>
+<tr class="memdesc:aa197263e11094372a42d3ac04b3e2e34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declaring the Belts instance.  <a href="class_robot.html#aa197263e11094372a42d3ac04b3e2e34">More...</a><br /></td></tr>
+<tr class="separator:aa197263e11094372a42d3ac04b3e2e34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15a71322e7e02cca07950f3d876447ee"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_intake_subsystem.html">IntakeSubsystem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot.html#a15a71322e7e02cca07950f3d876447ee">intake</a></td></tr>
+<tr class="memdesc:a15a71322e7e02cca07950f3d876447ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declaring the Intake instance.  <a href="class_robot.html#a15a71322e7e02cca07950f3d876447ee">More...</a><br /></td></tr>
+<tr class="separator:a15a71322e7e02cca07950f3d876447ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a132345b2e92c4e9393b754d3e12418e5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_shooter_subsystem.html">ShooterSubsystem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot.html#a132345b2e92c4e9393b754d3e12418e5">shooter</a></td></tr>
+<tr class="memdesc:a132345b2e92c4e9393b754d3e12418e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declaring the Shooter instance.  <a href="class_robot.html#a132345b2e92c4e9393b754d3e12418e5">More...</a><br /></td></tr>
+<tr class="separator:a132345b2e92c4e9393b754d3e12418e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5e04fafed748bb7edfd5e5f3d66982a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_climb_subsystem.html">ClimbSubsystem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot.html#aa5e04fafed748bb7edfd5e5f3d66982a">climber</a></td></tr>
+<tr class="memdesc:aa5e04fafed748bb7edfd5e5f3d66982a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declaring the climber instance.  <a href="class_robot.html#aa5e04fafed748bb7edfd5e5f3d66982a">More...</a><br /></td></tr>
+<tr class="separator:aa5e04fafed748bb7edfd5e5f3d66982a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba2b3f3ff1f8a7c2c614dd25a27477bb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_autonomous.html">Autonomous</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot.html#aba2b3f3ff1f8a7c2c614dd25a27477bb">auton</a></td></tr>
+<tr class="separator:aba2b3f3ff1f8a7c2c614dd25a27477bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a02c768a6a93b3442bbabf2e16ea8bd6a"><td class="memItemLeft" align="right" valign="top">frc2::Command *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot.html#a02c768a6a93b3442bbabf2e16ea8bd6a">autonomousCommand</a> = nullptr</td></tr>
+<tr class="memdesc:a02c768a6a93b3442bbabf2e16ea8bd6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declaring the controller for the LED via PWM.  <a href="class_robot.html#a02c768a6a93b3442bbabf2e16ea8bd6a">More...</a><br /></td></tr>
+<tr class="separator:a02c768a6a93b3442bbabf2e16ea8bd6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69b5e128c33ab516cf62889a1a64e3e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot.html#a69b5e128c33ab516cf62889a1a64e3e6">isShooterAtMax</a> = false</td></tr>
+<tr class="memdesc:a69b5e128c33ab516cf62889a1a64e3e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A boolean to track whether the shooter is at maximum velocity.  <a href="class_robot.html#a69b5e128c33ab516cf62889a1a64e3e6">More...</a><br /></td></tr>
+<tr class="separator:a69b5e128c33ab516cf62889a1a64e3e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa89385dbab708040b445a63c291cd515"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot.html#aa89385dbab708040b445a63c291cd515">isShooterRunning</a> = false</td></tr>
+<tr class="memdesc:aa89385dbab708040b445a63c291cd515"><td class="mdescLeft">&#160;</td><td class="mdescRight">A boolean to track whether the shooter is running.  <a href="class_robot.html#aa89385dbab708040b445a63c291cd515">More...</a><br /></td></tr>
+<tr class="separator:aa89385dbab708040b445a63c291cd515"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >The <a class="el" href="class_robot.html">Robot</a> class is the central class in the project. </p>
+<div class="textblock"><p >The <a class="el" href="class_robot.html" title="The Robot class is the central class in the project.">Robot</a> class is the central class in the project. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a2136cfc015936285218c8a8db984d6bc" name="a2136cfc015936285218c8a8db984d6bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2136cfc015936285218c8a8db984d6bc">&#9670;&nbsp;</a></span>AutonomousInit()</h2>
@@ -195,7 +230,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>This function is run when the <a class="el" href="class_robot.html">Robot</a> is initially disabled. </p>
+<p>This function is run when the <a class="el" href="class_robot.html" title="The Robot class is the central class in the project.">Robot</a> is initially disabled. </p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
@@ -251,7 +286,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>This function is run when the <a class="el" href="class_robot.html">Robot</a> is Initialized. </p>
+<p>This function is run when the <a class="el" href="class_robot.html" title="The Robot class is the central class in the project.">Robot</a> is Initialized. </p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
@@ -279,7 +314,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>This function is run periodically while the <a class="el" href="class_robot.html">Robot</a> is initialized. </p>
+<p>This function is run periodically while the <a class="el" href="class_robot.html" title="The Robot class is the central class in the project.">Robot</a> is initialized. </p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
@@ -337,10 +372,106 @@ Static Public Attributes</h2></td></tr>
 
 <p>This function is run periodically in the teleoperated mode. </p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<p >Logic to track whether the shooter is running and whether the shooter is at its maximum velocity</p>
+<p >Logic to control the LED colors when shooting. Red and blue corresponding to the detected ball by the color sensor. Strobe = shooter ramping up. Solid = up to speed. Dual color = shooter not running.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="aba2b3f3ff1f8a7c2c614dd25a27477bb" name="aba2b3f3ff1f8a7c2c614dd25a27477bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba2b3f3ff1f8a7c2c614dd25a27477bb">&#9670;&nbsp;</a></span>auton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_autonomous.html">Autonomous</a> Robot::auton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02c768a6a93b3442bbabf2e16ea8bd6a" name="a02c768a6a93b3442bbabf2e16ea8bd6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02c768a6a93b3442bbabf2e16ea8bd6a">&#9670;&nbsp;</a></span>autonomousCommand</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">frc2::Command* Robot::autonomousCommand = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Declaring the controller for the LED via PWM. </p>
+
+</div>
+</div>
+<a id="aa197263e11094372a42d3ac04b3e2e34" name="aa197263e11094372a42d3ac04b3e2e34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa197263e11094372a42d3ac04b3e2e34">&#9670;&nbsp;</a></span>belts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_belt_subsystem.html">BeltSubsystem</a> Robot::belts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Declaring the Belts instance. </p>
+
+</div>
+</div>
+<a id="aa5e04fafed748bb7edfd5e5f3d66982a" name="aa5e04fafed748bb7edfd5e5f3d66982a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5e04fafed748bb7edfd5e5f3d66982a">&#9670;&nbsp;</a></span>climber</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_climb_subsystem.html">ClimbSubsystem</a> Robot::climber</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Declaring the climber instance. </p>
+
+</div>
+</div>
 <a id="a02904913f9e0af17a44060bd1c4e36b1" name="a02904913f9e0af17a44060bd1c4e36b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a02904913f9e0af17a44060bd1c4e36b1">&#9670;&nbsp;</a></span>driveBase</h2>
 
@@ -360,7 +491,8 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Declaring the <a class="el" href="class_drive_base_subsystem.html">DriveBaseSubsystem</a> instance. </p>
+
+<p>Declaring the <a class="el" href="class_drive_base_subsystem.html" title="The DriveBaseSubsystem class controls the drivebase.">DriveBaseSubsystem</a> instance. </p>
 
 </div>
 </div>
@@ -383,7 +515,130 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Declaring the <a class="el" href="class_input.html">Input</a> instance. </p>
+
+<p>Declaring the <a class="el" href="class_input.html" title="This is the input class.">Input</a> instance. </p>
+
+</div>
+</div>
+<a id="a15a71322e7e02cca07950f3d876447ee" name="a15a71322e7e02cca07950f3d876447ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15a71322e7e02cca07950f3d876447ee">&#9670;&nbsp;</a></span>intake</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_intake_subsystem.html">IntakeSubsystem</a> Robot::intake</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Declaring the Intake instance. </p>
+
+</div>
+</div>
+<a id="a69b5e128c33ab516cf62889a1a64e3e6" name="a69b5e128c33ab516cf62889a1a64e3e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69b5e128c33ab516cf62889a1a64e3e6">&#9670;&nbsp;</a></span>isShooterAtMax</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Robot::isShooterAtMax = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A boolean to track whether the shooter is at maximum velocity. </p>
+<p >True is at max, false is not. </p>
+
+</div>
+</div>
+<a id="aa89385dbab708040b445a63c291cd515" name="aa89385dbab708040b445a63c291cd515"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa89385dbab708040b445a63c291cd515">&#9670;&nbsp;</a></span>isShooterRunning</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Robot::isShooterRunning = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A boolean to track whether the shooter is running. </p>
+<p >True is running, false is not. </p>
+
+</div>
+</div>
+<a id="a03f978b2599095b3630b0e5b2ca8b67f" name="a03f978b2599095b3630b0e5b2ca8b67f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03f978b2599095b3630b0e5b2ca8b67f">&#9670;&nbsp;</a></span>limelight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_limelight_subsystem.html">LimelightSubsystem</a> Robot::limelight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Declaring the Limelight instance. </p>
+
+</div>
+</div>
+<a id="a132345b2e92c4e9393b754d3e12418e5" name="a132345b2e92c4e9393b754d3e12418e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a132345b2e92c4e9393b754d3e12418e5">&#9670;&nbsp;</a></span>shooter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shooter_subsystem.html">ShooterSubsystem</a> Robot::shooter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Declaring the Shooter instance. </p>
 
 </div>
 </div>

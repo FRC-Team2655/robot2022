@@ -68,28 +68,73 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">Input.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Creates the <a class="el" href="class_input.html">Input</a> class to handle the input of the Joystick.  
+<p>Handles the source code for the input class.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;frc/Joystick.h&gt;</code><br />
 <code>#include &lt;frc2/command/button/JoystickButton.h&gt;</code><br />
+<code>#include &lt;frc2/command/SequentialCommandGroup.h&gt;</code><br />
+<code>#include &lt;frc2/command/ParallelCommandGroup.h&gt;</code><br />
+<code>#include &quot;frc2/command/InstantCommand.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="joystick_8hpp_source.html">team2655/joystick.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_robot_map_8h_source.html">RobotMap.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_run_belts_command_8h_source.html">Commands/RunBeltsCommand.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_intake_out_command_8h_source.html">Commands/IntakeOutCommand.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_intake_in_command_8h_source.html">Commands/IntakeInCommand.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_run_shooter_dripout_speed_command_8h_source.html">Commands/RunShooterDripoutSpeedCommand.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_run_shooter_velocity_command_8h_source.html">Commands/RunShooterVelocityCommand.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_run_all_belts_command_8h_source.html">Commands/RunAllBeltsCommand.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_run_intake_rollers_command_8h_source.html">Commands/RunIntakeRollersCommand.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_move_climber_down_command_8h_source.html">Commands/MoveClimberDownCommand.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_move_climber_up_command_8h_source.html">Commands/MoveClimberUpCommand.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_release_climber_command_8h_source.html">Commands/ReleaseClimberCommand.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_reset_climber_down_command_8h_source.html">Commands/ResetClimberDownCommand.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_reset_climber_up_command_8h_source.html">Commands/ResetClimberUpCommand.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_drive_joystick_command_8h_source.html">Commands/DriveJoystickCommand.h</a>&quot;</code><br />
+<code>#include &quot;frc2/command/button/POVButton.h&quot;</code><br />
 </div>
 <p><a href="_input_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input.html">Input</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the input class.  <a href="class_input.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a89b4734193f4521916fdd33f075233ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8h.html#a89b4734193f4521916fdd33f075233ad">CLIMBERMAXHEIGHT</a>&#160;&#160;&#160;153</td></tr>
+<tr class="memdesc:a89b4734193f4521916fdd33f075233ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum height of the climber in terms of encoder rotations.  <a href="_input_8h.html#a89b4734193f4521916fdd33f075233ad">More...</a><br /></td></tr>
+<tr class="separator:a89b4734193f4521916fdd33f075233ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Creates the <a class="el" href="class_input.html">Input</a> class to handle the input of the Joystick. </p>
+<div class="textblock"><p >Handles the source code for the input class. </p>
+<p >Creates the <a class="el" href="class_input.html" title="This is the input class.">Input</a> class to handle the input of the Joystick.</p>
 <dl class="section date"><dt>Date</dt><dd>1/15/2022 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jonah Boan, Aidan Cobb, Alex Nolan </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a89b4734193f4521916fdd33f075233ad" name="a89b4734193f4521916fdd33f075233ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89b4734193f4521916fdd33f075233ad">&#9670;&nbsp;</a></span>CLIMBERMAXHEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLIMBERMAXHEIGHT&#160;&#160;&#160;153</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The maximum height of the climber in terms of encoder rotations. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
