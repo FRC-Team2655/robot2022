@@ -17,6 +17,8 @@ DriveDistanceCommand::DriveDistanceCommand(double distance) : distance(distance)
  * @return void
  */ 
 void DriveDistanceCommand::Initialize() {
+  Robot::driveBase.SetCoastMode();
+
   Robot::driveBase.DriveTankPercentage(0, 0);
   Robot::driveBase.ResetEncoders();
   currentDistance = 0;
@@ -107,15 +109,17 @@ void DriveDistanceCommand::Execute() {
   else
       Robot::driveBase.DriveTank(leftSpeed, rightSpeed);
 
-  //std::cout << "Left: " << leftSpeed << ", " << "Right: " << rightSpeed << ", " << "Gyro Error: " << gyroError << std::endl;
-  std::cout << "Left: " << Robot::driveBase.GetLeftEncoderRotations() << ", Right: " << Robot::driveBase.GetRightEncoderRotations() << ", Current Distance: " << currentDistance
-  << ", Gyro Error:" << gyroError << std::endl;
+  std::cout << "Left speed: " << leftSpeed << ", " << "Right speed: " << rightSpeed << std::endl;//<< ", " << "Gyro Error: " << gyroError << std::endl;
+  std::cout << "Left rotations: " << Robot::driveBase.GetLeftEncoderRotations() << ", Right rotations: " << Robot::driveBase.GetRightEncoderRotations() << std::endl;//<< ", Current Distance: " << currentDistance
+  //<< ", Gyro Error:" << gyroError << std::endl;
 }
 
 /** @brief Called once the command ends or is interrupted.
  * @return void
  */ 
 void DriveDistanceCommand::End(bool interrupted) {
+  Robot::driveBase.SetBrakeMode();
+
   Robot::driveBase.DriveTank(0, 0);
 }
 

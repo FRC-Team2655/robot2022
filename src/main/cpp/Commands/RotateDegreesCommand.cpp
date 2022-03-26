@@ -16,6 +16,8 @@ RotateDegreesCommand::RotateDegreesCommand(double degrees) : degrees(degrees) {
  * @return void
  */ 
 void RotateDegreesCommand::Initialize() {
+  Robot::driveBase.SetCoastMode();
+
   /* First mod by 360 to get to range -360 - 360 */
   degrees = std::fmod(degrees, 360);
 
@@ -99,14 +101,15 @@ void RotateDegreesCommand::Execute() {
 
   std::cout << "Current Speed: " << currentSpeed << " Remaining Angle: " << remainingAngle << "Turning Right: " << turnRight << std::endl;
 
-  /* Apply the current speed value to motors */
+
+  /* Apply te current speed value to motors */
   if(turnRight)
   {
-    Robot::driveBase.DriveTankPercentage(-currentSpeed, currentSpeed);
+    Robot::driveBase.DriveTank(-currentSpeed, currentSpeed);
   }
   else
   {
-    Robot::driveBase.DriveTankPercentage(currentSpeed, -currentSpeed);
+    Robot::driveBase.DriveTank(currentSpeed, -currentSpeed);
   }
 }
 
@@ -115,6 +118,8 @@ void RotateDegreesCommand::Execute() {
  */ 
 void RotateDegreesCommand::End(bool interrupted) {
   Robot::driveBase.DriveTank(0, 0);
+
+  std::cout << "end" << std::endl;
 }
 
 /** @brief Returns true when the command should end.

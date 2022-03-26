@@ -87,6 +87,23 @@ void Robot::RobotPeriodic() {
   frc::SmartDashboard::PutNumber("Accel Y", driveBase.GetYAcceleration());
   frc::SmartDashboard::PutNumber("Accel Z", driveBase.GetZAcceleration());
 
+  shooter.shooterSpeed = frc::SmartDashboard::GetNumber("Shooter Speed", 0);
+  shooter.shooterKickerSpeed = frc::SmartDashboard::GetNumber("Shooter Kicker Speed", 0);
+
+  /** Logic to track whether the shooter is running and whether the shooter is at its maximum velocity */
+  if (shooter.GetShooterVelocity() <= 0.0) {
+    shooter.isShooterAtMax = false;
+    shooter.isShooterRunning = false;
+  }else if ((shooter.GetShooterVelocity() < SHOOTERVELOCITY) && (shooter.GetShooterVelocity() > 0.0)) {
+    shooter.isShooterAtMax = false;
+    shooter.isShooterRunning = true;
+  }else if (shooter.GetShooterVelocity() >= SHOOTERVELOCITY) {
+    shooter.isShooterAtMax = true;
+    shooter.isShooterRunning = true;
+  }
+
+  frc::SmartDashboard::PutBoolean("Shooter up to speed", shooter.isShooterAtMax);
+
   // Update the limelight values
   //limelight.UpdateValues();
 
@@ -99,10 +116,14 @@ void Robot::RobotPeriodic() {
  * @return void
  */ 
 void Robot::AutonomousInit() {
+  driveBase.SetCoastMode();
+
   // Reset the IMU Angle at the beginning of auto
   driveBase.ResetIMUAngle();
 
-  autonomousCommand = auton.ShootPreload();
+  //autonomousCommand = auton.ShootPreload();
+  //autonomousCommand = auton.RotateDegreesTest();
+  autonomousCommand = auton.DriveBackwards();
   autonomousCommand->Schedule();
 }
 
@@ -131,20 +152,6 @@ void Robot::AutonomousPeriodic() {
   * @return void
   */
 void Robot::TeleopPeriodic() {
-  /** Logic to track whether the shooter is running and whether the shooter is at its maximum velocity */
-  if (shooter.GetShooterVelocity() <= 0.0) {
-    isShooterAtMax = false;
-    isShooterRunning = false;
-  }else if ((shooter.GetShooterVelocity() < SHOOTERVELOCITY) && (shooter.GetShooterVelocity() > 0.0)) {
-    isShooterAtMax = false;
-    isShooterRunning = true;
-  }else if (shooter.GetShooterVelocity() >= SHOOTERVELOCITY) {
-    isShooterAtMax = true;
-    isShooterRunning = true;
-  }
-
-  frc::SmartDashboard::PutBoolean("Shooter up to speed", isShooterAtMax);
-
   /** Logic to control the LED colors when shooting. Red and blue corresponding to the detected ball by the color sensor. 
    * Strobe = shooter ramping up. Solid = up to speed. Dual color = shooter not running.
    */ 

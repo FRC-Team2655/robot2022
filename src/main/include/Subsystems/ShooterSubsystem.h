@@ -41,6 +41,11 @@ class ShooterSubsystem : public frc2::SubsystemBase {
   double shooterKickerSpeed = 0.4;
   double shooterSpeed = 3600;
 
+  /** A boolean to track whether the shooter is at maximum velocity. True is at max, false is not. */
+  bool isShooterAtMax = false;
+  /** A boolean to track whether the shooter is running. True is running, false is not. */
+  bool isShooterRunning = false;
+
  private:
  /** First shooter motor controller definition */
   rev::CANSparkMax shooter1 {SHOOTER1, rev::CANSparkMax::MotorType::kBrushless};

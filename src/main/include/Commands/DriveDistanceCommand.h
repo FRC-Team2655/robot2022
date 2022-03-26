@@ -46,13 +46,13 @@ private:
   /* Current "uncompensated" speed */
   double currentSpeed;
   /* min speed during movement. In units of power (0 - 1) */
-  double minSpeed = 0.3;
+  double minSpeed = 0.35;
   /* max speed during movement. In units of power (0 - 1) */
-  double maxSpeed = 0.5;
+  double maxSpeed = 0.7;
   /* Amount to step up speed per iteration when accelerating */
   double speedStep = 0.02;
   /* distance to start ramp down PID (inches) */
-  double rampDownDistance = 36.0;
+  double rampDownDistance = 12.0;
   /* travel direction */
   bool goingForward;
 };

@@ -16,6 +16,7 @@ RotateToGyroAngleCommand::RotateToGyroAngleCommand(double TargetAngle) : TargetA
  * @return void
 */
 void RotateToGyroAngleCommand::Initialize() {
+  Robot::driveBase.SetCoastMode();
 
   /* Get the initial IMU angle */
   double initialGyroAngle = Robot::driveBase.GetIMUAngle();

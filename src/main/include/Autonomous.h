@@ -18,11 +18,18 @@
 #include "Commands/DelayMillisecondsCommand.h"
 #include <frc2/command/ParallelCommandGroup.h>
 
+#include "Commands/IntakeOutCommand.h"
+#include "Commands/IntakeInCommand.h"
+#include "Commands/RunIntakeRollersCommand.h"
+#include "Commands/RotateDegreesCommand.h"
+#include "Commands/RunBeltsCommand.h"
+
 /** Class for all the Autonomous routines */
 class Autonomous {
 public:
     Autonomous();
 
+    frc2::Command* RotateDegreesTest();
     frc2::Command* ShootPreload();
     frc2::Command* DriveBackwards();
     frc2::Command* TwoBallAuto();

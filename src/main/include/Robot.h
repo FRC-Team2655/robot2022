@@ -56,10 +56,4 @@ private:
   //frc::Spark LEDController {LEDPWMPORT};
 
   frc2::Command* autonomousCommand = nullptr;
-
-  /** A boolean to track whether the shooter is at maximum velocity. True is at max, false is not. */
-  bool isShooterAtMax = false;
-  /** A boolean to track whether the shooter is running. True is running, false is not. */
-  bool isShooterRunning = false;
-
 };

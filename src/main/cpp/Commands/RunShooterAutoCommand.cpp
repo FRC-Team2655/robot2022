@@ -35,5 +35,5 @@ void RunShooterAutoCommand::End(bool interrupted) {}
  * @return Whether the command should finish
  */ 
 bool RunShooterAutoCommand::IsFinished() {
-  return false;
+  return Robot::shooter.isShooterAtMax;
 }

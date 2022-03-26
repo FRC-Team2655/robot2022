@@ -83,5 +83,5 @@ private:
   DriveJoystickCommand driveJoystick;
 
   /** Creating the IMU instance */
-  frc::ADIS16470_IMU imu {};
+  frc::ADIS16470_IMU imu {frc::ADIS16470_IMU::IMUAxis::kY, frc::SPI::kOnboardCS0, frc::ADIS16470_IMU::CalibrationTime::_1s};
 };
