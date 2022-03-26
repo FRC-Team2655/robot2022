@@ -121,3 +121,8 @@ void BeltSubsystem::RunBelts() {
         StopBelts();
     }
 }
+
+void BeltSubsystem::RunBeltsReverse() {
+    leftBelt.Set(-0.20);
+    rightBelt.Set(-0.20);
+}
