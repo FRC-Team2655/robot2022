@@ -21,7 +21,7 @@ IntakeSubsystem Robot::intake;
 ShooterSubsystem Robot::shooter;
 /** Declaring the climber instance */
 ClimbSubsystem Robot::climber;
-
+/** The Autonomous instance */
 Autonomous Robot::auton;
 
 /**
@@ -44,8 +44,6 @@ void Robot::RobotInit() {
   frc::SmartDashboard::PutNumber("Shooter Max Velocity", 0);
 
   frc::SmartDashboard::PutNumber("Acceleration", 0);
-
-  frc::SmartDashboard::PutBoolean("Use filtered power?", 1);
 
   frc::SmartDashboard::PutNumber("Shooter Kicker Speed", 0);
   frc::SmartDashboard::PutNumber("Shooter Speed", 0);
@@ -88,12 +86,6 @@ void Robot::RobotPeriodic() {
   frc::SmartDashboard::PutNumber("Accel X", driveBase.GetXAcceleration());
   frc::SmartDashboard::PutNumber("Accel Y", driveBase.GetYAcceleration());
   frc::SmartDashboard::PutNumber("Accel Z", driveBase.GetZAcceleration());
-
-  driveBase.useFilteredPower = frc::SmartDashboard::GetBoolean("Use filtered power?", 1);
-
-  shooter.shooterKickerSpeed = frc::SmartDashboard::GetNumber("Shooter Kicker Speed", 0);
-  shooter.shooterSpeed = frc::SmartDashboard::GetNumber("Shooter Speesd", 0);
-  driveBase.accelerationClamp = frc::SmartDashboard::GetNumber("Acceleration Clamp", 0);
 
   // Update the limelight values
   //limelight.UpdateValues();

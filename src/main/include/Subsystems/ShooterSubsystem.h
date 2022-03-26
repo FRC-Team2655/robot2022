@@ -29,7 +29,7 @@ class ShooterSubsystem : public frc2::SubsystemBase {
 
   void SetKickerCoastMode();
 
-  void RunShooterKicker();
+  void RunShooterKicker(double kickerSpeed);
   void StopShooterKicker();
 
   double GetKickerVelocity();

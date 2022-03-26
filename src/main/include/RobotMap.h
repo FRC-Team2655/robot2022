@@ -90,7 +90,7 @@
 #define LMAXVELOCITY 5700
 
 /** Intake rollers percentage speed */
-#define INTAKEROLLERSSPEED 0.6
+#define INTAKEROLLERSSPEED 0.75
 
 /** Speed to run the belt */
 #define BELTSPEED 0.2
@@ -102,13 +102,13 @@
 #define SHOOTERVELOCITY 3600
 
 /** Speed for the shooter to run at a very slow speed such that the ball "drips" out. */
-#define SHOOTERDRIPOUTSPEED 1000
+#define SHOOTERDRIPOUTSPEED 900
 
 /** The speed to test the climber at (moving up and down) */
 #define CLIMBERTESTINGSPEED 0.10
 
 /** The speed to climb with */
-#define CLIMBINGSPEED 0.50
+#define CLIMBINGSPEED 0.60
 
 /** Speed for the shooter kicker */
 #define SHOOTERKICKERSPEED -0.25

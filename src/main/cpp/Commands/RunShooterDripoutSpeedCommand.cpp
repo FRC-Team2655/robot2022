@@ -27,7 +27,7 @@ void RunShooterDripoutSpeedCommand::Execute() {
   // Running the shooter at the "dripout" speed.
   Robot::shooter.RunShooterVelocity(SHOOTERDRIPOUTSPEED);
   // Run the shooter kicker wheel
-  Robot::shooter.RunShooterKicker();
+  Robot::shooter.RunShooterKicker(-SHOOTERKICKERSPEED);
 }
 
 /** @brief Called once the command ends or is interrupted. 

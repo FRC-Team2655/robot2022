@@ -53,7 +53,7 @@ void DriveJoystickCommand::Execute() {
   double power = team2655::jshelper::getAxisValue(Robot::input.driveAxisConfig, driveDirection);
   #else
   /** If the driving style is linear, drive linearly */
-  double rotate = -0.70 * Robot::input.joystick->GetRawAxis(0);
+  double rotate = -0.90 * Robot::input.joystick->GetRawAxis(0);
   double power = driveDirection;
   #endif
 
@@ -72,7 +72,6 @@ void DriveJoystickCommand::Execute() {
     if(power < 0.0)
     {
       cnt = 0;
-      std::cout << "Clamp Applied! :D ACTIVATED! ;) BBBBBBBBBBBB" << std::endl;
     }
   }
 

@@ -85,9 +85,9 @@ void ShooterSubsystem::SetKickerCoastMode() {
 /** @brief Function to run the shooter kicker
  * @return void
  */
-void ShooterSubsystem::RunShooterKicker() {
+void ShooterSubsystem::RunShooterKicker(double kickerSpeed) {
     // Running the shooter kicker at a set percentage
-    shooterKicker.Set(SHOOTERKICKERSPEED);
+    shooterKicker.Set(kickerSpeed);
 } 
 
 /** @brief Function to stop the shooter kicker

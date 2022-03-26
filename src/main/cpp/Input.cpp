@@ -33,12 +33,11 @@ Input::Input() {
   /** When the x button is pressed, move the intake out and run the belts */
   xBtn->WhenPressed(frc2::SequentialCommandGroup(intakeOut, runBelts), true);
   /** When the square button is held, run the shooter at the "dripout" speed. */
-  squareBtn->WhenHeld(runShooterDripoutSpeed);
+  squareBtn->WhenHeld(frc2::ParallelCommandGroup(runShooterDripoutSpeed, runAllBelts));
   /** When the L1 button is held, run the shooter at the shooter velocity */
   l1Btn->WhenHeld(runShooterVelocity);
   /** When the right stick button is held, run all the belts without belt logic */
   rightStickBtn->WhenHeld(runAllBelts);
-
   /** When the R1 button is held, run the intake rollers. */
   r1Btn->WhenHeld(runIntakeRollers);
   /** When the share button is held, move the climber down without PID */
