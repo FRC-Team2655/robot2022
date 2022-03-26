@@ -51,7 +51,7 @@ Input::Input() {
   triangleBtn->WhenHeld(reverseBelts);
 
   dPadUp->WhileHeld(runLeftClimberUp);
-  dPadDown->WhileHeld(runLeftClimberDown);
-  dPadLeft->WhenHeld(runRightClimberDown);
+  dPadLeft->WhileHeld(runLeftClimberDown);
+  dPadDown->WhenHeld(runRightClimberDown);
   dPadRight->WhenHeld(runRightClimberUp);
 }
