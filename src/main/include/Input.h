@@ -32,6 +32,7 @@
 #include "Commands/DriveJoystickCommand.h"
 #include "frc2/command/button/POVButton.h"
 #include "Commands/ReverseBeltsCommand.h"
+#include "Commands/RunClimberIndividuallyCommand.h"
 
 
 /** This is the input class. It deals with the joystick input. */
@@ -57,6 +58,8 @@ public:
     frc2::JoystickButton *leftStickBtn;
     frc2::POVButton *dPadDown;
     frc2::POVButton *dPadUp;
+    frc2::POVButton *dPadRight;
+    frc2::POVButton *dPadLeft;
 
 
     /** Configurations for the joystick deadband and cubic function. */
@@ -89,4 +92,9 @@ private:
     ResetClimberDownCommand resetClimberDown {};
 
     ReverseBeltsCommand reverseBelts {};
+
+    RunClimberIndividuallyCommand runLeftClimberUp {true, CLIMBINGSPEED};
+    RunClimberIndividuallyCommand runLeftClimberDown {true, -CLIMBINGSPEED};
+    RunClimberIndividuallyCommand runRightClimberUp {false, CLIMBINGSPEED};
+    RunClimberIndividuallyCommand runRightClimberDown {false, -CLIMBINGSPEED};
 };

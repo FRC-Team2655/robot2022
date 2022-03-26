@@ -31,6 +31,8 @@ class ClimbSubsystem : public frc2::SubsystemBase {
   void ResetClimberDown();
   void ResetClimberUp();
 
+  void RunClimberIndividually(bool isLeftSide, double speed);
+
   void Periodic() override;
 
  private:

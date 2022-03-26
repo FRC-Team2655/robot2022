@@ -27,6 +27,8 @@ Input::Input() {
   leftStickBtn = new frc2::JoystickButton(joystick, 11);
   dPadDown = new frc2::POVButton(joystick, 180);
   dPadUp = new frc2::POVButton(joystick, 0);
+  dPadLeft = new frc2::POVButton(joystick, 270);
+  dPadRight = new frc2::POVButton(joystick, 90);
 
 
   /** When the circle button is pressed, move the intake in */
@@ -45,10 +47,11 @@ Input::Input() {
   shareBtn->WhenHeld(moveClimberDown);
   /** When the options button is pressed, move the climber up without PID */
   optionsBtn->WhileHeld(moveClimberUp);
-  /** When the D-Pad down button is pressed, reset the climber encoders in the down position */
-  dPadDown->WhenPressed(resetClimberDown);
-  /** When the triangle button is pressed, reset the climber encoders in the up position. */
-  dPadUp->WhenPressed(resetClimberUp);
 
   triangleBtn->WhenHeld(reverseBelts);
+
+  dPadUp->WhileHeld(runLeftClimberUp);
+  dPadDown->WhileHeld(runLeftClimberDown);
+  dPadLeft->WhenHeld(runRightClimberDown);
+  dPadRight->WhenHeld(runRightClimberUp);
 }

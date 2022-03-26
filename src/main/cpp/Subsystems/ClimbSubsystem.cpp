@@ -125,3 +125,11 @@ void ClimbSubsystem::ResetClimberUp() {
     leftClimberEncoder.SetPosition(CLIMBERMAXHEIGHT);
     rightClimberEncoder.SetPosition(-CLIMBERMAXHEIGHT);
 }
+
+void ClimbSubsystem::RunClimberIndividually(bool isLeftSide, double upwardSpeed) {
+    if (isLeftSide) {
+        leftClimber.Set(upwardSpeed);
+    }else{
+        rightClimber.Set(-upwardSpeed);
+    }
+}
