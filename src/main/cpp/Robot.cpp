@@ -123,7 +123,8 @@ void Robot::AutonomousInit() {
 
   //autonomousCommand = auton.ShootPreload();
   //autonomousCommand = auton.RotateDegreesTest();
-  autonomousCommand = auton.DriveBackwards();
+  //autonomousCommand = auton.DriveBackwards();
+  autonomousCommand = auton.TwoBallAuto();
   autonomousCommand->Schedule();
 }
 

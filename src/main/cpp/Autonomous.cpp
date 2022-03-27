@@ -45,6 +45,8 @@ frc2::Command* Autonomous::TwoBallAuto() {
     // Put the intake out
     routine->AddCommands(IntakeOutCommand());
 
+    routine->AddCommands(DelayMillisecondsCommand(1000));
+
     // Drive toward the second ball to pick it up
     routine->AddCommands(frc2::ParallelRaceGroup(DriveDistanceCommand(50), RunIntakeRollersCommand(), RunBeltsCommand()));
 
