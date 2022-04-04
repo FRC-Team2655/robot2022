@@ -98,6 +98,9 @@ void ShooterSubsystem::StopShooterKicker() {
     shooterKicker.Set(0);
 }
 
+/** @brief Function to get the velocity of the kicker wheel
+ * @return The velocity of the kicker wheel
+ */ 
 double ShooterSubsystem::GetKickerVelocity() {
     return kickerEncoder.GetVelocity();
 }

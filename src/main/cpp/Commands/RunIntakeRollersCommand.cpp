@@ -10,8 +10,7 @@
 #include "RobotMap.h"
 
 /** Constructor for the RunIntakeRollersCommand. */
-RunIntakeRollersCommand::RunIntakeRollersCommand() {
-}
+RunIntakeRollersCommand::RunIntakeRollersCommand() {}
 
 /** @brief Called when the command is initially scheduled. 
  * @return void

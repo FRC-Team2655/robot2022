@@ -30,11 +30,9 @@ Autonomous Robot::auton;
  */ 
 void Robot::RobotInit() {
 
-  // Putting the IMU Angle onto smartdashboard.
+  // Putting all values on smartdash to be updated later.
   frc::SmartDashboard::PutNumber("IMU Angle", 0);
-  // Putting the shooter velocity on smartdash
   frc::SmartDashboard::PutNumber("Shooter Velocity", 0);
-  // Put whether the shooter is up to speed on smartdash
   frc::SmartDashboard::PutBoolean("Shooter up to speed", 0);
 
   frc::SmartDashboard::PutNumber("Shooter P", 0);
@@ -50,6 +48,8 @@ void Robot::RobotInit() {
   frc::SmartDashboard::PutNumber("Acceleration Clamp", 0);
 
   frc::SmartDashboard::PutNumber("Kicker Velocity", 0);
+
+  frc::SmartDashboard::PutBoolean("Is climber at max height", 0);
 
   frc::SmartDashboard::PutNumber("Accel X", 0);
   frc::SmartDashboard::PutNumber("Accel Y", 0);
@@ -77,16 +77,18 @@ void Robot::RobotInit() {
 void Robot::RobotPeriodic() {
   // Updating the IMU Angle on smartdashboard
   frc::SmartDashboard::PutNumber("IMU Angle", driveBase.GetIMUAngle());
-  // Updatin the Shooter Velocity on smartdashboard
+  // Updating the Shooter Velocity on smartdashboard
   frc::SmartDashboard::PutNumber("Shooter Velocity", shooter.GetShooterVelocity());
-
+  // Update the drive base acceleration on smartdash.
   frc::SmartDashboard::PutNumber("Acceleration", driveBase.deltaFilteredPower);
+  // Update kicker velocity on smartdash.
   frc::SmartDashboard::PutNumber("Kicker Velocity", shooter.GetKickerVelocity());
-
+  // Putting the imu acceleration readings on smartdash.
   frc::SmartDashboard::PutNumber("Accel X", driveBase.GetXAcceleration());
   frc::SmartDashboard::PutNumber("Accel Y", driveBase.GetYAcceleration());
   frc::SmartDashboard::PutNumber("Accel Z", driveBase.GetZAcceleration());
 
+  // Getting the shooter speeds off smartdash. For debug and tuning purposes only, never use on competition code. For comps, use hardcoded robotmap values.
   shooter.shooterSpeed = frc::SmartDashboard::GetNumber("Shooter Speed", 0);
   shooter.shooterKickerSpeed = frc::SmartDashboard::GetNumber("Shooter Kicker Speed", 0);
 
@@ -102,6 +104,22 @@ void Robot::RobotPeriodic() {
     shooter.isShooterRunning = true;
   }
 
+  /** Logic to check whether the climber arms are up to the maximum height */
+  if (climber.GetLeftClimberPosition() >= CLIMBERMAXHEIGHT) {
+    climber.isLeftClimberAtMax = true;
+  }else{
+    climber.isLeftClimberAtMax = false;
+  }
+  if (climber.GetRightClimberPosition() <= -CLIMBERMAXHEIGHT) {
+    climber.isRightClimberAtMax = true;
+  }else{
+    climber.isRightClimberAtMax = false;
+  }
+
+  // Update whether the climber arms are at the maximum height on smartdash
+  frc::SmartDashboard::PutBoolean("Is climber at max height", (climber.isRightClimberAtMax && climber.isLeftClimberAtMax));
+
+  // Put whether the shooter is up to speed on smartdash.
   frc::SmartDashboard::PutBoolean("Shooter up to speed", shooter.isShooterAtMax);
 
   // Update the limelight values
@@ -116,14 +134,15 @@ void Robot::RobotPeriodic() {
  * @return void
  */ 
 void Robot::AutonomousInit() {
+  // Put the drive base in coast mode.
   driveBase.SetCoastMode();
 
   // Reset the IMU Angle at the beginning of auto
   driveBase.ResetIMUAngle();
 
-  //autonomousCommand = auton.ShootPreload();
+  //autonomousCommand = auton.ShootPreloadAndDrive();
   //autonomousCommand = auton.RotateDegreesTest();
-  //autonomousCommand = auton.DriveBackwards();
+  //autonomousCommand = auton.DriveBackwardsOffTarmac();
   autonomousCommand = auton.TwoBallAuto();
   autonomousCommand->Schedule();
 }
@@ -132,9 +151,7 @@ void Robot::AutonomousInit() {
  * @brief This function is run periodically in the autonomous mode.
  * @return void
  */ 
-void Robot::AutonomousPeriodic() {
-
-}
+void Robot::AutonomousPeriodic() {}
 
  /** 
   * @brief This function is run when teleoperated mode is initialized.
@@ -188,9 +205,7 @@ void Robot::DisabledInit() {
  * @brief This function is run periodically while the robot is disabled.
  * @return void
  */ 
-void Robot::DisabledPeriodic() {
-
-}
+void Robot::DisabledPeriodic() {}
 
 #ifndef RUNNING_FRC_TESTS
 int main() {

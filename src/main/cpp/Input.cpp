@@ -43,13 +43,13 @@ Input::Input() {
   rightStickBtn->WhenHeld(runAllBelts);
   /** When the R1 button is held, run the intake rollers. */
   r1Btn->WhenHeld(runIntakeRollers);
-  /** When the share button is held, move the climber down without PID */
+  /** When the share button is held, move the climber down manually */
   shareBtn->WhenHeld(moveClimberDown);
-  /** When the options button is pressed, move the climber up without PID */
+  /** When the options button is pressed, move the climber up manually */
   optionsBtn->WhileHeld(moveClimberUp);
-
+  /** When the triangle button is held, run the belts in the reverse direction */
   triangleBtn->WhenHeld(reverseBelts);
-
+  /** D-Pad buttons to move the climber arms individually. */
   dPadUp->WhileHeld(runLeftClimberUp);
   dPadLeft->WhileHeld(runLeftClimberDown);
   dPadDown->WhenHeld(runRightClimberDown);

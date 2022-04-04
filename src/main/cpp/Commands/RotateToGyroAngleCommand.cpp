@@ -9,8 +9,7 @@
 #include <Robot.h>
 
 /** The constructor of the RotateToGyroAngleCommand. */
-RotateToGyroAngleCommand::RotateToGyroAngleCommand(double TargetAngle) : TargetAngle(TargetAngle){
-}
+RotateToGyroAngleCommand::RotateToGyroAngleCommand(double TargetAngle) : TargetAngle(TargetAngle){}
 
 /** @brief Called when the command is initially scheduled. 
  * @return void

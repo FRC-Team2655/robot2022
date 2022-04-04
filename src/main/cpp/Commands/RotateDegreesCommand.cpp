@@ -9,8 +9,7 @@
 #include "Robot.h"
 
 /** The constructor of the RotateDegreesCommand class */
-RotateDegreesCommand::RotateDegreesCommand(double degrees) : degrees(degrees) {
-}
+RotateDegreesCommand::RotateDegreesCommand(double degrees) : degrees(degrees) {}
 
 /** @brief Called when the command is initially scheduled.
  * @return void

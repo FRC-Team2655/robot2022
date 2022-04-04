@@ -30,7 +30,7 @@ public:
     Autonomous();
 
     frc2::Command* RotateDegreesTest();
-    frc2::Command* ShootPreload();
-    frc2::Command* DriveBackwards();
+    frc2::Command* ShootPreloadAndDrive();
+    frc2::Command* DriveBackwardsOffTarmac();
     frc2::Command* TwoBallAuto();
 };

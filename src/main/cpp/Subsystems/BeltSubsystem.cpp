@@ -122,6 +122,9 @@ void BeltSubsystem::RunBelts() {
     }
 }
 
+/** @brief Function to run the belts in the inverted direction
+ * @return void
+ */ 
 void BeltSubsystem::RunBeltsReverse() {
     leftBelt.Set(-0.20);
     rightBelt.Set(-0.20);

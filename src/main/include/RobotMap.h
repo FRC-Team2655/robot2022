@@ -108,7 +108,7 @@
 #define CLIMBERTESTINGSPEED 0.10
 
 /** The speed to climb with */
-#define CLIMBINGSPEED 0.60
+#define CLIMBINGSPEED 0.80
 
 /** Speed for the shooter kicker */
 #define SHOOTERKICKERSPEED 0.20

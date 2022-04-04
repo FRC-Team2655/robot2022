@@ -126,10 +126,17 @@ void ClimbSubsystem::ResetClimberUp() {
     rightClimberEncoder.SetPosition(-CLIMBERMAXHEIGHT);
 }
 
+/** @brief Function to run the climber arms individually
+ * @param isLeftSide Whether we are moving the left side individually. False is right side
+ * @param upwardSpeed The speed to run the individual climber arm at. + is up, - is down.
+ * @return void
+ */ 
 void ClimbSubsystem::RunClimberIndividually(bool isLeftSide, double upwardSpeed) {
+    // If we are moving the left side individually, move the left side at the upwardSpeed. If not, move the right side at the upward speed.
     if (isLeftSide) {
         leftClimber.Set(upwardSpeed);
     }else{
+        // Negative sign is so that the sign of upwardSpeed is the same for both sides (+ up, - down).
         rightClimber.Set(-upwardSpeed);
     }
 }

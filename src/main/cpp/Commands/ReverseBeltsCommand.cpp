@@ -1,29 +1,44 @@
-// Copyright (c) FIRST and other WPILib contributors.
-// Open Source Software; you can modify and/or share it under the terms of
-// the WPILib BSD license file in the root directory of this project.
+/**
+ * @file ReverseBeltsCommand.cpp
+ * @date 4/4/2022
+ * @author Jonah Boan, Aidan Cobb, Alex Nolan
+ * @brief Source code dealing with running the belts in the inverse direction.
+**/
 
 #include "Commands/ReverseBeltsCommand.h"
 
 #include "Robot.h"
 
+/** Constructor for the ReserseBeltsCommand class */
 ReverseBeltsCommand::ReverseBeltsCommand() {
+  // This command requires the belts subsystem
   AddRequirements(&Robot::belts);
 }
 
-// Called when the command is initially scheduled.
+/** @brief Called when the command is initially scheduled.
+ * @return void
+ */ 
 void ReverseBeltsCommand::Initialize() {}
 
-// Called repeatedly when this Command is scheduled to run
+/** @brief Called repeatedly when this Command is scheduled to run
+ * @return void
+ */ 
 void ReverseBeltsCommand::Execute() {
+  // Run the belts in the reverse direction
   Robot::belts.RunBeltsReverse();
 }
 
-// Called once the command ends or is interrupted.
+/** @brief Called once the command ends or is interrupted.
+ * @return void
+ */ 
 void ReverseBeltsCommand::End(bool interrupted) {
+  // Stop the belts from running
   Robot::belts.StopBelts();
 }
 
-// Returns true when the command should end.
+/** @brief Returns true when the command should end.
+ * @return Whether the command should finish
+ */
 bool ReverseBeltsCommand::IsFinished() {
   return false;
 }

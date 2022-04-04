@@ -12,7 +12,7 @@
 /** Constructor for the RunShooterDripoutSpeed class */
 RunShooterDripoutSpeedCommand::RunShooterDripoutSpeedCommand() {
   // Require the shooter for the command
-  //AddRequirements(&Robot::shooter);
+  AddRequirements(&Robot::shooter);
 }
 
 /** @brief Called when the command is initially scheduled. 

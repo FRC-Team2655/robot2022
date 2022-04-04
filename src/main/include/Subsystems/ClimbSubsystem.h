@@ -35,17 +35,22 @@ class ClimbSubsystem : public frc2::SubsystemBase {
 
   void Periodic() override;
 
+  // Boolean to track whether the left climber is at the maximum height
+  bool isLeftClimberAtMax = false;
+  // Boolean to track whether the right climber is at the maximum height
+  bool isRightClimberAtMax = false;
+  
  private:
 
- /** Motor controller definitions for the left and right climbers */
+  /** Motor controller definitions for the left and right climbers */
   rev::CANSparkMax leftClimber {LEFTCLIMBERID, rev::CANSparkMax::MotorType::kBrushless};
   rev::CANSparkMax rightClimber {RIGHTCLIMBERID, rev::CANSparkMax::MotorType::kBrushless};
 
-/** PID definintions for the left and right climbers */
+  /** PID definintions for the left and right climbers */
   rev::SparkMaxPIDController leftClimbPID = leftClimber.GetPIDController();
   rev::SparkMaxPIDController rightClimbPID = rightClimber.GetPIDController();
 
-/** Relative Encoder definitions for the left and right climbers */
+  /** Relative Encoder definitions for the left and right climbers */
   rev::SparkMaxRelativeEncoder leftClimberEncoder = leftClimber.GetEncoder();
   rev::SparkMaxRelativeEncoder rightClimberEncoder = rightClimber.GetEncoder();
 };

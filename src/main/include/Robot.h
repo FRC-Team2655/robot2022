@@ -55,5 +55,6 @@ private:
   /** Declaring the controller for the LED via PWM */
   //frc::Spark LEDController {LEDPWMPORT};
 
+  // The autonomous command to be assigned to a specific routine
   frc2::Command* autonomousCommand = nullptr;
 };

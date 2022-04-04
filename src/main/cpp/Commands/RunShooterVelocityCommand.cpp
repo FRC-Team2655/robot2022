@@ -11,7 +11,7 @@
 
 /** Constructor for the RunShooterVelocityCommand. */
 RunShooterVelocityCommand::RunShooterVelocityCommand() {
-  //AddRequirements(&Robot::shooter);
+  AddRequirements(&Robot::shooter);
 }
 
 /** @brief Called when the command is initially scheduled. 
