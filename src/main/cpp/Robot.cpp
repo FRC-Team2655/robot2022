@@ -50,6 +50,8 @@ void Robot::RobotInit() {
   frc::SmartDashboard::PutNumber("Kicker Velocity", 0);
 
   frc::SmartDashboard::PutBoolean("Is climber at max height", 0);
+  frc::SmartDashboard::PutBoolean("Is right climber at max", 0);
+  frc::SmartDashboard::PutBoolean("Is left climber at max", 0);
 
   frc::SmartDashboard::PutNumber("Accel X", 0);
   frc::SmartDashboard::PutNumber("Accel Y", 0);
@@ -118,6 +120,9 @@ void Robot::RobotPeriodic() {
 
   // Update whether the climber arms are at the maximum height on smartdash
   frc::SmartDashboard::PutBoolean("Is climber at max height", (climber.isRightClimberAtMax && climber.isLeftClimberAtMax));
+  // Upate whether the right and left climber arms are at the max height on smartdash
+  frc::SmartDashboard::PutBoolean("Is right climber at max", climber.isRightClimberAtMax);
+  frc::SmartDashboard::PutBoolean("Is left climber at max", climber.isLeftClimberAtMax);
 
   // Put whether the shooter is up to speed on smartdash.
   frc::SmartDashboard::PutBoolean("Shooter up to speed", shooter.isShooterAtMax);
