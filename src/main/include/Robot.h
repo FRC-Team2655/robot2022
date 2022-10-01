@@ -27,6 +27,9 @@
 #include "rev/ColorMatch.h"
 
 #include <frc/motorcontrol/Spark.h>
+#include <frc/smartdashboard/SendableChooser.h>
+
+#include <pathplanner/lib/PathPlanner.h>
 
 #include "Autonomous.h"
 
@@ -52,8 +55,17 @@ public:
   void TeleopPeriodic() override;
 private:
 
+  // This will load the file "Example Path.path" and generate it with a max velocity of 8 m/s and a max acceleration of 5 m/s^2
+  pathplanner::PathPlannerTrajectory examplePath = pathplanner::PathPlanner::loadPath("New Path", 8_mps, 5_mps_sq);
+
+  // Sample the state of the path at 1.2 seconds
+  pathplanner::PathPlannerTrajectory::PathPlannerState exampleState = examplePath.sample(1.2_s);
+
   /** Declaring the controller for the LED via PWM */
   //frc::Spark LEDController {LEDPWMPORT};
+
+  // Creating the list of autonomous routines as a sendable chooser for the dash
+  frc::SendableChooser<int> autoChooser;
 
   // The autonomous command to be assigned to a specific routine
   frc2::Command* autonomousCommand = nullptr;

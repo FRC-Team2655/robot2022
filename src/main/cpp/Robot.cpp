@@ -29,6 +29,12 @@ Autonomous Robot::auton;
  * @return void
  */ 
 void Robot::RobotInit() {
+  // Adding autonomous options on the dash
+  autoChooser.SetDefaultOption("Two Ball Auto (start with front bumper on tarmac line)", TWOBALLAUTO);
+  autoChooser.AddOption("One Ball Auto (start with front bumper on goal ready to shoot)", ONEBALLAUTO);
+  autoChooser.AddOption("Drive forward off line (start with front on tarmac line)", DRIVEOFFLINEAUTO);
+  autoChooser.AddOption("Test auto - DO NOT RUN", 2);
+  frc::SmartDashboard::PutData("Choose Auto: ", &autoChooser);
 
   // Putting all values on smartdash to be updated later.
   frc::SmartDashboard::PutNumber("IMU Angle", 0);
@@ -77,6 +83,8 @@ void Robot::RobotInit() {
  * @return void
  */ 
 void Robot::RobotPeriodic() {
+  frc::SmartDashboard::PutData("Choose Auto: ", &autoChooser);
+
   // Updating the IMU Angle on smartdashboard
   frc::SmartDashboard::PutNumber("IMU Angle", driveBase.GetIMUAngle());
   // Updating the Shooter Velocity on smartdashboard
@@ -98,10 +106,10 @@ void Robot::RobotPeriodic() {
   if (shooter.GetShooterVelocity() <= 0.0) {
     shooter.isShooterAtMax = false;
     shooter.isShooterRunning = false;
-  }else if ((shooter.GetShooterVelocity() < SHOOTERVELOCITY) && (shooter.GetShooterVelocity() > 0.0)) {
+  }else if ((shooter.GetShooterVelocity() < (SHOOTERVELOCITY)) && (shooter.GetShooterVelocity() > 0.0)) {
     shooter.isShooterAtMax = false;
     shooter.isShooterRunning = true;
-  }else if (shooter.GetShooterVelocity() >= SHOOTERVELOCITY) {
+  }else if (shooter.GetShooterVelocity() >= (SHOOTERVELOCITY)) {
     shooter.isShooterAtMax = true;
     shooter.isShooterRunning = true;
   }
@@ -145,11 +153,29 @@ void Robot::AutonomousInit() {
   // Reset the IMU Angle at the beginning of auto
   driveBase.ResetIMUAngle();
 
-  //autonomousCommand = auton.ShootPreloadAndDrive();
-  //autonomousCommand = auton.RotateDegreesTest();
-  //autonomousCommand = auton.DriveBackwardsOffTarmac();
-  autonomousCommand = auton.TwoBallAuto();
-  autonomousCommand->Schedule();
+  // Cycle through the selected autonomous routine and assign it to the command to schedule
+  switch (autoChooser.GetSelected()) {
+    case ONEBALLAUTO:
+      autonomousCommand = auton.ShootPreloadAndDrive();
+      break;
+    case DRIVEOFFLINEAUTO:
+      autonomousCommand = auton.DriveForwardOffTarmac();
+      break;
+    case TWOBALLAUTO:
+      autonomousCommand = auton.TwoBallAuto();
+      break;
+    case 2:
+      autonomousCommand = auton.RotateDegreesTest();
+      break;
+    default:
+      autonomousCommand = nullptr;
+      break;
+  }
+
+  // If the autonomousCommand is not empty, schedule
+  if (autonomousCommand != nullptr) {
+    autonomousCommand->Schedule();
+  }
 }
 
 /**
@@ -163,6 +189,9 @@ void Robot::AutonomousPeriodic() {}
   * @return void
   */
  void Robot::TeleopInit() {
+   // Reset the climber heights (assuming we are starting teleop with cliber arms down)
+   climber.ResetClimberDown();
+
    // Set drive base motor controllers into coast mode.
    driveBase.SetCoastMode();
 

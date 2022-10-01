@@ -29,7 +29,7 @@ class RotateDegreesCommand
   /* Minimum speed to run while turning (motor percent) */
   double minSpeed = 0.50;
   /* delta from target angle at which to start ramp down (degrees) */
-  double rampdownStartAngle = 15;
+  double rampdownStartAngle = 30;
   /* P term for gyro feedback while ramping down */
   double P_gyro = 0.09;
   /* ramp up increment */

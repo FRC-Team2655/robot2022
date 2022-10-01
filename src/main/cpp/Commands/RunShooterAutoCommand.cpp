@@ -24,6 +24,7 @@ void RunShooterAutoCommand::Initialize() {}
  */ 
 void RunShooterAutoCommand::Execute() {
   Robot::shooter.RunShooterVelocity(SHOOTERVELOCITY);
+  Robot::shooter.RunShooterKicker(SHOOTERKICKERSPEED);
 }
 
 /** @brief Called once the command ends or is interrupted.

@@ -24,6 +24,8 @@
 #include "Commands/RotateDegreesCommand.h"
 #include "Commands/RunBeltsCommand.h"
 
+#include "Commands/ShootOneBallCommand.h"
+
 /** Class for all the Autonomous routines */
 class Autonomous {
 public:
@@ -31,6 +33,7 @@ public:
 
     frc2::Command* RotateDegreesTest();
     frc2::Command* ShootPreloadAndDrive();
-    frc2::Command* DriveBackwardsOffTarmac();
+    frc2::Command* DriveForwardOffTarmac();
     frc2::Command* TwoBallAuto();
+    frc2::Command* ThreeBallAuto();
 };

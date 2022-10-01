@@ -22,11 +22,7 @@ void RunIntakeRollersCommand::Initialize() {}
 */
 void RunIntakeRollersCommand::Execute() {
   // Running the intake rollers at a fixed percentage if the intake is out
-  if (Robot::intake.isIntakeIn == false) {
-    Robot::intake.RunIntakeRollers(INTAKEROLLERSSPEED);
-  }else{
-    Robot::intake.RunIntakeRollers(0);
-  }
+  Robot::intake.RunIntakeRollers(INTAKEROLLERSSPEED);
 }
 
 /** @brief Called once the command ends or is interrupted. 

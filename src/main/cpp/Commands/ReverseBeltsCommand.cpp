@@ -26,6 +26,7 @@ void ReverseBeltsCommand::Initialize() {}
 void ReverseBeltsCommand::Execute() {
   // Run the belts in the reverse direction
   Robot::belts.RunBeltsReverse();
+  Robot::intake.RunIntakeRollers(-0.5);
 }
 
 /** @brief Called once the command ends or is interrupted.
@@ -34,6 +35,7 @@ void ReverseBeltsCommand::Execute() {
 void ReverseBeltsCommand::End(bool interrupted) {
   // Stop the belts from running
   Robot::belts.StopBelts();
+  Robot::intake.RunIntakeRollers(0);
 }
 
 /** @brief Returns true when the command should end.

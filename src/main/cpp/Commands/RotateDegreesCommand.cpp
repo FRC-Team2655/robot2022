@@ -125,7 +125,19 @@ void RotateDegreesCommand::End(bool interrupted) {
  * @return Whether the command should finish
  */ 
 bool RotateDegreesCommand::IsFinished() {
+  static bool isAngleMet = false;
+
   /* Get the error */
   double angleError = std::abs(currentAngle - targetAngle);
-  return (angleError < 1.0);
+
+  // If we are "sweeping" through the desired angle, do not return.
+  if (angleError < 1.0) {
+    if (isAngleMet) {
+      return true;
+    }else{
+      isAngleMet = true;
+    }
+  }
+
+  return false;
 }

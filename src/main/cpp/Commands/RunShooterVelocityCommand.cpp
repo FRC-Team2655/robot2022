@@ -18,7 +18,6 @@ RunShooterVelocityCommand::RunShooterVelocityCommand() {
  * @return void
 */
 void RunShooterVelocityCommand::Initialize() {
-  std::cout << "Init" << std::endl;
 }
 
 /** @brief Called repeatedly when this Command is scheduled to run 
@@ -29,8 +28,6 @@ void RunShooterVelocityCommand::Execute() {
   Robot::shooter.RunShooterVelocity(SHOOTERVELOCITY);
   // Run the shooter kicker
   Robot::shooter.RunShooterKicker(SHOOTERKICKERSPEED);
-
-  std::cout << "Execute" << std::endl;
 }
 
 /** @brief Called once the command ends or is interrupted. 
@@ -41,8 +38,6 @@ void RunShooterVelocityCommand::End(bool interrupted) {
   Robot::shooter.RunShooterPercentage(0);
   // Stop the shooter kicker
   Robot::shooter.StopShooterKicker();
-
-  std::cout << "End" << std::endl;
 }
 
 /** @brief Returns true when the command should end. 

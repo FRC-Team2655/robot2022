@@ -15,6 +15,22 @@ DriveBaseSubsystem::DriveBaseSubsystem() {
 
     /** Inverting the right side of the drive train so that both sides are in the same direction. */
     leftSide.SetInverted(true);
+
+  // Current limiting
+  const int stallLimit = 38, freeLimit = 60, limitRPM = 2000;
+  leftLeader.SetSmartCurrentLimit(stallLimit, freeLimit, limitRPM);
+  leftFollower1.SetSmartCurrentLimit(stallLimit, freeLimit, limitRPM);
+  leftFollower2.SetSmartCurrentLimit(stallLimit, freeLimit, limitRPM);
+  rightLeader.SetSmartCurrentLimit(stallLimit, freeLimit, limitRPM);
+  rightFollower1.SetSmartCurrentLimit(stallLimit, freeLimit, limitRPM);
+  rightFollower2.SetSmartCurrentLimit(stallLimit, freeLimit, limitRPM);
+
+  leftLeader.BurnFlash();
+  leftFollower1.BurnFlash();
+  leftFollower2.BurnFlash();
+  rightLeader.BurnFlash();
+  rightFollower1.BurnFlash();
+  rightFollower2.BurnFlash();
 }
 
 /**
