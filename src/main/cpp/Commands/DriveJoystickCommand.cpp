@@ -53,9 +53,15 @@ void DriveJoystickCommand::Execute() {
   double power = team2655::jshelper::getAxisValue(Robot::input.driveAxisConfig, driveDirection);
   #else
   /** If the driving style is linear, drive linearly */
-  double rotate = -0.5 * Robot::input.joystick->GetRawAxis(0);
-  double power = 0.6 * driveDirection;
+
+  // Drive with triggers
+  //double rotate = -0.5 * Robot::input.joystick->GetRawAxis(0);
+  //double power = 0.6 * driveDirection;
   #endif
+
+  // Drive with joysticks
+  double rotate = -0.4 * team2655::jshelper::getAxisValue(Robot::input.rotateAxisConfig, Robot::input.joystick->GetRawAxis(2));
+  double power = 0.5 * team2655::jshelper::getAxisValue(Robot::input.driveAxisConfig, Robot::input.joystick->GetRawAxis(1));
 
   /* Filtered power */
   double filteredPower;

@@ -99,7 +99,7 @@
 #define SHOOTERPERCENTAGE 0.8
  
 /** Shooter max velocity */
-#define SHOOTERVELOCITY 3200 //3000
+#define SHOOTERVELOCITY 2400 //3000
 
 /** Speed for the shooter to run at a very slow speed such that the ball "drips" out. */
 #define SHOOTERDRIPOUTSPEED 900
@@ -111,7 +111,7 @@
 #define CLIMBINGSPEED 0.80
 
 /** Speed for the shooter kicker */
-#define SHOOTERKICKERSPEED  -0.2 //0.20
+#define SHOOTERKICKERSPEED  0.1 //0.20
 
 
 
